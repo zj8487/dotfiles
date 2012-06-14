@@ -1,0 +1,10 @@
+[color]
+	ui = auto
+[alias]
+	st = status -s
+	co = checkout
+	ci = commit
+	amend = commit --amend -C HEAD
+[user]
+	name = Lars-Magnus Skog
+	email = lars.magnus.skog@gmail.com

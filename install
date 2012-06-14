@@ -1,10 +1,22 @@
 #!/bin/bash
 set -e
 
-# create ~/.bashrc as symbolic link to our bashrc
-mv ~/.bashrc /tmp
 SCRIPT_DIR=$( cd "$( dirname "$0" )" && pwd )
+
+# create ~/.bashrc as symbolic link to ./bash/bashrc
+if [ -e ~/.bashrc ]
+then
+    mv ~/.bashrc /tmp
+fi
 ln -s $SCRIPT_DIR/bash/bashrc ~/.bashrc
+
+# create ~/.gitconfig as symbolic link to ./git/gitconfig
+if [ -e ~/.gitconfig ]
+then
+    mv ~/.gitconfig /tmp
+fi
+ln -s $SCRIPT_DIR/git/gitconfig ~/.gitconfig
+
 
 # add in bundles from bundle.txt
 #mkdir -p ~/.vim/bundle
