@@ -1,0 +1,15 @@
+# get dir for this script
+SOURCE="${BASH_SOURCE[0]}"
+THIS="$( dirname "$SOURCE" )"
+while [ -h "$SOURCE" ]
+do 
+    SOURCE="$(readlink "$SOURCE")"
+    [[ $SOURCE != /* ]] && SOURCE="$THIS/$SOURCE"
+    THIS="$( cd -P "$( dirname "$SOURCE"  )" && pwd )"
+    done
+THIS="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+
+source $THIS/alias.bash
+source $THIS/colors.bash
+source $THIS/git.bash
+source $THIS/prompt.bash

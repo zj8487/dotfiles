@@ -1,0 +1,21 @@
+#!/bin/bash
+
+source $DEVENV/bash/colors.bash
+
+echo -e "${BLACK}BLACK${NORMAL}"
+echo -e "${RED}RED${NORMAL}"
+echo -e "${GREEN}GREEN${NORMAL}"
+echo -e "${YELLOW}YELLOW${NORMAL}"
+echo -e "${BLUE}BLUE${NORMAL}"
+echo -e "${VIOLET}VIOLET${NORMAL}"
+echo -e "${CYAN}CYAN${NORMAL}"
+echo -e "${WHITE}WHITE${NORMAL}"
+
+echo -e "${BRIGHT_BLACK}BRIGHT_BLACK${NORMAL}"
+echo -e "${BRIGHT_RED}BRIGHT_RED${NORMAL}"
+echo -e "${BRIGHT_GREEN}BRIGHT_GREEN${NORMAL}"
+echo -e "${BRIGHT_YELLOW}BRIGHT_YELLOW${NORMAL}"
+echo -e "${BRIGHT_BLUE}BRIGHT_BLUE${NORMAL}"
+echo -e "${BRIGHT_VIOLET}BRIGHT_VIOLET${NORMAL}"
+echo -e "${BRIGHT_CYAN}BRIGHT_CYAN${NORMAL}"
+echo -e "${BRIGHT_WHITE}BRIGHT_WHITE${NORMAL}"
