@@ -1,6 +1,7 @@
 alias ac='. ~/env/bin/activate && cd $SRC/braian/'
 alias cd..='cd ..'
 alias cd-='cd -'
+alias e='emacs -nw'
 alias igrep='grep -i'
 alias l="ls -ltrha"
 alias ls="ls --color=auto"
