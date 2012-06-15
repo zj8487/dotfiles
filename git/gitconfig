@@ -5,6 +5,7 @@
 	co = checkout
 	ci = commit
 	amend = commit --amend -C HEAD
+	hist = log --graph --color --oneline --decorate
 [user]
 	name = Lars-Magnus Skog
 	email = lars.magnus.skog@gmail.com
