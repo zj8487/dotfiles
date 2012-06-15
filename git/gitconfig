@@ -8,3 +8,5 @@
 [user]
 	name = Lars-Magnus Skog
 	email = lars.magnus.skog@gmail.com
+[merge]
+	conflictstyle = diff3
