@@ -13,3 +13,5 @@ source $THIS/alias.bash
 source $THIS/colors.bash
 source $THIS/git.bash
 source $THIS/prompt.bash
+
+export PATH=/home/magnus/Dropbox/bin:$PATH
