@@ -14,4 +14,6 @@ source $THIS/colors.bash
 source $THIS/git.bash
 source $THIS/prompt.bash
 
-export PATH=/home/magnus/Dropbox/bin:$PATH
+export DROPBOX=/home/magnus/Dropbox
+export SRC=$DROPBOX/src
+export PATH=$DROPBOX/bin:$PATH
