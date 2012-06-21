@@ -12,7 +12,6 @@ THIS="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 source $THIS/alias.bash
 source $THIS/colors.bash
 source $THIS/git.bash
-source $THIS/prompt.bash
 
 export DROPBOX=/home/magnus/Dropbox
 export SRC=$DROPBOX/src
