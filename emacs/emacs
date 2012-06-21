@@ -1,2 +1,5 @@
 ; Show which parenthesis belongs together upon placing the cursor on one of them
 (show-paren-mode t)
+
+; Do not show menu bar
+(menu-bar-mode -1)
