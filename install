@@ -17,6 +17,12 @@ then
 fi
 ln -s $SCRIPT_DIR/git/gitconfig ~/.gitconfig
 
+# create ~/.emacs as symbolic link to ./emacs/emacs
+if [ -e ~/.emacs ]
+then
+    mv ~/.emacs /tmp
+fi
+ln -s $SCRIPT_DIR/emacs/emacs ~/.emacs
 
 # add in bundles from bundle.txt
 #mkdir -p ~/.vim/bundle

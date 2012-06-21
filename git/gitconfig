@@ -11,3 +11,5 @@
 	email = lars.magnus.skog@gmail.com
 [merge]
 	conflictstyle = diff3
+[core]
+	editor = emacs -nw
