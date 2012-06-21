@@ -16,3 +16,9 @@ source $THIS/git.bash
 export DROPBOX=/home/magnus/Dropbox
 export SRC=$DROPBOX/src
 export PATH=$DROPBOX/bin:$PATH
+
+# enable bash completion in interactive shells
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+   . /etc/bash_completion
+fi
+
