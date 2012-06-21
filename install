@@ -24,6 +24,9 @@ then
 fi
 ln -s $SCRIPT_DIR/emacs/emacs ~/.emacs
 
+# make symbolic link in /usr/bin to custom emacs startup script
+sudo ln -s $SCRIPT_DIR/bash/e /usr/bin/e
+
 # add in bundles from bundle.txt
 #mkdir -p ~/.vim/bundle
 #bundles=$(cat ./bundles.txt)
