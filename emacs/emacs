@@ -6,3 +6,7 @@
 
 ; Always follow symbolic links to version controlled files
 (setq vc-follow-symlinks t)
+
+; Line and column mode
+(setq line-number-mode t)
+(setq column-number-mode t)
