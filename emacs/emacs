@@ -10,3 +10,9 @@
 ; Line and column mode
 (setq line-number-mode t)
 (setq column-number-mode t)
+
+; Enabled downcase-region command (C-x C-l)
+(put 'downcase-region 'disabled nil)
+
+; Enabled upcase-region command (C-x C-u)
+(put 'upcase-region 'disabled nil)
