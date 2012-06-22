@@ -4,28 +4,16 @@ set -e
 SCRIPT_DIR=$( cd "$( dirname "$0" )" && pwd )
 
 # create ~/.bashrc as symbolic link to ./bash/bashrc
-if [ -e ~/.bashrc ]
-then
-    mv ~/.bashrc /tmp
-fi
-ln -s $SCRIPT_DIR/bash/bashrc ~/.bashrc
+ln -fs $SCRIPT_DIR/bash/bashrc ~/.bashrc
 
 # create ~/.gitconfig as symbolic link to ./git/gitconfig
-if [ -e ~/.gitconfig ]
-then
-    mv ~/.gitconfig /tmp
-fi
-ln -s $SCRIPT_DIR/git/gitconfig ~/.gitconfig
+ln -fs $SCRIPT_DIR/git/gitconfig ~/.gitconfig
 
 # create ~/.emacs as symbolic link to ./emacs/emacs
-if [ -e ~/.emacs ]
-then
-    mv ~/.emacs /tmp
-fi
-ln -s $SCRIPT_DIR/emacs/emacs ~/.emacs
+ln -fs $SCRIPT_DIR/emacs/emacs ~/.emacs
 
 # make symbolic link in /usr/bin to custom emacs startup script
-sudo ln -s $SCRIPT_DIR/bash/e /usr/bin/e
+sudo ln -fs $SCRIPT_DIR/bash/e /usr/bin/e
 
 # add in bundles from bundle.txt
 #mkdir -p ~/.vim/bundle
