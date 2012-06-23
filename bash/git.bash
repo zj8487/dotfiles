@@ -29,4 +29,4 @@ function parse_git_branch {
   echo ${ref#refs/heads/}
 }
 
-PS1="$VIOLET\h$WHITE|$RED\$(date +%H:%M)$WHITE|$CYAN\w$WHITE|$YELLOW\$(parse_git_branch)$WHITE> "
+PS1="$GREEN\u@\h$WHITE|$RED\$(date +%H:%M)$WHITE|$CYAN\w$WHITE|$YELLOW\$(parse_git_branch)$WHITE> "
