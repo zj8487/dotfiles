@@ -1,7 +1,7 @@
 alias ac='. ~/env/bin/activate && cd $SRC/braian/'
 alias cd..='cd ..'
 alias cd-='cd -'
-alias duf='du --human-readable | egrep "\.\/(\w|\.|-)+$"'
+alias duf='du --human-readable | egrep "\.\/*(\w|\.|-)*$"'
 alias igrep='grep -i'
 alias l="ls -ltrha"
 alias ls="ls --color=auto"
