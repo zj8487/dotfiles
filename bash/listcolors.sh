@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source $DEVENV/bash/colors.bash
+source colors.bash
 
 echo -e "${BLACK}BLACK${NORMAL}"
 echo -e "${RED}RED${NORMAL}"
