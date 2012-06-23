@@ -1,4 +1,4 @@
-alias ac='. ~/env/bin/activate && cd $SRC/braian/'
+alias ac='. ~/env/bin/activate && cd ~/src/braian/'
 alias cd..='cd ..'
 alias cd-='cd -'
 alias duf='du --max-depth=1 | sort -n -r'
