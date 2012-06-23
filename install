@@ -12,6 +12,9 @@ ln -fs $SCRIPT_DIR/git/gitconfig ~/.gitconfig
 # create ~/.emacs as symbolic link to ./emacs/emacs
 ln -fs $SCRIPT_DIR/emacs/emacs ~/.emacs
 
+# create ~/.ssh/config as symbolic link to ./ssh/config
+ln -fs $SCRIPT_DIR/ssh/config ~/.ssh/config
+
 # make symbolic link in /usr/bin to custom emacs startup script
 sudo ln -fs $SCRIPT_DIR/bash/e /usr/bin/e
 
