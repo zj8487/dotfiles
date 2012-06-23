@@ -26,7 +26,7 @@ function grb_git_prompt() {
 
 function parse_git_branch {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  echo ${ref#refs/heads/}
+  echo -e "$WHITE|$BRIGHT_YELLOW"${ref#refs/heads/}
 }
 
-PS1="$GREEN\u@\h$WHITE|$RED\$(date +%H:%M)$WHITE|$CYAN\w$WHITE|$YELLOW\$(parse_git_branch)$WHITE> "
+PS1="$BRIGHT_GREEN\u@\h$WHITE|$BRIGHT_RED\$(date +%H:%M)$WHITE|$BRIGHT_CYAN\w\$(parse_git_branch) $BRIGHT_VIOLET\$ $WHITE"
