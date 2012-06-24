@@ -1,4 +1,5 @@
 alias ac='. ~/env/bin/activate && cd ~/src/braian/'
+alias ack='ack-grep'
 alias cd..='cd ..'
 alias cd-='cd -'
 alias duf='du --max-depth=1 | sort -n -r'
