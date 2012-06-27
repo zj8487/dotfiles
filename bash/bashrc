@@ -14,9 +14,8 @@ source $THIS/colors.bash
 source $THIS/git.bash
 source $THIS/npm-completion.bash
 
-#export DROPBOX=/home/magnus/Dropbox
-#export PATH=$DROPBOX/bin:$PATH
-export PATH=$HOME/local/bin:$PATH
+export N_PREFIX=~/local
+export PATH=~/local/bin:$PATH
 
 # enable bash completion in interactive shells
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
