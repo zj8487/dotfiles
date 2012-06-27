@@ -11,7 +11,8 @@ THIS="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
 source $THIS/alias.bash
 source $THIS/colors.bash
-source $THIS/git.bash
+source $THIS/git-completion.bash
+source $THIS/prompt.bash
 source $THIS/npm-completion.bash
 
 #export DROPBOX=/home/magnus/Dropbox
