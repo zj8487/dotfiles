@@ -3,6 +3,7 @@ alias ack='ack-grep'
 alias cd..='cd ..'
 alias cd-='cd -'
 alias duf='du --max-depth=1 | sort -n -r'
+alias getnpm='curl http://npmjs.org/install.sh | sh'
 alias igrep='grep -i'
 alias l="ls -ltrha"
 alias ls="ls --color=auto"
