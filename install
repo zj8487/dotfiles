@@ -16,10 +16,10 @@ ln -fs $SCRIPT_DIR/emacs/emacs ~/.emacs
 ln -fs $SCRIPT_DIR/ssh/config ~/.ssh/config
 
 # make symbolic link in /usr/bin to custom emacs startup script
-ln -fs $SCRIPT_DIR/bash/e /usr/bin/e
+sudo ln -fs $SCRIPT_DIR/bash/e /usr/bin/e
 
 # install dependencies and programs needed for the development environment
-apt-get install --assume-yes build-essential
+sudo apt-get install --assume-yes build-essential
 
 # add in bundles from bundle.txt
 #mkdir -p ~/.vim/bundle
