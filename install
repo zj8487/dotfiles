@@ -20,6 +20,7 @@ sudo ln -fs $SCRIPT_DIR/bash/e /usr/bin/e
 
 # install dependencies and programs needed for the development environment
 sudo apt-get install --assume-yes build-essential
+sudo apt-get install --assume-yes imagemagick
 
 # add in bundles from bundle.txt
 #mkdir -p ~/.vim/bundle
