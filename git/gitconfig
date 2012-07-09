@@ -3,7 +3,7 @@
 [alias]
 	st = status -s
 	co = checkout
-	ci = commit
+	ci = commit --verbose
 	amend = commit --amend -C HEAD
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an <%ae>%Creset' --abbrev-commit
 [user]
