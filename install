@@ -22,6 +22,9 @@ sudo ln -fs $SCRIPT_DIR/bash/e /usr/bin/e
 sudo apt-get install --assume-yes build-essential
 sudo apt-get install --assume-yes imagemagick
 
+sudo apt-get install --assume-yes rubygems
+sudo gem install jekyll
+
 # add in bundles from bundle.txt
 #mkdir -p ~/.vim/bundle
 #bundles=$(cat ./bundles.txt)
