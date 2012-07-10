@@ -22,7 +22,7 @@ sudo ln -fs $SCRIPT_DIR/bash/e /usr/bin/e
 sudo apt-get install --assume-yes build-essential
 sudo apt-get install --assume-yes imagemagick
 
-sudo apt-get install --assume-yes rubygems
+sudo apt-get install --assume-yes ruby1.9.1-full rubygems
 sudo gem install jekyll
 
 # add in bundles from bundle.txt
