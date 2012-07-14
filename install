@@ -26,6 +26,18 @@ sudo apt-get install --assume-yes imagemagick
 sudo apt-get install --assume-yes ruby1.9.1-full rubygems
 sudo gem install jekyll
 
+# install from source into src
+mkdir -p ~/local ~/src && cd ~/src
+
+# install n and use n to install latest node
+if [ -e ~/src/n ]; then
+    rm -rf ~/src/n
+fi
+git clone git@github.com:ralphtheninja/n.git && cd n && N_PREFIX='~/local' make install && n latest
+
+# go back to where we were
+cd -
+
 # add in bundles from bundle.txt
 #mkdir -p ~/.vim/bundle
 #bundles=$(cat ./bundles.txt)
