@@ -3,37 +3,44 @@ set -e
 
 SCRIPT_DIR=$( cd "$( dirname "$0" )" && pwd )
 
-# create ~/.bashrc as symbolic link to ./bash/bashrc
-ln -fs $SCRIPT_DIR/bash/bashrc ~/.bashrc
-
-# create ~/.gitconfig as symbolic link to ./git/gitconfig
-ln -fs $SCRIPT_DIR/git/gitconfig ~/.gitconfig
-
-# create ~/.emacs as symbolic link to ./emacs/emacs
-ln -fs $SCRIPT_DIR/emacs/emacs ~/.emacs
-
-# create ~/.ssh/config as symbolic link to ./ssh/config
-ln -fs $SCRIPT_DIR/ssh/config ~/.ssh/config
-
-# make symbolic link in /usr/bin to custom emacs startup script
-sudo ln -fs $SCRIPT_DIR/bash/e /usr/bin/e
-
-# install dependencies and programs needed for the development environment
-sudo apt-get install --assume-yes build-essential
-sudo apt-get install --assume-yes emacs23
-sudo apt-get install --assume-yes imagemagick
-
-# install from source into src
+echo "---- INSTALLING: setting up folder structure"
 mkdir -p ~/local ~/src && cd ~/src
 
-# install n and use n to install latest node
+echo "---- INSTALLING: symlinks"
+ln -fs $SCRIPT_DIR/bash/bashrc ~/.bashrc
+ln -fs $SCRIPT_DIR/git/gitconfig ~/.gitconfig
+ln -fs $SCRIPT_DIR/emacs/emacs ~/.emacs
+ln -fs $SCRIPT_DIR/ssh/config ~/.ssh/config
+sudo ln -fs $SCRIPT_DIR/bash/e /usr/bin/e
+
+echo "---- INSTALLING: build essentials"
+sudo apt-get install --assume-yes build-essential
+
+echo "---- INSTALLING: emacs 23"
+sudo apt-get install --assume-yes emacs23
+
+echo "---- INSTALLING: imagemagick"
+sudo apt-get install --assume-yes imagemagick
+
+echo "---- INSTALLING: n"
 if [ -e ~/src/n ]; then
     rm -rf ~/src/n
 fi
-git clone git@github.com:ralphtheninja/n.git && cd n && N_PREFIX='~/local' make install && n latest
+git clone git@github.com:ralphtheninja/n.git && cd n && N_PREFIX='~/local' make install
+
+echo "---- INSTALLING: node"
+n latest
+
+echo "---- INSTALLING: npm blacksmith"
+npm install -g blacksmith
 
 # go back to where we were
 cd -
+
+
+
+
+
 
 # add in bundles from bundle.txt
 #mkdir -p ~/.vim/bundle
