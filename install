@@ -23,9 +23,6 @@ sudo apt-get install --assume-yes build-essential
 sudo apt-get install --assume-yes emacs23
 sudo apt-get install --assume-yes imagemagick
 
-sudo apt-get install --assume-yes ruby1.9.1-full rubygems
-sudo gem install jekyll
-
 # install from source into src
 mkdir -p ~/local ~/src && cd ~/src
 
