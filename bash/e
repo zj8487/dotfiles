@@ -1,2 +1,2 @@
 #!/bin/bash
-emacs23 -nw "$@"
+emacsclient -c "$@"

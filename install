@@ -12,6 +12,7 @@ ln -fs $SCRIPT_DIR/git/gitconfig ~/.gitconfig
 ln -fs $SCRIPT_DIR/emacs/emacs ~/.emacs
 ln -fs $SCRIPT_DIR/ssh/config ~/.ssh/config
 sudo ln -fs $SCRIPT_DIR/bash/e /usr/bin/e
+sudo ln -fs $SCRIPT_DIR/rc.local /etc/rc.local
 
 echo "---- INSTALLING: build essentials"
 sudo apt-get install --assume-yes build-essential
