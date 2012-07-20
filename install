@@ -23,6 +23,9 @@ sudo apt-get install --assume-yes emacs23
 echo "---- INSTALLING: imagemagick"
 sudo apt-get install --assume-yes imagemagick
 
+echo "---- INSTALLING: xclip"
+sudo apt-get install --assume-yes xclip
+
 echo "---- INSTALLING: n"
 if [ -e ~/src/n ]; then
     rm -rf ~/src/n
