@@ -3,23 +3,23 @@ Host node
 	Hostname ec2-176-34-206-245.eu-west-1.compute.amazonaws.com
 	ForwardAgent yes
 	PreferredAuthentications publickey
-	IdentityFile ~/.ssh/node_aws.pem
+	IdentityFile /media/keys/.ssh/node_aws.pem
 
 Host github.com
 	User git
 	Hostname github.com
 	PreferredAuthentications publickey
-	IdentityFile ~/.ssh/github
+	IdentityFile /media/keys/.ssh/github
 
 Host djoot
 	User mange
 	Hostname djoot.se
 	PreferredAuthentications publickey
-	IdentityFile ~/.ssh/djoot
+	IdentityFile /media/keys/.ssh/djoot
 
 Host numbahWWW
 	User numbahtennet
 	Hostname shell.scorpionshops.com
 	PreferredAuthentications publickey
-	IdentityFile ~/.ssh/numbahWWW
+	IdentityFile /media/keys/.ssh/numbahWWW
 
