@@ -1,2 +1,19 @@
 #!/bin/bash
-emacsclient -c "$@" -e "(fullscreen)" &
+
+edit() {
+    local FILE=$1
+
+    if [[ -z $FILE ]]; then
+	emacsclient -n -c -e "(fullscreen)"
+        return
+    fi
+
+    if [ $FILE[0] != "/" -o $FILE[0] = "~" ]
+    then
+        FILE="$PWD/$FILE"
+    fi
+
+    emacsclient -n -c -e "(find-file \"$FILE\")" "(fullscreen)"
+}
+
+edit $1
