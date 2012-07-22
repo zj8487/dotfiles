@@ -33,7 +33,7 @@ fi
 git clone git@github.com:ralphtheninja/n.git && cd n && N_PREFIX='~/local' make install
 
 echo "---- INSTALLING: node"
-n latest
+n 0.8.3
 
 echo "---- INSTALLING: npm blacksmith"
 npm install -g blacksmith
