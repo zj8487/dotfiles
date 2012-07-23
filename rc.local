@@ -11,6 +11,4 @@
 #
 # By default this script does nothing.
 
-emacs --daemon
-
 exit 0
