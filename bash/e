@@ -4,7 +4,7 @@ edit() {
     local FILE=$1
 
     if [[ -z $FILE ]]; then
-	emacsclient -n -c -e "(fullscreen)"
+	exec emacsclient -a "" -n -c -e "(fullscreen)"
         return
     fi
 
@@ -13,7 +13,7 @@ edit() {
         FILE="$PWD/$FILE"
     fi
 
-    emacsclient -n -c -e "(find-file \"$FILE\")" "(fullscreen)"
+    exec emacsclient -a "" -n -c -e "(find-file \"$FILE\")" "(fullscreen)"
 }
 
 edit $1
