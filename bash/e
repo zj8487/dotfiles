@@ -8,11 +8,6 @@ edit() {
         return
     fi
 
-    if [ $FILE[0] != "/" -o $FILE[0] = "~" ]
-    then
-        FILE="$PWD/$FILE"
-    fi
-
     exec emacsclient -a "" -n -c -e "(find-file \"$FILE\")" "(fullscreen)"
 }
 
