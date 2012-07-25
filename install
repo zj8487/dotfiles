@@ -38,6 +38,9 @@ n 0.8.3
 echo "---- INSTALLING: npm blacksmith"
 npm install -g blacksmith
 
+echo "---- INSTALLING: npm browserify"
+npm install -g browserify
+
 # go back to where we were
 cd -
 
