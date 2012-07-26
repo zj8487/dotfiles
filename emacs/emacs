@@ -1,3 +1,13 @@
+(add-to-list 'load-path "~/dotfiles/emacs/color-theme")
+
+(require 'color-theme)
+(color-theme-initialize)
+;(color-theme-robin-hood)
+;(color-theme-deep-blue)
+(color-theme-hober)
+(setq my-color-themes (list 'color-theme-billw 'color-theme-robin-hood 
+                            'color-theme-deep-blue 'color-theme-hober))
+
 (defun fullscreen (&optional f)
        (interactive)
        (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
