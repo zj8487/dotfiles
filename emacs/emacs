@@ -51,8 +51,6 @@
 (global-set-key "\C-z" 'scroll-one-line-up)
 (global-set-key "\ez" 'scroll-one-line-down)
 (global-set-key "\C-c\C-z" 'suspend-frame)
-;(global-set-key [?\C-\054] 'move-to-previous-window)
 (global-set-key (kbd "C-,") 'move-to-previous-window)
-;(global-set-key [?\C-\056] 'move-to-next-window)
 (global-set-key (kbd "C-.") 'move-to-next-window)
 (global-set-key "\C-xl" 'electric-buffer-list)
