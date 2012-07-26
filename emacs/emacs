@@ -4,9 +4,13 @@
 (color-theme-initialize)
 ;(color-theme-robin-hood)
 ;(color-theme-deep-blue)
-(color-theme-hober)
+;(color-theme-hober)
+(color-theme-gray30)
 (setq my-color-themes (list 'color-theme-billw 'color-theme-robin-hood 
                             'color-theme-deep-blue 'color-theme-hober))
+
+(add-to-list 'load-path "~/dotfiles/emacs/doremi")
+(require 'doremi-cmd)
 
 (defun fullscreen (&optional f)
        (interactive)
