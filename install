@@ -29,6 +29,9 @@ sudo apt-get install --assume-yes xclip
 echo "---- INSTALLING: redis-server"
 sudo apt-get install --assume-yes redis-server
 
+echo "---- INSTALLING: yum"
+sudo apt-get install --assume-yes yum
+
 echo "---- INSTALLING: n"
 if [ -e ~/src/n ]; then
     rm -rf ~/src/n
