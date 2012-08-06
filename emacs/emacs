@@ -62,9 +62,16 @@
   (interactive)
   (select-window (next-window)))
 
+(global-set-key "\C-c\C-z" 'suspend-frame)
+(global-set-key "\C-xl" 'electric-buffer-list)
+(global-set-key "\eg" 'goto-line)
+
 (global-set-key "\C-z" 'scroll-one-line-up)
 (global-set-key "\ez" 'scroll-one-line-down)
-(global-set-key "\C-c\C-z" 'suspend-frame)
 (global-set-key (kbd "C-,") 'move-to-previous-window)
 (global-set-key (kbd "C-.") 'move-to-next-window)
-(global-set-key "\C-xl" 'electric-buffer-list)
+
+(global-set-key (quote [67108909]) 'shrink-window);; C--
+(global-set-key (quote [M-up]) `shrink-window);; M-up
+(global-set-key (quote [67108907]) 'enlarge-window);; C-+ 
+(global-set-key (quote [M-down]) `enlarge-window);; M-down
