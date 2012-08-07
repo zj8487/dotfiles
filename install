@@ -37,7 +37,7 @@ if [ -e ~/src/n ]; then
     rm -rf ~/src/n
 fi
 git clone git@github.com:ralphtheninja/n.git
-cd n && N_PREFIX='~/local' make install
+cd n && N_PREFIX='~/local' make install && cd ..
 
 echo "---- INSTALLING: node"
 n 0.8.3
@@ -48,12 +48,8 @@ npm install -g blacksmith
 echo "---- INSTALLING: npm browserify"
 npm install -g browserify
 
-# go back to where we were
-cd -
-
-
-
-
+echo "---- INSTALLING: npm nodefront"
+npm install -g nodefront
 
 
 # add in bundles from bundle.txt
