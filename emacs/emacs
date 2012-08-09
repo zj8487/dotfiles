@@ -9,6 +9,9 @@
 (setq my-color-themes (list 'color-theme-billw 'color-theme-robin-hood 
                             'color-theme-deep-blue 'color-theme-hober))
 
+(add-to-list 'load-path "~/dotfiles/emacs")
+(load-library "comment-out-line")
+
 (add-to-list 'load-path "~/dotfiles/emacs/doremi")
 (require 'doremi-cmd)
 
