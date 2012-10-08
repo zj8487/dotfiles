@@ -78,3 +78,6 @@
 (global-set-key (quote [M-up]) `shrink-window);; M-up
 (global-set-key (quote [67108907]) 'enlarge-window);; C-+ 
 (global-set-key (quote [M-down]) `enlarge-window);; M-down
+
+; Two space identation for JavaScript
+(setq js-indent-level 2)
