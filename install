@@ -32,26 +32,6 @@ sudo apt-get install --assume-yes redis-server
 echo "---- INSTALLING: yum"
 sudo apt-get install --assume-yes yum
 
-echo "---- INSTALLING: n"
-if [ -e ~/src/n ]; then
-    rm -rf ~/src/n
-fi
-git clone git@github.com:ralphtheninja/n.git
-cd n && N_PREFIX='~/local' make install && cd ..
-
-echo "---- INSTALLING: node"
-n 0.8.3
-
-echo "---- INSTALLING: npm blacksmith"
-npm install -g blacksmith
-
-echo "---- INSTALLING: npm browserify"
-npm install -g browserify
-
-echo "---- INSTALLING: npm nodefront"
-npm install -g nodefront
-
-
 # add in bundles from bundle.txt
 #mkdir -p ~/.vim/bundle
 #bundles=$(cat ./bundles.txt)
