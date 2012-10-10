@@ -15,7 +15,6 @@ source $THIS/git-completion.bash
 source $THIS/prompt.bash
 source $THIS/npm-completion.bash
 
-export N_PREFIX=~/local
 export PATH=~/local/bin:$PATH
 
 # enable bash completion in interactive shells
