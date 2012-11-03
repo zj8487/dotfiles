@@ -3,8 +3,6 @@ set -e
 
 cd ~/src
 
-echo "---- INSTALLING: pidgin (and finch)"
-
 PIDGIN_V=2.10.6
 PIDGIN_FOLDER="pidgin-$PIDGIN_V"
 
@@ -12,6 +10,7 @@ if [ ! -d "$PIDGIN_FOLDER" ]; then
     echo "---- INSTALLING: build-dep pidgin"
     sudo apt-get --assume-yes build-dep pidgin
 
+    echo "---- INSTALLING: pidgin (and finch)"
     PIDGIN_FILE=$PIDGIN_FOLDER.tar.bz2
     PIDGIN_URL="http://downloads.sourceforge.net/project/pidgin/Pidgin/$PIDGIN_V/$PIDGIN_FILE?r=&ts=1351971096&use_mirror=garr"
     wget -O $PIDGIN_FILE $PIDGIN_URL
