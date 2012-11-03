@@ -9,6 +9,8 @@ do
     done
 THIS="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
+NUMBER_OF_PROCESSORS=`cat /proc/cpuinfo | grep processor | wc -l`
+
 source $THIS/alias.bash
 source $THIS/colors.bash
 source $THIS/git-completion.bash

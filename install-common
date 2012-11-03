@@ -1,0 +1,28 @@
+#!/bin/bash
+set -e
+
+echo "---- INSTALLING: build essentials"
+sudo apt-get install --assume-yes build-essential
+echo "---- INSTALLING: emacs 24"
+sudo apt-get install --assume-yes emacs24
+echo "---- INSTALLING: imagemagick"
+sudo apt-get install --assume-yes imagemagick
+echo "---- INSTALLING: xclip"
+sudo apt-get install --assume-yes xclip
+echo "---- INSTALLING: redis-server"
+sudo apt-get install --assume-yes redis-server
+echo "---- INSTALLING: yum"
+sudo apt-get install --assume-yes yum
+echo "---- INSTALLING: ack-grep"
+sudo apt-get install --assume-yes ack-grep
+echo "---- INSTALLING: GNU gettext tools"
+sudo apt-get install --assume-yes gettext
+echo "---- INSTALLING: intltool"
+sudo apt-get install --assume-yes intltool
+
+
+
+
+
+
+

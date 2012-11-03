@@ -4,7 +4,7 @@ set -e
 SCRIPT_DIR=$( cd "$( dirname "$0" )" && pwd )
 
 echo "---- INSTALLING: setting up folder structure"
-mkdir -p ~/local ~/src && cd ~/src
+mkdir -p ~/local ~/src
 
 echo "---- INSTALLING: symlinks"
 ln -fs $SCRIPT_DIR/bash/bashrc ~/.bashrc
@@ -14,23 +14,8 @@ ln -fs $SCRIPT_DIR/ssh/config ~/.ssh/config
 sudo ln -fs $SCRIPT_DIR/bash/e /usr/bin/e
 sudo ln -fs $SCRIPT_DIR/rc.local /etc/rc.local
 
-echo "---- INSTALLING: build essentials"
-sudo apt-get install --assume-yes build-essential
-
-echo "---- INSTALLING: emacs 23"
-sudo apt-get install --assume-yes emacs23
-
-echo "---- INSTALLING: imagemagick"
-sudo apt-get install --assume-yes imagemagick
-
-echo "---- INSTALLING: xclip"
-sudo apt-get install --assume-yes xclip
-
-echo "---- INSTALLING: redis-server"
-sudo apt-get install --assume-yes redis-server
-
-echo "---- INSTALLING: yum"
-sudo apt-get install --assume-yes yum
+source "install-common"
+source "install-pidgin"
 
 # add in bundles from bundle.txt
 #mkdir -p ~/.vim/bundle
