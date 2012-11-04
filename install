@@ -17,6 +17,7 @@ sudo ln -fs $SCRIPT_DIR/rc.local /etc/rc.local
 source "install-common"
 source "install-pidgin"
 source "install-node"
+source "install-npm-modules"
 
 # add in bundles from bundle.txt
 #mkdir -p ~/.vim/bundle
