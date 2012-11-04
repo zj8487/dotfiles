@@ -1,0 +1,21 @@
+#!/bin/bash
+set -e
+
+cd ~/src
+
+NODE_V=v0.8.14
+echo "---- INSTALLING: node $NODE_V"
+
+if [ ! -d "node" ]; then
+    git clone git@github.com:ralphtheninja/node.git
+    cd node && git remote add upstream git://github.com/joyent/node.git
+else
+    cd node
+fi
+
+rm -rf out
+git co $NODE_V
+NUMBER_OF_PROCESSORS=`cat /proc/cpuinfo | grep processor | wc -l`
+./configure && time make -j $NUMBER_OF_PROCESSORS && sudo make install
+
+cd -
