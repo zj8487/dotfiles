@@ -19,6 +19,12 @@ echo "---- INSTALLING: GNU gettext tools"
 sudo apt-get install --assume-yes gettext
 echo "---- INSTALLING: intltool"
 sudo apt-get install --assume-yes intltool
+echo "---- INSTALLING: sshfs"
+sudo apt-get install --assume-yes sshfs
+echo "---- INSTALLING: openssh-server"
+sudo apt-get install --assume-yes openssh-server
+
+
 
 
 
