@@ -23,6 +23,8 @@ echo "---- INSTALLING: sshfs"
 sudo apt-get install --assume-yes sshfs
 echo "---- INSTALLING: openssh-server"
 sudo apt-get install --assume-yes openssh-server
+echo "---- INSTALLING: whois (for mkpasswd)"
+sudo apt-get install --assume-yes whois
 
 
 
