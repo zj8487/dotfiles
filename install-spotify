@@ -1,0 +1,10 @@
+#!/bin/bash
+set -e
+
+echo 'deb http://repository.spotify.com stable non-free' > /mnt/spotify.list
+sudo cp /mnt/spotify.list /etc/apt/sources.list.d
+rm /mnt/spotify.list
+
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 94558F59
+sudo apt-get update
+sudo apt-get install --assume-yes spotify-client
