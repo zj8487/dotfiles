@@ -21,5 +21,3 @@ if [ ! -d "$PIDGIN_FOLDER" ]; then
     cd ..
     rm $PIDGIN_FILE
 fi
-
-cd -

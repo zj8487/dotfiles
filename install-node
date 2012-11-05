@@ -17,5 +17,3 @@ rm -rf out
 git co $NODE_V
 NUMBER_OF_PROCESSORS=`cat /proc/cpuinfo | grep processor | wc -l`
 ./configure && time make -j $NUMBER_OF_PROCESSORS && sudo make install
-
-cd -

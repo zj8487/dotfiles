@@ -12,8 +12,8 @@ ln -fs /home/magnus/dotfiles/ssh/config ~/.ssh/config
 sudo ln -fs /home/magnus/dotfiles/bash/e /usr/bin/e
 sudo ln -fs /home/magnus/dotfiles/rc.local /etc/rc.local
 
-source "install-common"
-source "install-ssh"
-source "install-pidgin"
-source "install-node"
-source "install-npm-modules"
+source "/home/magnus/dotfiles/install-common"
+source "/home/magnus/dotfiles/install-ssh"
+source "/home/magnus/dotfiles/install-pidgin"
+source "/home/magnus/dotfiles/install-node"
+source "/home/magnus/dotfiles/install-npm-modules"
