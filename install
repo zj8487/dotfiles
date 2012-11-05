@@ -5,15 +5,15 @@ echo "---- INSTALLING: setting up folder structure"
 mkdir -p ~/local ~/src
 
 echo "---- INSTALLING: symlinks"
-ln -fs /home/magnus/dotfiles/bash/bashrc ~/.bashrc
-ln -fs /home/magnus/dotfiles/git/gitconfig ~/.gitconfig
-ln -fs /home/magnus/dotfiles/emacs/emacs ~/.emacs
-ln -fs /home/magnus/dotfiles/ssh/config ~/.ssh/config
-sudo ln -fs /home/magnus/dotfiles/bash/e /usr/bin/e
-sudo ln -fs /home/magnus/dotfiles/rc.local /etc/rc.local
+ln -fs ~/dotfiles/bash/bashrc ~/.bashrc
+ln -fs ~/dotfiles/git/gitconfig ~/.gitconfig
+ln -fs ~/dotfiles/emacs/emacs ~/.emacs
+ln -fs ~/dotfiles/ssh/config ~/.ssh/config
+sudo ln -fs ~/dotfiles/bash/e /usr/bin/e
+sudo ln -fs ~/dotfiles/rc.local /etc/rc.local
 
-source "/home/magnus/dotfiles/install-common"
-source "/home/magnus/dotfiles/install-ssh"
-source "/home/magnus/dotfiles/install-pidgin"
-source "/home/magnus/dotfiles/install-node"
-source "/home/magnus/dotfiles/install-npm-modules"
+source "~/dotfiles/install-common"
+source "~/dotfiles/install-ssh"
+source "~/dotfiles/install-pidgin"
+source "~/dotfiles/install-node"
+source "~/dotfiles/install-npm-modules"

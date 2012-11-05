@@ -1,5 +1,5 @@
 #!/bin/bash
 set -e
 
-sudo dpkg -i /home/magnus/dotfiles/files/dropbox.deb
+sudo dpkg -i ~/dotfiles/files/dropbox.deb
 
