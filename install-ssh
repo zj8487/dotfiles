@@ -1,0 +1,8 @@
+#!/bin/bash
+set -e
+
+echo "---- INSTALLING: sshfs"
+sudo apt-get install --assume-yes sshfs
+echo "---- INSTALLING: openssh-server"
+sudo apt-get install --assume-yes openssh-server
+sudo cp /home/magnus/dotfiles/ssh/sshd_config /etc/ssh

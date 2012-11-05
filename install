@@ -1,21 +1,19 @@
 #!/bin/bash
 set -e
 
-SCRIPT_DIR=$( cd "$( dirname "$0" )" && pwd )
-
 echo "---- INSTALLING: setting up folder structure"
 mkdir -p ~/local ~/src
 
 echo "---- INSTALLING: symlinks"
-ln -fs $SCRIPT_DIR/bash/bashrc ~/.bashrc
-ln -fs $SCRIPT_DIR/git/gitconfig ~/.gitconfig
-ln -fs $SCRIPT_DIR/emacs/emacs ~/.emacs
-ln -fs $SCRIPT_DIR/ssh/config ~/.ssh/config
-sudo cp $SCRIPT_DIR/ssh/sshd_config /etc/ssh
-sudo ln -fs $SCRIPT_DIR/bash/e /usr/bin/e
-sudo ln -fs $SCRIPT_DIR/rc.local /etc/rc.local
+ln -fs /home/magnus/dotfiles/bash/bashrc ~/.bashrc
+ln -fs /home/magnus/dotfiles/git/gitconfig ~/.gitconfig
+ln -fs /home/magnus/dotfiles/emacs/emacs ~/.emacs
+ln -fs /home/magnus/dotfiles/ssh/config ~/.ssh/config
+sudo ln -fs /home/magnus/dotfiles/bash/e /usr/bin/e
+sudo ln -fs /home/magnus/dotfiles/rc.local /etc/rc.local
 
 source "install-common"
+source "install-ssh"
 source "install-pidgin"
 source "install-node"
 source "install-npm-modules"
