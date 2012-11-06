@@ -21,3 +21,5 @@ echo "---- INSTALLING: intltool"
 sudo apt-get install --assume-yes intltool
 echo "---- INSTALLING: whois (for mkpasswd)"
 sudo apt-get install --assume-yes whois
+echo "---- INSTALLING: shotwell"
+sudo apt-get install --assume-yes shotwell
