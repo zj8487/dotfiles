@@ -3,6 +3,8 @@ set -e
 
 echo "---- INSTALLING: build essentials"
 sudo apt-get install --assume-yes build-essential
+echo "---- INSTALLING: libgnome2-bin (for gnome-open)"
+sudo apt-get install --assume-yes libgnome2-bin
 echo "---- INSTALLING: emacs24"
 sudo apt-get install --assume-yes emacs24
 echo "---- INSTALLING: imagemagick"
@@ -21,3 +23,5 @@ echo "---- INSTALLING: intltool"
 sudo apt-get install --assume-yes intltool
 echo "---- INSTALLING: whois (for mkpasswd)"
 sudo apt-get install --assume-yes whois
+echo "---- INSTALLING: shotwell"
+sudo apt-get install --assume-yes shotwell
