@@ -3,6 +3,8 @@ set -e
 
 echo "---- INSTALLING: build essentials"
 sudo apt-get install --assume-yes build-essential
+echo "---- INSTALLING: curl"
+sudo apt-get install --assume-yes curl
 echo "---- INSTALLING: libgnome2-bin (for gnome-open)"
 sudo apt-get install --assume-yes libgnome2-bin
 echo "---- INSTALLING: emacs24"
