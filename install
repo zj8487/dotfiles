@@ -2,7 +2,7 @@
 set -e
 
 echo "---- INSTALLING: setting up folder structure"
-mkdir -p ~/local ~/src ~/.ssh
+mkdir -p ~/local ~/src ~/.ssh ~/.npm
 
 echo "---- INSTALLING: symlinks"
 ln -fs ~/dotfiles/bash/bashrc ~/.bashrc
