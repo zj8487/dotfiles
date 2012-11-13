@@ -31,3 +31,5 @@ echo "---- INSTALLING: shotwell"
 sudo apt-get install --assume-yes shotwell
 echo "---- INSTALLING: gimp"
 sudo apt-get install --assume-yes gimp
+echo "---- INSTALLING: cvs"
+sudo apt-get install --assume-yes cvs
