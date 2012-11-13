@@ -27,3 +27,5 @@ echo "---- INSTALLING: whois (for mkpasswd)"
 sudo apt-get install --assume-yes whois
 echo "---- INSTALLING: shotwell"
 sudo apt-get install --assume-yes shotwell
+echo "---- INSTALLING: libssl-dev (for bitcoinsjs-server)"
+sudo apt-get install --assume-yes libssl-dev
