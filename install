@@ -4,6 +4,9 @@ set -e
 echo "---- INSTALLING: setting up folder structure"
 mkdir -p ~/local ~/src ~/.ssh ~/.npm
 
+echo "---- INSTALLING: setting up keyboard preferences"
+sudo cp ~/dotfiles/keyboard /etc/default/keyboard
+
 echo "---- INSTALLING: symlinks"
 ln -fs ~/dotfiles/bash/bashrc ~/.bashrc
 ln -fs ~/dotfiles/git/gitconfig ~/.gitconfig
