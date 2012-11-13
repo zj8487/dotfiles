@@ -2,3 +2,4 @@
 set -e
 
 npm install -g blacksmith
+npm install -g swank-js
