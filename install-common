@@ -9,6 +9,8 @@ echo "---- INSTALLING: libgnome2-bin (for gnome-open)"
 sudo apt-get install --assume-yes libgnome2-bin
 echo "---- INSTALLING: emacs23"
 sudo apt-get install --assume-yes emacs23
+echo "---- INSTALLING: firefox"
+sudo apt-get install --assume-yes firefox
 echo "---- INSTALLING: imagemagick"
 sudo apt-get install --assume-yes imagemagick
 echo "---- INSTALLING: xclip"
@@ -29,3 +31,7 @@ echo "---- INSTALLING: shotwell"
 sudo apt-get install --assume-yes shotwell
 echo "---- INSTALLING: libssl-dev (for bitcoinsjs-server)"
 sudo apt-get install --assume-yes libssl-dev
+echo "---- INSTALLING: gimp"
+sudo apt-get install --assume-yes gimp
+echo "---- INSTALLING: cvs"
+sudo apt-get install --assume-yes cvs
