@@ -17,7 +17,17 @@ source $THIS/git-completion.bash
 source $THIS/prompt.bash
 source $THIS/npm-completion.bash
 
-export PATH=~/local/bin:$PATH
+# only prepend to path if it's not in path
+prepend_to_path() {
+    if [[ ":$PATH:" != *":$1:"* ]]; then
+        PATH=$1:$PATH
+    fi
+}
+
+prepend_to_path ~/local/bin
+
+# prevent git from opening editor for merge commit message
+export GIT_MERGE_AUTOEDIT=no
 
 # enable bash completion in interactive shells
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
