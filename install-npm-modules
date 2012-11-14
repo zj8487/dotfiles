@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
 
- "---- INSTALLING: installing global npm modules"
+echo "---- INSTALLING: installing global npm modules"
 npm install -g blacksmith
 npm install -g swank-js
