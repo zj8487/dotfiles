@@ -3,6 +3,7 @@ set -e
 
 echo "---- INSTALLING: setting up folder structure"
 mkdir -p ~/local ~/src ~/.ssh ~/.npm
+sudo chown -R magnus /usr/local
 
 echo "---- INSTALLING: setting up keyboard preferences"
 sudo cp ~/dotfiles/keyboard /etc/default/keyboard
