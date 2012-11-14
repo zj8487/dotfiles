@@ -11,6 +11,7 @@ echo "---- INSTALLING: symlinks"
 ln -fs ~/dotfiles/bash/bashrc ~/.bashrc
 ln -fs ~/dotfiles/git/gitconfig ~/.gitconfig
 ln -fs ~/dotfiles/emacs/emacs ~/.emacs
+ln -fs ~/dotfiles/xinitrc ~/.xinitrc
 ln -fs ~/dotfiles/ssh/config ~/.ssh/config
 sudo ln -fs ~/dotfiles/bash/e /usr/bin/e
 sudo ln -fs ~/dotfiles/rc.local /etc/rc.local
