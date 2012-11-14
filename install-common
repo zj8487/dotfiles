@@ -35,3 +35,5 @@ echo "---- INSTALLING: gimp"
 sudo apt-get install --assume-yes gimp
 echo "---- INSTALLING: cvs"
 sudo apt-get install --assume-yes cvs
+echo "---- INSTALLING: gnome-terminal"
+sudo apt-get install --assume-yes gnome-terminal
