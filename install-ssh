@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+echo "---- INSTALLING: .ssh folder structure"
+mkdir -p ~/.ssh
 echo "---- INSTALLING: symlink for ~/.ssh/config"
 ln -fs ~/dotfiles/ssh/config ~/.ssh/config
 echo "---- INSTALLING: sshfs"

@@ -2,7 +2,7 @@
 set -e
 
 echo "---- INSTALLING: setting up folder structure"
-mkdir -p ~/local ~/src ~/.ssh ~/.npm ~/tmp
+mkdir -p ~/local ~/src ~/.npm ~/tmp
 sudo chown -R magnus /usr/local ~/tmp ~/.npm
 
 echo "---- INSTALLING: setting up keyboard preferences"
