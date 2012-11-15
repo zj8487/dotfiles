@@ -3,13 +3,15 @@ set -e
 
 cd ~/src
 
-echo "---- INSTALLING: node $NODE_V"
-
 if [ ! -d "node" ]; then
     NODE_V=v0.8.14
+    echo "---- INSTALLING: node $NODE_V"
     git clone git://github.com/joyent/node.git
     cd node && git co $NODE_V
     NUMBER_OF_PROCESSORS=`cat /proc/cpuinfo | grep processor | wc -l`
-    ./configure && time make -j $NUMBER_OF_PROCESSORS && make install
+    ./configure --prefix=~/local
+    time make -j $NUMBER_OF_PROCESSORS && make install
+else
+    echo "---- INSTALLING: node already installed, SKIPPING!"
 fi
 
