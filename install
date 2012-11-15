@@ -2,7 +2,7 @@
 set -e
 
 echo "---- INSTALLING: setting up folder structure"
-mkdir -p ~/local ~/src ~/.npm ~/tmp
+mkdir -p ~/local ~/.npm ~/tmp
 
 echo "---- INSTALLING: setting up keyboard preferences"
 sudo cp ~/dotfiles/keyboard /etc/default/keyboard

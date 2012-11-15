@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-cd ~/src
+mkdir -p ~/src && cd ~/src
 
 if [ ! -d "node" ]; then
     NODE_V=v0.8.14
