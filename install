@@ -8,19 +8,76 @@ sudo chown -R magnus /usr/local ~/tmp ~/.npm
 echo "---- INSTALLING: setting up keyboard preferences"
 sudo cp ~/dotfiles/keyboard /etc/default/keyboard
 
-echo "---- INSTALLING: symlinks"
+echo "---- INSTALLING: symlink for ~/.bashrc"
 ln -fs ~/dotfiles/bash/bashrc ~/.bashrc
+
+echo "---- INSTALLING: symlink for ~/.gitconfig"
 ln -fs ~/dotfiles/git/gitconfig ~/.gitconfig
-ln -fs ~/dotfiles/emacs/emacs ~/.emacs
+
+echo "---- INSTALLING: symlink for ~/.xinitrc"
 ln -fs ~/dotfiles/xinitrc ~/.xinitrc
-ln -fs ~/dotfiles/ssh/config ~/.ssh/config
+
+echo "---- INSTALLING: symlink for ~/.config/openbox/lubuntu-rc.xml"
 ln -fs ~/dotfiles/lubuntu-rc.xml ~/.config/openbox/lubuntu-rc.xml
-sudo ln -fs ~/dotfiles/bash/e /usr/bin/e
+
+echo "---- INSTALLING: symlink for /etc/rc.local"
 sudo ln -fs ~/dotfiles/rc.local /etc/rc.local
 
-source ~/dotfiles/install-common
+echo "---- INSTALLING: build-essential"
+sudo apt-get install --assume-yes build-essential
+
+echo "---- INSTALLING: curl"
+sudo apt-get install --assume-yes curl
+
+echo "---- INSTALLING: libgnome2-bin (for gnome-open)"
+sudo apt-get install --assume-yes libgnome2-bin
+
+echo "---- INSTALLING: firefox"
+sudo apt-get install --assume-yes firefox
+
+echo "---- INSTALLING: imagemagick"
+sudo apt-get install --assume-yes imagemagick
+
+echo "---- INSTALLING: xclip"
+sudo apt-get install --assume-yes xclip
+
+echo "---- INSTALLING: redis-server"
+sudo apt-get install --assume-yes redis-server
+
+echo "---- INSTALLING: yum"
+sudo apt-get install --assume-yes yum
+
+echo "---- INSTALLING: ack-grep"
+sudo apt-get install --assume-yes ack-grep
+
+echo "---- INSTALLING: GNU gettext tools"
+sudo apt-get install --assume-yes gettext
+
+echo "---- INSTALLING: intltool"
+sudo apt-get install --assume-yes intltool
+
+echo "---- INSTALLING: whois (for mkpasswd)"
+sudo apt-get install --assume-yes whois
+
+echo "---- INSTALLING: shotwell"
+sudo apt-get install --assume-yes shotwell
+
+echo "---- INSTALLING: libssl-dev (for bitcoinsjs-server)"
+sudo apt-get install --assume-yes libssl-dev
+
+echo "---- INSTALLING: gimp"
+sudo apt-get install --assume-yes gimp
+
+echo "---- INSTALLING: cvs"
+sudo apt-get install --assume-yes cvs
+
+echo "---- INSTALLING: gnome-terminal"
+sudo apt-get install --assume-yes gnome-terminal
+
 source ~/dotfiles/install-emacs
 source ~/dotfiles/install-node
 source ~/dotfiles/install-npm-modules
 source ~/dotfiles/install-pidgin
 source ~/dotfiles/install-ssh
+
+echo "---- INSTALL: Finished successfully!"

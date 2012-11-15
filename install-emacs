@@ -3,6 +3,10 @@ set -e
 
 mkdir -p ~/src && cd ~/src
 
+echo "---- INSTALLING: setting up symbolic link for emacs"
+ln -fs ~/dotfiles/emacs/emacs ~/.emacs
+sudo ln -fs ~/dotfiles/bash/e /usr/bin/e
+
 echo "---- INSTALLING: emacs dependencies"
 sudo apt-get install --assume-yes libtiff4-dev libjpeg-dev libgif-dev libxpm-dev libncurses5-dev
 
