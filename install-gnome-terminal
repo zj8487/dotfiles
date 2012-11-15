@@ -2,10 +2,11 @@
 set -e
 
 echo "---- INSTALLING: setting up folder structure for gnome-terminal "
-mkdir -p ~/.gconf/apps/gnome-terminal/profiles/Default
+GT_DEFAULT=~/.gconf/apps/gnome-terminal/profiles/Default
+mkdir -p $GT_DEFAULT
 
 echo "---- INSTALLING: symlink for gnome-terminal %gconf.xml"
-ln -fs ~/dotfiles/%gconf.xml ~/.gconf/apps/gnome-terminal/profiles/Default/%gconf.xml
+ln -fs ~/dotfiles/%gconf.xml $GT_DEFAULT/%gconf.xml
 
 echo "---- INSTALLING: gnome-terminal"
 sudo apt-get install --assume-yes gnome-terminal
