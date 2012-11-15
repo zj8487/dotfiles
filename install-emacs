@@ -1,0 +1,26 @@
+#!/bin/bash
+set -e
+
+mkdir -p ~/src && cd ~/src
+
+echo "---- INSTALLING: emacs dependencies"
+sudo apt-get install --assume-yes libtiff4-dev libjpeg-dev libgif-dev libxpm-dev libncurses5-dev
+
+EMACS_V=24.2
+EMACS_BASE="emacs-$EMACS_V"
+
+if [ ! -d "$EMACS_BASE" ]; then
+    echo "---- INSTALLING: $EMACS_BASE"
+    EMACS_GZ="$EMACS_BASE.tar.gz"
+    wget -O $EMACS_GZ "ftp://ftp.gnu.org/pub/gnu/emacs/$EMACS_GZ"
+    tar xvfz $EMACS_GZ
+    cd $EMACS_BASE
+    ./configure
+    NUMBER_OF_PROCESSORS=`cat /proc/cpuinfo | grep processor | wc -l`
+    make -j $NUMBER_OF_PROCESSORS
+    sudo make install
+    rm $EMACS_GZ
+else
+    echo "---- INSTALLING: $EMACS_BASE already installed, SKIPPING!"
+fi
+

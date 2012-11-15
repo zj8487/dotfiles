@@ -18,7 +18,8 @@ sudo ln -fs ~/dotfiles/bash/e /usr/bin/e
 sudo ln -fs ~/dotfiles/rc.local /etc/rc.local
 
 source ~/dotfiles/install-common
-source ~/dotfiles/install-ssh
-source ~/dotfiles/install-pidgin
+source ~/dotfiles/install-emacs
 source ~/dotfiles/install-node
 source ~/dotfiles/install-npm-modules
+source ~/dotfiles/install-pidgin
+source ~/dotfiles/install-ssh
