@@ -14,6 +14,7 @@ ln -fs ~/dotfiles/git/gitconfig ~/.gitconfig
 ln -fs ~/dotfiles/emacs/emacs ~/.emacs
 ln -fs ~/dotfiles/xinitrc ~/.xinitrc
 ln -fs ~/dotfiles/ssh/config ~/.ssh/config
+ln -fs ~/dotfiles/lubuntu-rc.xml ~/.config/openbox/lubuntu-rc.xml
 sudo ln -fs ~/dotfiles/bash/e /usr/bin/e
 sudo ln -fs ~/dotfiles/rc.local /etc/rc.local
 
