@@ -1,6 +1,7 @@
 alias ac='. ~/env/bin/activate && cd ~/src/braian/'
 alias ack='ack-grep'
 alias bankid='cat /media/usb-stick/passwords/bank-id | xclip'
+alias bc='bc <(echo scale=10)'
 alias cd..='cd ..'
 alias cd-='cd -'
 alias chr='google-chrome --js-flags="--trace-opt --trace-bailout --trace-deopt --prof"'
