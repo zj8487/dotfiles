@@ -23,7 +23,7 @@ if [ ! -d "$EMACS_BASE" ]; then
     NUMBER_OF_PROCESSORS=`cat /proc/cpuinfo | grep processor | wc -l`
     make -j $NUMBER_OF_PROCESSORS
     sudo make install
-    rm $EMACS_GZ
+    cd ~/src && rm $EMACS_GZ
 else
     echo "---- INSTALLING: $EMACS_BASE already installed, SKIPPING!"
 fi
