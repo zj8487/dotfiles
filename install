@@ -31,9 +31,6 @@ sudo apt-get install --assume-yes curl
 echo "---- INSTALLING: libgnome2-bin (for gnome-open)"
 sudo apt-get install --assume-yes libgnome2-bin
 
-echo "---- INSTALLING: firefox"
-sudo apt-get install --assume-yes firefox
-
 echo "---- INSTALLING: imagemagick"
 sudo apt-get install --assume-yes imagemagick
 
@@ -79,5 +76,6 @@ source ~/dotfiles/install-node
 source ~/dotfiles/install-npm-modules
 source ~/dotfiles/install-pidgin
 source ~/dotfiles/install-ssh
+source ~/dotfiles/install-firefox
 
 echo "---- INSTALL: Finished successfully!"
