@@ -77,5 +77,6 @@ source ~/dotfiles/install-npm-modules
 source ~/dotfiles/install-pidgin
 source ~/dotfiles/install-ssh
 source ~/dotfiles/install-firefox
+source ~/dotfiles/install-opera
 
 echo "---- INSTALL: Finished successfully!"

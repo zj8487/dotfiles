@@ -1,0 +1,15 @@
+#!/bin/bash
+set -e
+
+mkdir -p ~/src && cd ~/src
+
+OPERA_FOLDER=opera-12.11-1661.i386.linux
+
+if [ ! -d "$OPERA_FOLDER" ]; then
+    echo "---- INSTALLING: opera browser"
+    OPERA_FILE=$OPERA_FOLDER.tar.xz
+    wget http://snapshot.opera.com/unix/rvt_12.11-1661/$OPERA_FILE
+    tar xvf $OPERA_FILE
+    opera-12.11-1661*/install --prefix ~/local --unattended --name opera-12.1
+    rm $OPERA_FILE
+fi
