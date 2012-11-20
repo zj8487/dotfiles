@@ -70,6 +70,9 @@ sudo apt-get install --assume-yes cvs
 echo "---- INSTALLING: irssi"
 sudo apt-get install --assume-yes irssi
 
+echo "---- INSTALLING: nc6"
+sudo apt-get install --assume-yes netcat6
+
 source ~/dotfiles/install-gnome-terminal
 source ~/dotfiles/install-emacs
 source ~/dotfiles/install-node
