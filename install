@@ -73,13 +73,14 @@ sudo apt-get install --assume-yes irssi
 echo "---- INSTALLING: nc6"
 sudo apt-get install --assume-yes netcat6
 
+source ~/dotfiles/install-couchdb
 source ~/dotfiles/install-gnome-terminal
 source ~/dotfiles/install-emacs
+source ~/dotfiles/install-firefox
 source ~/dotfiles/install-node
 source ~/dotfiles/install-npm-modules
+source ~/dotfiles/install-opera
 source ~/dotfiles/install-pidgin
 source ~/dotfiles/install-ssh
-source ~/dotfiles/install-firefox
-source ~/dotfiles/install-opera
 
 echo "---- INSTALL: Finished successfully!"

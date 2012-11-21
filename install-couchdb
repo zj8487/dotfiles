@@ -1,0 +1,17 @@
+#!/bin/bash
+set -e
+
+mkdir -p ~/src && cd ~/src
+
+COUCHDB_FOLDER=build-couchdb
+
+if [ ! -d "$COUCHDB_FOLDER" ]; then
+    echo "---- INSTALLING: dependencies for build-couchdb"
+    sudo apt-get install --assume-yes help2man make gcc zlib1g-dev libssl-dev rake
+    echo "---- INSTALLING: build-couchdb"
+    git clone git://github.com/iriscouch/build-couchdb
+    cd build-couchdb
+    git submodule init
+    git submodule update
+    rake
+fi
