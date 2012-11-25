@@ -96,3 +96,9 @@
 
 ;; Turns on flymake for all files which have a flymake mode
 (add-hook 'find-file-hook 'flymake-find-file-hook)
+
+;; Show error/warning message in status buffer
+(custom-set-variables
+ '(help-at-pt-timer-delay 0.5)
+ '(help-at-pt-display-when-idle '(flymake-overlay)))
+
