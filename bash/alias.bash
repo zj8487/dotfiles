@@ -11,6 +11,7 @@ alias igrep='grep -i'
 alias l="ls -ltrha"
 alias ls="ls --color=auto"
 alias m="make -j $NUMBER_OF_PROCESSORS"
+alias myip="curl http://whatismyip.nodejitsu.com/index.json"
 alias o="gnome-open"
 alias rlocate='locate --regex'
 alias sr='pserve development.ini --reload'
