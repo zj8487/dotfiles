@@ -76,6 +76,9 @@ sudo apt-get install --assume-yes netcat6
 echo "---- INSTALLING: eog"
 sudo apt-get install --assume-yes eog
 
+echo "---- INSTALLING: rar"
+sudo apt-get install --assume-yes rar unrar
+
 source ~/dotfiles/install-couchdb
 source ~/dotfiles/install-gnome-terminal
 source ~/dotfiles/install-emacs
