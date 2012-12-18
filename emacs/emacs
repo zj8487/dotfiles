@@ -1,3 +1,11 @@
+;; Turn off mouse interface early in startup to avoid momentary display
+(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+
+;; No splash screen please ... jeez
+(setq inhibit-startup-message t)
+
 (add-to-list 'load-path "~/dotfiles/emacs/color-theme")
 
 (require 'color-theme)
@@ -24,15 +32,6 @@
 
 ; Show which parenthesis belongs together upon placing the cursor on one of them
 (show-paren-mode t)
-
-; Hide menu bar
-(menu-bar-mode -1)
-
-; Hide toolbar
-(tool-bar-mode -1)
-
-; Hide scrollbar
-(scroll-bar-mode -1)
 
 ; Always follow symbolic links to version controlled files
 (setq vc-follow-symlinks t)
