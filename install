@@ -25,6 +25,12 @@ sudo ln -fs ~/dotfiles/rc.local /etc/rc.local
 echo "---- INSTALLING: build-essential"
 sudo apt-get install --assume-yes build-essential
 
+echo "---- INSTALLING: aptitude"
+sudo apt-get install --assume-yes aptitude
+
+echo "---- INSTALLING: libavahi-compat-libdnssd-dev"
+sudo apt-get install --assume-yes libavahi-compat-libdnssd-dev
+
 echo "---- INSTALLING: curl"
 sudo apt-get install --assume-yes curl
 
