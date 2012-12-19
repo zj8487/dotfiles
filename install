@@ -34,6 +34,9 @@ sudo apt-get install --assume-yes libavahi-compat-libdnssd-dev
 echo "---- INSTALLING: curl"
 sudo apt-get install --assume-yes curl
 
+echo "---- INSTALLING: gnome-utils"
+sudo apt-get install --assume-yes gnome-utils
+
 echo "---- INSTALLING: libgnome2-bin (for gnome-open)"
 sudo apt-get install --assume-yes libgnome2-bin
 
