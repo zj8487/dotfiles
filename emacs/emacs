@@ -19,6 +19,14 @@
 (setq-default save-place t)
 (setq save-place-file (expand-file-name ".places" user-emacs-directory))
 
+;; Add package archives
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/"))
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/"))
+(package-initialize)
+
 ;; Color theme stuff
 (add-to-list 'load-path "~/dotfiles/emacs/color-theme")
 
