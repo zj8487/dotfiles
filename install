@@ -93,6 +93,7 @@ source ~/dotfiles/install-gnome-terminal
 source ~/dotfiles/install-emacs
 source ~/dotfiles/install-firefox
 source ~/dotfiles/install-node
+source ~/dotfiles/install-dtrace
 source ~/dotfiles/install-npm-modules
 source ~/dotfiles/install-opera
 source ~/dotfiles/install-pidgin
