@@ -9,7 +9,7 @@ if [ ! -d "$DTRACE" ]; then
     echo "---- INSTALLING: $DTRACE"
     git clone git://github.com/dtrace4linux/linux.git "$DTRACE"
     cd "$DTRACE"
-    sudo ./tools/get-deps.pl
+    sudo ./tools/get-deps.pl --assume-yes
     make all
     sudo make install
     sudo make load
