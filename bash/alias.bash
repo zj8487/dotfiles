@@ -6,11 +6,12 @@ alias cd..='cd ..'
 alias cd-='cd -'
 alias chr='google-chrome --js-flags="--trace-opt --trace-bailout --trace-deopt --prof"'
 alias duf='du --max-depth=1 | sort -n -r'
-alias getnpm='curl http://npmjs.org/install.sh | sh'
+alias getnpm='curl https://npmjs.org/install.sh | sh'
 alias igrep='grep -i'
 alias l="ls -ltrha"
 alias ls="ls --color=auto"
 alias m="make -j $NUMBER_OF_PROCESSORS"
+alias n="node"
 alias myip="curl http://whatismyip.nodejitsu.com/index.json"
 alias o="gnome-open"
 alias rlocate='locate --regex'
