@@ -3,5 +3,8 @@ set -e
 
 echo "---- INSTALLING: installing global npm modules"
 npm install -g blacksmith
-npm install -g swank-js
+npm install -g browserify
+npm install -g node-gyp
 npm install -g rsa-json
+npm install -g swank-js
+npm install -g uglify-js2
