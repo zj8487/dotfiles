@@ -88,6 +88,10 @@ sudo apt-get install --assume-yes eog
 echo "---- INSTALLING: rar"
 sudo apt-get install --assume-yes rar unrar
 
+echo "---- INSTALLING: dvd stuff"
+sudo apt-get install --assume-yes libdvdnav4 libdvdread4 gstreamer0.10-plugins-bad gstreamer0.10-plugins-ugly
+sudo /usr/share/doc/libdvdread4/install-css.sh
+
 source ~/dotfiles/install-couchdb
 source ~/dotfiles/install-gnome-terminal
 source ~/dotfiles/install-emacs
