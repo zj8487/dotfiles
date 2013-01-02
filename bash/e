@@ -1,14 +1,3 @@
 #!/bin/bash
 
-edit() {
-    local FILE=$1
-
-    if [[ -z $FILE ]]; then
-	exec emacsclient -a "" -n -c -e "(fullscreen)"
-        return
-    fi
-
-    exec emacsclient -a "" -n -c -e "(find-file \"$FILE\")" "(fullscreen)"
-}
-
-edit $1
+emacs "$@" &
