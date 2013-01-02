@@ -96,6 +96,7 @@ source ~/dotfiles/install-couchdb
 source ~/dotfiles/install-gnome-terminal
 source ~/dotfiles/install-emacs
 source ~/dotfiles/install-firefox
+source ~/dotfiles/install-fonts
 source ~/dotfiles/install-node
 source ~/dotfiles/install-dtrace
 source ~/dotfiles/install-npm-modules

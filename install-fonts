@@ -1,0 +1,8 @@
+#!/bin/bash
+set -e
+
+mkdir -p ~/.fonts
+
+echo "---- INSTALLING: fonts"
+ln -fs ~/dotfiles/fonts ~/.fonts
+fc-cache
