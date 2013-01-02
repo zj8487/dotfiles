@@ -125,3 +125,6 @@
 
 ;; Start emacs in full screen mode
 (fullscreen)
+
+;; 
+(set-default-font "Source Code Pro 8")
