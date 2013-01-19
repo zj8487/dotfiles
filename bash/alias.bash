@@ -9,6 +9,7 @@ alias duf='du --max-depth=1 | sort -n -r'
 alias getnpm='curl https://npmjs.org/install.sh | sh'
 alias igrep='grep -i'
 alias l="ls -ltrha"
+alias ll="ls -lha"
 alias ls="ls --color=auto"
 alias m="make -j $NUMBER_OF_PROCESSORS"
 alias n="node"
