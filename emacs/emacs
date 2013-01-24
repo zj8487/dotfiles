@@ -128,3 +128,5 @@
 
 ;; 
 (set-default-font "Source Code Pro 8")
+
+(setq-default indent-tabs-mode nil)
