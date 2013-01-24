@@ -106,17 +106,17 @@
 ; Install jshint-mode
 (add-to-list 'load-path "~/src/jshint-mode")
 (require 'flymake-jshint)
-;(add-hook 'js-mode-hook 
-;	  (lambda () 
-;	  	  (flymake-mode t)
-;	  	  (local-set-key "\en" 'flymake-goto-next-error)
-;	  	  (local-set-key "\ep" 'flymake-goto-prev-error)
-;	  )
-;)
+(add-hook 'js-mode-hook 
+	  (lambda () 
+	  	  (flymake-mode t)
+	  	  (local-set-key "\en" 'flymake-goto-next-error)
+	  	  (local-set-key "\ep" 'flymake-goto-prev-error)
+	  )
+)
 
 
 ;; Turns on flymake for all files which have a flymake mode
-;(add-hook 'find-file-hook 'flymake-find-file-hook)
+(add-hook 'find-file-hook 'flymake-find-file-hook)
 
 ;; Show error/warning message in status buffer
 (custom-set-variables
@@ -126,7 +126,8 @@
 ;; Start emacs in full screen mode
 (fullscreen)
 
-;; 
+;; Font used
 (set-default-font "Source Code Pro 8")
 
+;; Use spaces and not fecking tabs when auto indenting!
 (setq-default indent-tabs-mode nil)
