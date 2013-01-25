@@ -100,13 +100,19 @@
 (global-set-key (quote [67108907]) 'enlarge-window);; C-+ 
 (global-set-key (quote [M-down]) `enlarge-window);; M-down
 
-; Two space identation for JavaScript
-(setq js-indent-level 2)
+;;(setq load-path (cons "~/dotfiles/emacs/js3-mode" load-path))
+
+(add-to-list 'load-path "~/dotfiles/emacs/js3-mode")
+(autoload 'js3-mode "js3" nil t)
+(add-to-list 'auto-mode-alist '("\\.js$" . js3-mode))
+
+; Two space identation for JavaScript (apparently implicit with js3 mode)
+;;(setq js-indent-level 2)
 
 ; Install jshint-mode
 (add-to-list 'load-path "~/src/jshint-mode")
 (require 'flymake-jshint)
-(add-hook 'js-mode-hook 
+(add-hook 'js3-mode-hook 
 	  (lambda () 
 	  	  (flymake-mode t)
 	  	  (local-set-key "\en" 'flymake-goto-next-error)
@@ -121,7 +127,21 @@
 ;; Show error/warning message in status buffer
 (custom-set-variables
  '(help-at-pt-timer-delay 0.5)
- '(help-at-pt-display-when-idle '(flymake-overlay)))
+ '(help-at-pt-display-when-idle '(flymake-overlay))
+ '(js3-auto-indent-p t)          ; it's nice for commas to right themselves.
+ '(js3-enter-indents-newline t)  ; don't need to push tab before typing
+ '(js3-indent-on-enter-key t)    ; fix indenting before moving on
+ '(js3-mirror-mode t)
+ ;;'(js3-indent-dots t)
+ ;;'(js3-indent-level 1)
+ ;;'(js3-lazy-commas t)
+ ;;'(js3-lazy-operators t)
+ ;;'(js3-lazy-dots t)
+ ;;'(js3-expr-indent-offset 2)
+ ;;'(js3-paren-indent-offset 2)
+ ;;'(js3-square-indent-offset 2)
+ ;;'(js3-curly-indent-offset 2)
+)
 
 ;; Start emacs in full screen mode
 (fullscreen)
