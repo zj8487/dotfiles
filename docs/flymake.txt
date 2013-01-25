@@ -1,0 +1,8 @@
+How to disable the extremely annoying flymake warning when doing /* in .js files
+
+1. comment out the line producing the flymake error (see ./flymake.el)
+   the file is located in ~/src/emacs24.2/lisp/progmodes/flymake.el
+2. byte compile flymake.el with the following command:
+   emacs --batch -f batch-byte-compile flymake.el
+
+Done
