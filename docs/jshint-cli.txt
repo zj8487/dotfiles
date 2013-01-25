@@ -1,0 +1,1 @@
+curl --form source="</home/magnus/src/levelup-benchmark/index.js" --form jshintrc="/home/magnus/src/levelup-benchmark/.jshintrc" --form mode="jshint" http://127.0.0.1:3003/check
