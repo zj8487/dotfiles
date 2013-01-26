@@ -100,16 +100,12 @@
 (global-set-key (quote [67108907]) 'enlarge-window);; C-+ 
 (global-set-key (quote [M-down]) `enlarge-window);; M-down
 
-;;(setq load-path (cons "~/dotfiles/emacs/js3-mode" load-path))
-
+;; js3 mode
 (add-to-list 'load-path "~/dotfiles/emacs/js3-mode")
 (autoload 'js3-mode "js3" nil t)
 (add-to-list 'auto-mode-alist '("\\.js$" . js3-mode))
 
-; Two space identation for JavaScript (apparently implicit with js3 mode)
-;;(setq js-indent-level 2)
-
-; Install jshint-mode
+; Install jshint-mode (uses flymake)
 (add-to-list 'load-path "~/src/jshint-mode")
 (require 'flymake-jshint)
 (add-hook 'js3-mode-hook 
@@ -120,9 +116,30 @@
 	  )
 )
 
-
 ;; Turns on flymake for all files which have a flymake mode
 (add-hook 'find-file-hook 'flymake-find-file-hook)
+
+;; Flymake log level. Useful when trouble shooting flymake problems
+(setq flymake-log-level 3)
+
+;; Start emacs in full screen mode
+(fullscreen)
+
+;; Font used
+(set-default-font "Source Code Pro 8")
+
+;; Use spaces and not fecking tabs when auto indenting!
+(setq-default indent-tabs-mode nil)
+
+;; Diminish modeline clutter
+(require 'diminish)
+;(diminish 'wrap-region-mode)
+;(diminish 'yas/minor-mode)
+
+;; Elisp go-to-definition with M-. and back again with M-,
+(autoload 'elisp-slime-nav-mode "elisp-slime-nav")
+(add-hook 'emacs-lisp-mode-hook (lambda () (elisp-slime-nav-mode t)))
+(eval-after-load 'elisp-slime-nav '(diminish 'elisp-slime-nav-mode))
 
 ;; Show error/warning message in status buffer
 (custom-set-variables
@@ -143,11 +160,3 @@
  ;;'(js3-curly-indent-offset 2)
 )
 
-;; Start emacs in full screen mode
-(fullscreen)
-
-;; Font used
-(set-default-font "Source Code Pro 8")
-
-;; Use spaces and not fecking tabs when auto indenting!
-(setq-default indent-tabs-mode nil)
