@@ -120,7 +120,7 @@
 (add-hook 'find-file-hook 'flymake-find-file-hook)
 
 ;; Flymake log level. Useful when trouble shooting flymake problems
-(setq flymake-log-level 3)
+;;(setq flymake-log-level 3)
 
 ;; Start emacs in full screen mode
 (fullscreen)
@@ -143,8 +143,12 @@
 
 ;; Show error/warning message in status buffer
 (custom-set-variables
+
  '(help-at-pt-timer-delay 0.5)
  '(help-at-pt-display-when-idle '(flymake-overlay))
+
+ '(jshint-mode-jshintrc "/home/magnus/dotfiles/js/jshintrc.json")
+
  '(js3-auto-indent-p t)          ; it's nice for commas to right themselves.
  '(js3-enter-indents-newline t)  ; don't need to push tab before typing
  '(js3-indent-on-enter-key t)    ; fix indenting before moving on
