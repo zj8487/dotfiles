@@ -74,5 +74,5 @@
   , "nomen": false        // false -> Allow dangling _ in variable names
   , "onevar": true        // true -> Warn on multiple var in functions
   , "passfail": false     // false -> Do not stop on first error
-  , "white": true         // true -> Use Douglas Crockfords good parts
+  , "white": false        // true -> Use Douglas Crockfords good parts
 }
