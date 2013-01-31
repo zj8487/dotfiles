@@ -33,7 +33,7 @@
 (require 'cc-mode)
 (define-key c-mode-map "\C-]" 'cc-mode-comment-out-line)
 (define-key c++-mode-map "\C-]" 'cc-mode-comment-out-line)
-(add-hook 'js3-mode-hook
+(add-hook 'js2-mode-hook
 	  '(lambda() (local-set-key "" 'cc-mode-comment-out-line)))
 
 ;;

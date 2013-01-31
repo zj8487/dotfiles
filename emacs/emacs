@@ -1,26 +1,6 @@
 ;; -*- mode: Lisp; fill-column: 75; comment-column: 50; -*-
 
-;; Turn off mouse interface early in startup to avoid momentary display
-(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
-(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
-
-;; No splash screen please ... jeez
-(setq inhibit-startup-message t)
-
-;; Write backup files to own directory
-(setq backup-directory-alist
-      `(("." . ,(expand-file-name
-                 (concat user-emacs-directory "backups")))))
-
-;; Make backups of files, even when they're in version control
-(setq vc-make-backup-files t)
-
-;; Save point position between sessions
-(require 'saveplace)
-(setq-default save-place t)
-(setq save-place-file (expand-file-name ".places" user-emacs-directory))
-
+;; --------------------------------------------------------------------
 ;; Add package archives
 (require 'package)
 (add-to-list 'package-archives
@@ -28,6 +8,124 @@
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (package-initialize)
+;; --------------------------------------------------------------------
+
+;; --------------------------------------------------------------------
+;; http://whattheemacsd.com/init.el-01.html
+;; Turn off mouse interface early in startup to avoid momentary display
+(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
+(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
+;; No splash screen please ... jeez
+(setq inhibit-startup-message t)
+;; --------------------------------------------------------------------
+
+;; --------------------------------------------------------------------
+;; http://whattheemacsd.com/init.el-02.html
+;; Write backup files to own directory
+(setq backup-directory-alist
+      `(("." . ,(expand-file-name
+                 (concat user-emacs-directory "backups")))))
+;; Make backups of files, even when they're in version control
+(setq vc-make-backup-files t)
+;; --------------------------------------------------------------------
+
+;; --------------------------------------------------------------------
+;; http://whattheemacsd.com/init.el-03.html
+;; Save point position between sessions
+(require 'saveplace)
+(setq-default save-place t)
+(setq save-place-file (expand-file-name ".places" user-emacs-directory))
+;; --------------------------------------------------------------------
+
+;; --------------------------------------------------------------------
+;; http://whattheemacsd.com/init.el-04.html
+;; Diminish modeline clutter
+(require 'diminish)
+;(diminish 'wrap-region-mode)
+;(diminish 'yas/minor-mode)
+;; --------------------------------------------------------------------
+
+;; --------------------------------------------------------------------
+;; http://whattheemacsd.com/init.el-05.html
+;; Elisp go-to-definition with M-. and back again with M-,
+(autoload 'elisp-slime-nav-mode "elisp-slime-nav")
+(add-hook 'emacs-lisp-mode-hook (lambda () (elisp-slime-nav-mode t)))
+(eval-after-load 'elisp-slime-nav '(diminish 'elisp-slime-nav-mode))
+;; --------------------------------------------------------------------
+
+;; --------------------------------------------------------------------
+;; http://whattheemacsd.com/my-misc.el-01.html
+;; Webjump to search using different enginges, e.g. google, wikipedia
+(global-set-key (kbd "C-x g") 'webjump)
+;; Add Urban Dictionary to webjump
+(eval-after-load "webjump"
+'(add-to-list 'webjump-sites
+              '("Urban Dictionary" .
+                [simple-query
+                 "www.urbandictionary.com"
+                 "http://www.urbandictionary.com/define.php?term="
+                 ""])))
+;; --------------------------------------------------------------------
+
+;; --------------------------------------------------------------------
+;; http://whattheemacsd.com/key-bindings.el-01.html
+;; Awesome goto line that shows the line numbers to the left
+(global-set-key [remap goto-line] 'goto-line-with-feedback)
+(defun goto-line-with-feedback ()
+  "Show line numbers temporarily, while prompting for the line number input"
+  (interactive)
+  (unwind-protect
+      (progn
+        (linum-mode 1)
+        (goto-line (read-number "Goto line: ")))
+    (linum-mode -1)))
+;; --------------------------------------------------------------------
+
+;; --------------------------------------------------------------------
+;; http://whattheemacsd.com/setup-shell.el-01.html
+;; Tap C-d twice to stop shell and kill buffer
+(defun comint-delchar-or-eof-or-kill-buffer (arg)
+  (interactive "p")
+  (if (null (get-buffer-process (current-buffer)))
+      (kill-buffer)
+    (comint-delchar-or-maybe-eof arg)))
+(add-hook 'shell-mode-hook
+          (lambda ()
+            (define-key shell-mode-map
+              (kbd "C-d") 'comint-delchar-or-eof-or-kill-buffer)))
+;; --------------------------------------------------------------------
+
+;; --------------------------------------------------------------------
+;; http://whattheemacsd.com/editing-defuns.el-01.html
+;; Awesome! Stand anywhere on a line and start a new line below or
+;; above
+(defun open-line-below ()
+  (interactive)
+  (end-of-line)
+  (newline)
+  (indent-for-tab-command))
+(defun open-line-above ()
+  (interactive)
+  (beginning-of-line)
+  (newline)
+  (forward-line -1)
+  (indent-for-tab-command))
+(global-set-key (kbd "<C-return>") 'open-line-below)
+(global-set-key (kbd "<C-S-return>") 'open-line-above)
+;; --------------------------------------------------------------------
+
+;; --------------------------------------------------------------------
+;; http://whattheemacsd.com/html
+;; --------------------------------------------------------------------
+
+;; --------------------------------------------------------------------
+;; http://whattheemacsd.com/html
+;; --------------------------------------------------------------------
+
+;; --------------------------------------------------------------------
+;; http://whattheemacsd.com/html
+;; --------------------------------------------------------------------
 
 ;; Color theme stuff
 (add-to-list 'load-path "~/dotfiles/emacs/color-theme")
@@ -48,10 +146,10 @@
 (require 'doremi-cmd)
 
 (defun fullscreen (&optional f)
-       (interactive)
-       (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
+  (interactive)
+  (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
 	    		 '(2 "_NET_WM_STATE_MAXIMIZED_VERT" 0))
-       (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
+  (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
 	    		 '(2 "_NET_WM_STATE_MAXIMIZED_HORZ" 0)))
 
 ; Show which parenthesis belongs together upon placing the cursor on one of them
@@ -102,27 +200,24 @@
 (global-set-key (quote [67108907]) 'enlarge-window);; C-+ 
 (global-set-key (quote [M-down]) `enlarge-window);; M-down
 
-;; js3 mode
-(add-to-list 'load-path "~/dotfiles/emacs/js3-mode")
-(autoload 'js3-mode "js3" nil t)
-(add-to-list 'auto-mode-alist '("\\.js$" . js3-mode))
+;; js2 mode
+(add-to-list 'load-path "~/src/js2-mode")
+(autoload 'js2-mode "js2-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 
+;; --------------------------------------------------------------------
 ; Install jshint-mode (uses flymake)
 (add-to-list 'load-path "~/src/jshint-mode")
 (require 'flymake-jshint)
-(add-hook 'js3-mode-hook 
-	  (lambda () 
-	  	  (flymake-mode t)
-	  	  (local-set-key "\en" 'flymake-goto-next-error)
-	  	  (local-set-key "\ep" 'flymake-goto-prev-error)
-	  )
-)
-
+(add-hook 'js2-mode-hook (lambda () 
+                           (flymake-mode t)
+                           (local-set-key "\en" 'flymake-goto-next-error)
+                           (local-set-key "\ep" 'flymake-goto-prev-error)))
 ;; Turns on flymake for all files which have a flymake mode
 (add-hook 'find-file-hook 'flymake-find-file-hook)
-
 ;; Flymake log level. Useful when trouble shooting flymake problems
 ;;(setq flymake-log-level 3)
+;; --------------------------------------------------------------------
 
 ;; Start emacs in full screen mode
 (fullscreen)
@@ -133,16 +228,6 @@
 ;; Use spaces and not fecking tabs when auto indenting!
 (setq-default indent-tabs-mode nil)
 
-;; Diminish modeline clutter
-(require 'diminish)
-;(diminish 'wrap-region-mode)
-;(diminish 'yas/minor-mode)
-
-;; Elisp go-to-definition with M-. and back again with M-,
-(autoload 'elisp-slime-nav-mode "elisp-slime-nav")
-(add-hook 'emacs-lisp-mode-hook (lambda () (elisp-slime-nav-mode t)))
-(eval-after-load 'elisp-slime-nav '(diminish 'elisp-slime-nav-mode))
-
 ;; Show error/warning message in status buffer
 (custom-set-variables
 
@@ -151,10 +236,13 @@
 
  '(jshint-mode-jshintrc "/home/magnus/dotfiles/js/jshintrc.json")
 
- '(js3-auto-indent-p t)          ; it's nice for commas to right themselves.
- '(js3-enter-indents-newline t)  ; don't need to push tab before typing
+ '(js2-basic-offset 2)
+ '(js2-pretty-multiline-declarations 'all)
+
+ ;;'(js3-auto-indent-p t)          ; it's nice for commas to right themselves.
+ ;;'(js3-enter-indents-newline t)  ; don't need to push tab before typing
  ;;'(js3-indent-on-enter-key t)    ; fix indenting before moving on
- '(js3-mirror-mode t)
+ ;;'(js3-mirror-mode t)
  ;;'(js3-indent-dots t)
  ;;'(js3-indent-level 1)
  ;;'(js3-lazy-commas t)
@@ -165,4 +253,10 @@
  ;;'(js3-square-indent-offset 2)
  ;;'(js3-curly-indent-offset 2)
 )
+
+;; Join two lines
+(global-set-key (kbd "M-j")
+                (lambda ()
+                  (interactive)
+                  (join-line -1)))
 
