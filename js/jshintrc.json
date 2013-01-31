@@ -22,7 +22,7 @@
   , "trailing": true      // true -> Warn about trailing whitespace
   , "maxparams": 4        // Maximum number of parameters in a function
   , "maxdepth": 2         // Maximum nested levels
-  , "maxstatements": 10   // Maximum number of statements in a function
+  , "maxstatements": 15   // Maximum number of statements in a function
   , "maxcomplexity": 5    // Maximum cyclomatic complexity
   , "maxlen": 80          // Maximum row length
 
