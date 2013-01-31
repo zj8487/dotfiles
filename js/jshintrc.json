@@ -4,7 +4,7 @@
     "bitwise": true       // true -> Prohibit bitwise operators &, | and ^
   , "camelcase": false    // false -> Variables doesn't have to be in camelCase
   , "curly": false        // true -> Loops and conditionals must have curly braces
-  , "eqeqeq": true        // true -> Must use either === or !==
+  , "eqeqeq": false       // true -> Must use either === or !==
   , "forin": false        // Seems buggy, false or true doesn't matter
   , "immed": false        // Seems buggy, false or true doesn't matter
   , "indent": 2           // Indentation
