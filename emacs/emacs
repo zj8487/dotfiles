@@ -1,16 +1,6 @@
 ;; -*- mode: Lisp; fill-column: 75; comment-column: 50; -*-
 
 ;; --------------------------------------------------------------------
-;; Add package archives
-(require 'package)
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(package-initialize)
-;; --------------------------------------------------------------------
-
-;; --------------------------------------------------------------------
 ;; http://whattheemacsd.com/init.el-01.html
 ;; Turn off mouse interface early in startup to avoid momentary display
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
@@ -18,6 +8,29 @@
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 ;; No splash screen please ... jeez
 (setq inhibit-startup-message t)
+;; --------------------------------------------------------------------
+
+;; Set path to dependencies
+(setq site-lisp-dir
+      (expand-file-name "site-lisp" default-directory))
+
+;; Set up load path
+(add-to-list 'load-path default-directory)
+(add-to-list 'load-path site-lisp-dir)
+
+;; Add external projects to load path
+(dolist (project (directory-files site-lisp-dir t "\\w+"))
+  (when (file-directory-p project)
+    (add-to-list 'load-path project)))
+
+;; --------------------------------------------------------------------
+;; Add package archives TODO move these elsewhere? check magnars stuff
+(require 'package)
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(package-initialize)
 ;; --------------------------------------------------------------------
 
 ;; --------------------------------------------------------------------
@@ -186,6 +199,7 @@
   (interactive)
   (select-window (next-window)))
 
+;; TODO move to key-bindings.el ?
 (global-set-key "\C-c\C-z" 'suspend-frame)
 (global-set-key "\C-xl" 'electric-buffer-list)
 (global-set-key "\eg" 'goto-line)
@@ -230,20 +244,27 @@
 (setq-default indent-tabs-mode nil)
 
 ;; Show error/warning message in status buffer
+;; TODO use something else than custom-set-variables, need to split out settings and
+;; not keep them all in the same place, how do you set a defcustom variable if not 
+;; using custom-set-variables?
 (custom-set-variables
 
  '(help-at-pt-timer-delay 0.5)
  '(help-at-pt-display-when-idle '(flymake-overlay))
 
  '(jshint-mode-jshintrc "/home/magnus/dotfiles/js/jshintrc.json")
-
- ;;'(js2-basic-offset 2)
- ;;'(js2-pretty-multiline-declarations 'all)
 )
 
-;; Join two lines
+;; --------------------------------------------------------------------
+;; Pull up the line below and join with the current line
 (global-set-key (kbd "M-j")
                 (lambda ()
                   (interactive)
                   (join-line -1)))
+;; --------------------------------------------------------------------
 
+;; --------------------------------------------------------------------
+;; Buffer names with folders -> Get rid of buffers named foo<1> etc
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'reverse)
+;; --------------------------------------------------------------------
