@@ -200,10 +200,11 @@
 (global-set-key (quote [67108907]) 'enlarge-window);; C-+ 
 (global-set-key (quote [M-down]) `enlarge-window);; M-down
 
-;; js2 mode
-(add-to-list 'load-path "~/src/js2-mode")
-(autoload 'js2-mode "js2-mode" nil t)
-(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+;; Language specific setup files
+(eval-after-load 'js2-mode '(require 'setup-js2-mode))
+
+;; Map files to modes
+(require 'mode-mappings)
 
 ;; --------------------------------------------------------------------
 ; Install jshint-mode (uses flymake)
