@@ -11,8 +11,7 @@
 ;; --------------------------------------------------------------------
 
 ;; Set path to dependencies
-(setq site-lisp-dir
-      (expand-file-name "site-lisp" default-directory))
+(setq site-lisp-dir "~/dotfiles/emacs/site-lisp")
 
 ;; Set up load path
 (add-to-list 'load-path default-directory)

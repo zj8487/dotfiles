@@ -1,0 +1,3 @@
+[submodule "emacs/site-lisp/js2-mode"]
+	path = emacs/site-lisp/js2-mode
+	url = https://github.com/ralphtheninja/js2-mode.git
