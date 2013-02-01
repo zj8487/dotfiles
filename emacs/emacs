@@ -236,22 +236,8 @@
 
  '(jshint-mode-jshintrc "/home/magnus/dotfiles/js/jshintrc.json")
 
- '(js2-basic-offset 2)
- '(js2-pretty-multiline-declarations 'all)
-
- ;;'(js3-auto-indent-p t)          ; it's nice for commas to right themselves.
- ;;'(js3-enter-indents-newline t)  ; don't need to push tab before typing
- ;;'(js3-indent-on-enter-key t)    ; fix indenting before moving on
- ;;'(js3-mirror-mode t)
- ;;'(js3-indent-dots t)
- ;;'(js3-indent-level 1)
- ;;'(js3-lazy-commas t)
- ;;'(js3-lazy-operators t)
- ;;'(js3-lazy-dots t)
- ;;'(js3-expr-indent-offset 2)
- ;;'(js3-paren-indent-offset 2)
- ;;'(js3-square-indent-offset 2)
- ;;'(js3-curly-indent-offset 2)
+ ;;'(js2-basic-offset 2)
+ ;;'(js2-pretty-multiline-declarations 'all)
 )
 
 ;; Join two lines
