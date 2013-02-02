@@ -157,12 +157,14 @@
 (add-to-list 'load-path "~/dotfiles/emacs/doremi")
 (require 'doremi-cmd)
 
+;; Start emacs in full screen mode
 (defun fullscreen (&optional f)
   (interactive)
   (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
 	    		 '(2 "_NET_WM_STATE_MAXIMIZED_VERT" 0))
   (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
 	    		 '(2 "_NET_WM_STATE_MAXIMIZED_HORZ" 0)))
+(fullscreen)
 
 ; Show which parenthesis belongs together upon placing the cursor on one of them
 (show-paren-mode t)
@@ -221,7 +223,6 @@
 
 ;; --------------------------------------------------------------------
 ; Install jshint-mode (uses flymake)
-(add-to-list 'load-path "~/src/jshint-mode")
 (require 'flymake-jshint)
 (add-hook 'js2-mode-hook (lambda () 
                            (flymake-mode t)
@@ -232,9 +233,6 @@
 ;; Flymake log level. Useful when trouble shooting flymake problems
 ;;(setq flymake-log-level 3)
 ;; --------------------------------------------------------------------
-
-;; Start emacs in full screen mode
-(fullscreen)
 
 ;; Font used
 (set-default-font "Source Code Pro 8")
