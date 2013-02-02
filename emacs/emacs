@@ -240,6 +240,10 @@
 ;; Use spaces and not fecking tabs when auto indenting!
 (setq-default indent-tabs-mode nil)
 
+;; Use electric indent mode and pair mode
+(electric-indent-mode)
+(electric-pair-mode)
+
 ;; Show error/warning message in status buffer
 ;; TODO use something else than custom-set-variables, need to split out settings and
 ;; not keep them all in the same place, how do you set a defcustom variable if not 
