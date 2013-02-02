@@ -23,7 +23,7 @@
   , "maxparams": 4        // Maximum number of parameters in a function
   , "maxdepth": 2         // Maximum nested levels
   , "maxstatements": 15   // Maximum number of statements in a function
-  , "maxcomplexity": 5    // Maximum cyclomatic complexity
+  , "maxcomplexity": 6    // Maximum cyclomatic complexity
   , "maxlen": 80          // Maximum row length
 
     // Relaxing options
