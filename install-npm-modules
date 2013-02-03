@@ -5,7 +5,9 @@ echo "---- INSTALLING: installing global npm modules"
 npm install -g blacksmith
 npm install -g browserify
 npm install -g forever
+npm install -g nave
 npm install -g node-gyp
+npm install -g npmtop
 npm install -g rsa-json
 npm install -g swank-js
 npm install -g uglify-js2
