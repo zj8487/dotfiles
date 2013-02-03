@@ -244,6 +244,15 @@
 (electric-indent-mode)
 (electric-pair-mode)
 
+;; Automatically convert to unix line endings
+(add-hook 'find-file-hook 'find-file-check-line-endings)
+(defun dos-file-endings-p ()
+  (string-match "dos" (symbol-name buffer-file-coding-system)))
+(defun find-file-check-line-endings ()
+  (when (dos-file-endings-p)
+    (set-buffer-file-coding-system 'undecided-unix)
+    (set-buffer-modified-p nil)))
+
 ;; Show error/warning message in status buffer
 ;; TODO use something else than custom-set-variables, need to split out settings and
 ;; not keep them all in the same place, how do you set a defcustom variable if not 
