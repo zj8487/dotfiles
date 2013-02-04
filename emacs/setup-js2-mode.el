@@ -16,11 +16,11 @@
                         nil)))))
 
 ;; Use right arrow for return in one-line anonymous functions
-(font-lock-add-keywords
- 'js2-mode `(("function *([^)]*) *{ *\\(return\\) "
-              (0 (progn (compose-region (match-beginning 1)
-                                        (match-end 1) "\u2190")
-                        nil)))))
+;; (font-lock-add-keywords
+;;  'js2-mode `(("function *([^)]*) *{ *\\(return\\) "
+;;               (0 (progn (compose-region (match-beginning 1)
+;;                                         (match-end 1) "\u2190")
+;;                         nil)))))
 
 ;; (setq-default js2-allow-rhino-new-expr-initializer nil)
 ;; (setq-default js2-auto-indent-p nil)
