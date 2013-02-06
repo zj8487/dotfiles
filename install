@@ -50,6 +50,12 @@ sudo apt-get install --assume-yes imagemagick
 echo "---- INSTALLING: ffmpeg"
 sudo apt-get install --assume-yes ffmpeg
 
+echo "---- INSTALLING: flac"
+sudo apt-get install --assume-yes flac
+
+echo "---- INSTALLING: lame"
+sudo apt-get install --assume-yes lame
+
 echo "---- INSTALLING: xclip"
 sudo apt-get install --assume-yes xclip
 
