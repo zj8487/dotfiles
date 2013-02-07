@@ -29,6 +29,9 @@ sudo ln -fs ~/dotfiles/rc.local /etc/rc.local
 echo "---- INSTALLING: build-essential"
 sudo apt-get install --assume-yes build-essential
 
+echo "---- INSTALLING: gdb"
+sudo apt-get install --assume-yes gdb
+
 echo "---- INSTALLING: aptitude"
 sudo apt-get install --assume-yes aptitude
 
