@@ -31,6 +31,7 @@ sudo apt-get install --assume-yes build-essential
 
 echo "---- INSTALLING: gdb"
 sudo apt-get install --assume-yes gdb
+sudo sysctl kernel.core_pattern='core'
 
 echo "---- INSTALLING: aptitude"
 sudo apt-get install --assume-yes aptitude
