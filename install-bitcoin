@@ -1,14 +1,18 @@
 #!/bin/bash
 set -e
 
+mkdir -p ~/src && cd ~/src
+
 echo "---- INSTALLING: bitcoin"
-sudo add-apt-repository ppa:bitcoin/bitcoin
-sudo apt-get update
+sudo add-apt-repository ppa:bitcoin/bitcoin -y
+sudo apt-get update --assume-yes
 sudo apt-get install --assume-yes qt4-qmake libqt4-dev build-essential libboost-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev libdb4.8++-dev
 
-cd ~/src && git clone git://github.com/bitcoin/bitcoin.git && cd bitcoin
-NUMBER_OF_PROCESSORS=`cat /proc/cpuinfo | grep processor | wc -l`
-git co v0.7.1 && qmake "USE_UPNP=-" && make -j $NUMBER_OF_PROCESSORS
+if [ ! -d "bitcoin" ]; then
+    git clone git://github.com/ralphtheninja/bitcoin.git && cd bitcoin
+    NUMBER_OF_PROCESSORS=`cat /proc/cpuinfo | grep processor | wc -l`
+    git co v0.7.2 && qmake "USE_UPNP=-" && make -j $NUMBER_OF_PROCESSORS
+fi
 
 
 

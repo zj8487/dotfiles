@@ -1,0 +1,82 @@
+{
+    // Predefined globals
+
+    "predef": [ "refute" ]
+
+    // Enforcing options
+
+  , "bitwise": true       // true -> Prohibit bitwise operators &, | and ^
+  , "camelcase": false    // false -> Variables doesn't have to be in camelCase
+  , "curly": false        // true -> Loops and conditionals must have curly braces
+  , "eqeqeq": false       // true -> Must use either === or !==
+  , "forin": false        // Seems buggy, false or true doesn't matter
+  , "immed": false        // Seems buggy, false or true doesn't matter
+  , "indent": 2           // Indentation
+  , "latedef": false      // false -> Do not warn about function called before they are defined
+  , "newcap": true        // true -> Need new for functions starting with capital letter
+  , "noarg": true         // true -> Avoid using arguments.callee/arguments.caller
+  , "noempty": true       // true -> Warn on empty blocks
+  , "nonew": true         // true -> Warn on new Foo() with no assignment, object not used
+  , "plusplus": false     // false -> Allow ++variable
+  , "quotmark": true      // true -> Enforce consistency on string literals
+  , "regexp": false       // false -> Allow . in regexps
+  , "undef": true         // true -> Detect usage of undefined variables
+  , "unused": true        // true -> Detect defined but unused variables
+  , "strict": false       // Seems buggy, false or true doesn't matter
+  , "trailing": true      // true -> Warn about trailing whitespace
+  , "maxparams": 4        // Maximum number of parameters in a function
+  , "maxdepth": 2         // Maximum nested levels
+  , "maxstatements": 15   // Maximum number of statements in a function
+  , "maxcomplexity": 6    // Maximum cyclomatic complexity
+  , "maxlen": 80          // Maximum row length
+
+    // Relaxing options
+
+  , "asi": true           // true -> Suppress warning on missing semicolon
+  , "boss": false         // false -> Warn about assignment instead of comparision
+  , "debug": true         // true -> Suppress warning on debugger statements
+  , "eqnull": false       // false -> Use === to compare with null
+  , "es5": true           // true -> Use ECMAScript5 specific features such as getters/setters
+  , "esnext": true        // true -> Use ES.next specific features such as const (buggy)
+  , "evil": true          // true -> Suppress warning on eval()
+  , "expr": false         // false -> Warn on foo ? foo() : bar(). Bugs! Removes other warnings
+  , "funcscope": false    // false -> Warn on declaring variables inside control structures
+  , "globalstrict": false // true -> Suppress warning about global strict mode. Bugs!
+  , "iterator": false     // false -> Warn on __iterator__
+  , "lastsemic": true     // true -> Suppress warning on omitted semicolon in a one-line block
+  , "laxbreak": true      // true -> Suppress warning on possibly unsafe line breaks
+  , "laxcomma": true      // true -> Suppress warning on comma-first coding style
+  , "loopfunc": false     // false -> Warn on using function expressions in loops
+  , "multistr": false     // false -> Warn on using multi-line strings
+  , "onecase": false      // false -> Warn on switch with one case
+  , "proto": false        // false -> Warn on deprecated __proto__
+  , "regexdash": false    // false -> Warn on unescaped - in regexps
+  , "scripturl": true     // true -> Suppress warning on 'javascript:' strings
+  , "smarttabs": false    // false -> Warn on mixed tabs and spaces
+  , "shadow": false       // false -> Warn on variable shadowing
+  , "sub": false          // false -> Warn on obj['property'] instead of obj.property
+  , "supernew": false     // false -> Warn on new function () {}
+  , "validthis": true     // true -> Suppress warning on this in non constructor (strict mode)
+
+    // Environments
+
+  , "browser": true       // true -> Allow use of browser globals
+  , "couch": true         // true -> Allow use of CouchDB globals
+  , "devel": true         // true -> Allow use of CouchDB globals
+  , "dojo": false         // 
+  , "mootools": false     // 
+  , "node": true          // true -> Allow use of node.js globals
+  , "nonstandard": true   // true -> Allow use escape/unescape
+  , "prototypejs": false  // 
+  , "rhino": false        // 
+  , "worker": true        // true -> Allow use of Web Workers
+  , "wsh": false          // 
+  , "yui": false          // 
+
+    // Legacy
+
+  , "nomen": false        // false -> Allow dangling _ in variable names
+  , "onevar": true        // true -> Warn on multiple var in functions
+  , "passfail": false     // false -> Do not stop on first error
+  , "white": false        // true -> Use Douglas Crockfords good parts
+}

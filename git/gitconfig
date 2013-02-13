@@ -13,3 +13,5 @@
 	conflictstyle = diff3
 [core]
 	editor = emacs -nw
+[push]
+	default = tracking

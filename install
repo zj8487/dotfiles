@@ -1,6 +1,10 @@
 #!/bin/bash
 set -e
 
+echo "---- INSTALLING: updating git submodules"
+git submodule init
+git submodule update
+
 echo "---- INSTALLING: setting up folder structure"
 mkdir -p ~/tmp
 
@@ -25,6 +29,10 @@ sudo ln -fs ~/dotfiles/rc.local /etc/rc.local
 echo "---- INSTALLING: build-essential"
 sudo apt-get install --assume-yes build-essential
 
+echo "---- INSTALLING: gdb"
+sudo apt-get install --assume-yes gdb
+sudo sysctl kernel.core_pattern='core'
+
 echo "---- INSTALLING: aptitude"
 sudo apt-get install --assume-yes aptitude
 
@@ -42,6 +50,15 @@ sudo apt-get install --assume-yes libgnome2-bin
 
 echo "---- INSTALLING: imagemagick"
 sudo apt-get install --assume-yes imagemagick
+
+echo "---- INSTALLING: ffmpeg"
+sudo apt-get install --assume-yes ffmpeg
+
+echo "---- INSTALLING: flac"
+sudo apt-get install --assume-yes flac
+
+echo "---- INSTALLING: lame"
+sudo apt-get install --assume-yes lame
 
 echo "---- INSTALLING: xclip"
 sudo apt-get install --assume-yes xclip

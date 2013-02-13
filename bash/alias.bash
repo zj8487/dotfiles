@@ -7,8 +7,10 @@ alias cd-='cd -'
 alias chr='google-chrome --js-flags="--trace-opt --trace-bailout --trace-deopt --prof"'
 alias duf='du --max-depth=1 | sort -n -r'
 alias getnpm='curl https://npmjs.org/install.sh | sh'
+alias gg='git grep'
 alias igrep='grep -i'
 alias l="ls -ltrha"
+alias ll="ls -lha"
 alias ls="ls --color=auto"
 alias m="make -j $NUMBER_OF_PROCESSORS"
 alias n="node"
@@ -17,7 +19,7 @@ alias o="gnome-open"
 alias rlocate='locate --regex'
 alias sr='pserve development.ini --reload'
 alias srp='ac && cd braian/portal && sr'
-alias todo='e ~/Dropbox/work/TODO.txt'
+alias todo='e ~/Dropbox/TODO.txt'
 alias ve='virtualenv --no-site-packages '
 alias xpc='xclip -o -selection clipboard'
 alias xpp='xclip -o -selection primary'
