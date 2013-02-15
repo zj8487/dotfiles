@@ -1,4 +1,8 @@
-(setq-default js2-global-externs '("module" "process" "require" "jQuery" "$" "_" "buster" "sinon" "assert" "refute" "setTimeout" "clearTimeout" "setInterval" "clearInterval" "location" "__dirname" "console" "JSON"))
+(setq-default js2-global-externs '("module" "process" "require" "jQuery" "$" "_"
+                                   "buster" "sinon" "assert" "refute" "setTimeout"
+                                   "clearTimeout" "setInterval" "clearInterval"
+                                   "location" "__dirname" "__filename" "console"
+                                   "JSON"))
 (setq-default js2-basic-offset 2)
 (setq-default js2-pretty-multiline-declarations 'all)
 (setq-default js2-strict-missing-semi-warning nil)
