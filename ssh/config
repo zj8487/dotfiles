@@ -17,6 +17,12 @@ Host djoot
 	PreferredAuthentications publickey
 	IdentityFile /media/magnus/usb-stick/ssh/djoot
 
+Host bitcoinjs
+	User root
+	Hostname 165.225.128.216
+	PreferredAuthentications publickey
+	IdentityFile /media/magnus/usb-stick/ssh/bitcoin_rsa
+
 Host numbahWWW
 	User numbahtennet
 	Hostname shell.scorpionshops.com
