@@ -63,8 +63,8 @@ sudo apt-get install --assume-yes lame
 echo "---- INSTALLING: xclip"
 sudo apt-get install --assume-yes xclip
 
-echo "---- INSTALLING: redis-server"
-sudo apt-get install --assume-yes redis-server
+#echo "---- INSTALLING: redis-server"
+#sudo apt-get install --assume-yes redis-server
 
 echo "---- INSTALLING: yum"
 sudo apt-get install --assume-yes yum
