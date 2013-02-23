@@ -292,3 +292,10 @@
 (global-set-key (kbd "C-x 5") 'split-windows-into-four-vertical)
 (split-windows-into-four-vertical)
 ;; --------------------------------------------------------------------
+
+;; --------------------------------------------------------------------
+;; Highlight tabs for me!
+(require 'highlight-chars)
+(global-set-key (kbd "<f9>") 'hc-toggle-highlight-trailing-whitespace)
+(hc-toggle-highlight-trailing-whitespace)
+;; --------------------------------------------------------------------
