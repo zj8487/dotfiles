@@ -9,7 +9,7 @@
   },
   "main": prompt('entry point', 'index.js'),
   "scripts": {
-    "test": "tap test/*.js"
+    "test": "tap ./test"
   },
   "dependencies": {},
   "devDependencies": {
