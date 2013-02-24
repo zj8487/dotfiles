@@ -11,7 +11,9 @@ npm install -g npmtop
 npm install -g rsa-json
 npm install -g swank-js
 npm install -g uglify-js2
+
 npm install -g pkginit
+pkginit add default /home/magnus/dotfiles/node/default.json
 
 npm install -g morkdown
 cd /home/magnus/local/lib/node_modules/morkdown/
