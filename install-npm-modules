@@ -11,6 +11,7 @@ npm install -g npmtop
 npm install -g rsa-json
 npm install -g swank-js
 npm install -g uglify-js2
+npm install -g wr
 
 npm install -g pkginit
 pkginit add default /home/magnus/dotfiles/node/default.json
