@@ -299,3 +299,8 @@
 (global-set-key (kbd "<f9>") 'hc-toggle-highlight-trailing-whitespace)
 (hc-toggle-highlight-trailing-whitespace)
 ;; --------------------------------------------------------------------
+
+;; --------------------------------------------------------------------
+;; Do not fucking indent within C++ namespaces. Thanks!
+(add-to-list 'c++-mode-hook (lambda () (c-set-offset 'innamespace 0)))
+;; --------------------------------------------------------------------
