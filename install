@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e
 
+echo "---- INSTALLING: copy o script"
+sudo ln -fs ~/dotfiles/bash/o /usr/bin/o
+
 echo "---- INSTALLING: updating git submodules"
 git submodule init
 git submodule update
