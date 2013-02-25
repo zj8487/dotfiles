@@ -72,6 +72,9 @@ sudo apt-get install --assume-yes yum
 echo "---- INSTALLING: ack-grep"
 sudo apt-get install --assume-yes ack-grep
 
+echo "---- INSTALLING: tree"
+sudo apt-get install --assume-yes tree
+
 echo "---- INSTALLING: GNU gettext tools"
 sudo apt-get install --assume-yes gettext
 
