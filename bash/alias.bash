@@ -9,6 +9,7 @@ alias duf='du --max-depth=1 | sort -n -r'
 alias getnpm='curl https://npmjs.org/install.sh | sh'
 alias gg='git grep'
 alias gl='git lg'
+alias glp='git lg -p'
 alias igrep='grep -i'
 alias l="ls -ltrha"
 alias ll="ls -lha"
