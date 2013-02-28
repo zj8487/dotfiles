@@ -290,7 +290,7 @@
   (command-execute 'balance-windows)
 )
 (global-set-key (kbd "C-x 5") 'split-windows-into-four-vertical)
-(split-windows-into-four-vertical)
+;;(split-windows-into-four-vertical)
 ;; --------------------------------------------------------------------
 
 ;; --------------------------------------------------------------------
