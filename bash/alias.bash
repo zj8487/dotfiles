@@ -18,6 +18,7 @@ alias ls="ls --color=auto"
 alias m="make -j $NUMBER_OF_PROCESSORS"
 alias n="node"
 alias myip="curl http://whatismyip.nodejitsu.com/index.json"
+alias pi='nave use 0.8.18 pkginit'
 alias rlocate='locate --regex'
 alias sr='pserve development.ini --reload'
 alias srp='ac && cd braian/portal && sr'
