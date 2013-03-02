@@ -18,12 +18,12 @@ alias ls="ls --color=auto"
 alias m="make -j $NUMBER_OF_PROCESSORS"
 alias n="node"
 alias myip="curl http://whatismyip.nodejitsu.com/index.json"
-alias pi='nave use 0.8.18 pkginit'
+alias pi='nave use 0.8.19 pkginit'
 alias rlocate='locate --regex'
 alias sr='pserve development.ini --reload'
 alias srp='ac && cd braian/portal && sr'
 alias todo='e ~/Dropbox/TODO.txt'
-alias t='npm test'
+alias t='nave use 0.8.19 npm test'
 alias ve='virtualenv --no-site-packages '
 alias xpc='xclip -o -selection clipboard'
 alias xpp='xclip -o -selection primary'
