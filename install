@@ -24,7 +24,9 @@ echo "---- INSTALLING: symlink for ~/.xinitrc"
 ln -fs ~/dotfiles/xinitrc ~/.xinitrc
 
 echo "---- INSTALLING: symlink for ~/.config/openbox/lubuntu-rc.xml"
-ln -fs ~/dotfiles/lubuntu-rc.xml ~/.config/openbox/lubuntu-rc.xml
+if [ -d ~/.config/openbox ]; then
+    ln -fs ~/dotfiles/lubuntu-rc.xml ~/.config/openbox/lubuntu-rc.xml
+fi
 
 echo "---- INSTALLING: symlink for /etc/rc.local"
 sudo ln -fs ~/dotfiles/rc.local /etc/rc.local
