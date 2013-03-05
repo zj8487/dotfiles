@@ -2,7 +2,7 @@
 SOURCE="${BASH_SOURCE[0]}"
 THIS="$( dirname "$SOURCE" )"
 while [ -h "$SOURCE" ]
-do 
+do
     SOURCE="$(readlink "$SOURCE")"
     [[ $SOURCE != /* ]] && SOURCE="$THIS/$SOURCE"
     THIS="$( cd -P "$( dirname "$SOURCE"  )" && pwd )"
@@ -16,6 +16,7 @@ source $THIS/colors.bash
 source $THIS/git-completion.bash
 source $THIS/prompt.bash
 source $THIS/npm-completion.bash
+source $THIS/tools.bash
 
 # only prepend to path if it's not in path
 prepend_to_path() {
