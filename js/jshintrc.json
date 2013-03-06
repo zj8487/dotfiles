@@ -63,20 +63,20 @@
   , "browser": true       // true -> Allow use of browser globals
   , "couch": true         // true -> Allow use of CouchDB globals
   , "devel": true         // true -> Allow use of CouchDB globals
-  , "dojo": false         // 
-  , "mootools": false     // 
+  , "dojo": false         //
+  , "mootools": false     //
   , "node": true          // true -> Allow use of node.js globals
   , "nonstandard": true   // true -> Allow use escape/unescape
-  , "prototypejs": false  // 
-  , "rhino": false        // 
+  , "prototypejs": false  //
+  , "rhino": false        //
   , "worker": true        // true -> Allow use of Web Workers
-  , "wsh": false          // 
-  , "yui": false          // 
+  , "wsh": false          //
+  , "yui": false          //
 
     // Legacy
 
   , "nomen": false        // false -> Allow dangling _ in variable names
-  , "onevar": true        // true -> Warn on multiple var in functions
+  , "onevar": false       // true -> Warn on multiple var in functions
   , "passfail": false     // false -> Do not stop on first error
   , "white": false        // true -> Use Douglas Crockfords good parts
 }
