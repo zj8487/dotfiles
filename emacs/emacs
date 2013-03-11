@@ -289,7 +289,7 @@
   (command-execute 'split-window-right)
   (command-execute 'balance-windows)
 )
-(global-set-key (kbd "C-x 5") 'split-windows-into-four-vertical)
+(global-set-key (kbd "C-x 6") 'split-windows-into-four-vertical)
 ;;(split-windows-into-four-vertical)
 ;; --------------------------------------------------------------------
 
