@@ -9,7 +9,7 @@
     }
   , "main": prompt('entry point', 'index.js')
   , "scripts": {
-        "test": "node ./test/index.js"
+        "test": "tap --stderr ./test/*.js"
     }
   , "dependencies": {}
   , "devDependencies": {
