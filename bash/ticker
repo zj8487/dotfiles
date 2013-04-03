@@ -1,0 +1,74 @@
+#!/bin/bash
+#
+# ticker [OPTION] [+FORMAT]
+#
+# OPTION:   --update=[max-age] | -u[max-age]
+#               Force ticker refresh [if older than max-age seconds]
+#           --no-update | -U
+#               Don't try to update ticker, no matter how old it is
+#
+# FORMAT:   %%  a literal %
+#           %a  ask
+#           %A  time since ticker update
+#           %b  bid (or 'buy')
+#           %g  average
+#           %h  high
+#           %l  low
+#           %L  last
+#           %m  mid market (( ask+sell ) / 2
+#           %n  a newline
+#           %s  ask (or 'sell', same as %a)
+#           %t  a tab
+#           %v  vwap
+#           %V  volume
+#
+## DEFAULTS
+FORMAT="Buy: %t%b%nSell:%t%s%nMid: %t%m%nLow: %t%l%nHigh:%t%h%nLast:%t%L%nVWAP:%t%v%nVolume:%t%V"
+MAX_AGE=60
+
+ARGS=$( getopt -o "Uu::" -l "no-update,update::" -- "$@" )
+if [ $? -ne 0 ]; then
+    exit 1
+fi
+eval set -- "$ARGS";
+
+while true; do
+    case "$1" in
+        -u|--update)
+            MAX_AGE=$2
+            test -n "$2" || update_ticker='yes'
+            shift 2
+            ;;
+        -U|--no-update)
+            dont_update_ticker='yes'
+            shift
+            ;;
+        --)
+            shift
+            break
+            ;;
+    esac
+done
+
+tmpfile=${TMPDIR:-/tmp}/mtgoxticker
+if [ -r "$tmpfile" ] ; then
+    mod_time=$( stat $tmpfile -c %Y )
+    now_time=$( date +%s )
+    age=$(( $now_time - $mod_time ))
+    if [[ $age -lt $MAX_AGE ]] ; then update_ticker='no' ; fi
+fi
+
+if [[ $update_ticker != 'no' && $dont_update_ticker != 'yes' ]] ; then
+    wget https://data.mtgox.com/code/data/ticker.php -q --no-check-certificate -O $tmpfile && age=0 ||
+        { echo "could not update ticker, try --no-update" >&2 ; exit 1 ; }
+    ticker=$( cat $tmpfile | grep -Eo "[^{}]*" | tail -n 1 | sed 's/":/=/g' | tr -d '"' | tr ',' '\n' )
+    echo "$ticker" > $tmpfile
+fi
+
+. $tmpfile
+mid=$( bc <<<"scale=4; ( $buy + $sell ) / 2" )
+if [[ ${1:0:1} == '+' ]] ; then FORMAT=${1:1} ; fi
+OUTSTRING=$( sed 's/ /\\ /g; s/\$/\\$/g; s/%[as]/$sell/g; s/%A/$age/g; s/%b/$buy/g; s/%g/$avg/g;
+    s/%h/$high/g; s/%l/$low/g; s/%L/$last/g; s/%m/$mid/g; s/%n/\\\\n/g; s/%t/\\\\t/g; s/%v/$vwap/g; s/%V/$vol/g; s/%%/%/g' <<<"$FORMAT" )
+eval echo -e "$OUTSTRING"
+chmod 666 $tmpfile 2>/dev/null
