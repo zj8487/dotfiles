@@ -11,7 +11,7 @@ sudo apt-get install --assume-yes qt4-qmake libqt4-dev build-essential libboost-
 if [ ! -d "bitcoin" ]; then
     git clone git://github.com/ralphtheninja/bitcoin.git && cd bitcoin
     NUMBER_OF_PROCESSORS=`cat /proc/cpuinfo | grep processor | wc -l`
-    git co v0.7.2 && qmake "USE_UPNP=-" && make -j $NUMBER_OF_PROCESSORS
+    git co v0.8.1 && qmake "USE_UPNP=-" && make -j $NUMBER_OF_PROCESSORS
 fi
 
 
