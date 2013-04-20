@@ -1,0 +1,6 @@
+#!/bin/bash
+
+if [ ! -z "$1" ]; then
+    cd ~/Downloads
+    ~/src/youtube-dl/youtube-dl -t "$1"
+fi
