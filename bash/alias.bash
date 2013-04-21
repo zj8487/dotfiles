@@ -24,6 +24,7 @@ alias todo='e ~/Dropbox/TODO.txt'
 alias t='npm test'
 alias ti='ticker -u'
 alias tt="wr 'npm test' *.js test/*.js"
+alias up='git add . && git ci -C HEAD --amend && git push -f'
 alias ve='virtualenv --no-site-packages '
 alias xpc='xclip -o -selection clipboard'
 alias xpp='xclip -o -selection primary'
