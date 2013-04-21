@@ -22,6 +22,7 @@ alias pi='nave use 0.8.19 pkginit'
 alias rlocate='locate --regex'
 alias todo='e ~/Dropbox/TODO.txt'
 alias t='npm test'
+alias ti='ticker -u'
 alias tt="wr 'npm test' *.js test/*.js"
 alias ve='virtualenv --no-site-packages '
 alias xpc='xclip -o -selection clipboard'
