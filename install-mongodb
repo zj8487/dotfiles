@@ -1,0 +1,20 @@
+#!/bin/bash
+
+set -e
+
+echo "---- INSTALLING: mongodb"
+
+# some key stuff
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
+
+# add distro
+MONGOTMP=/tmp/mongodb.list
+echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' > $MONGOTMP
+sudo cp $MONGOTMP /etc/apt/sources.list.d/
+rm $MONGOTMP
+
+# update
+sudo apt-get update --assume-yes
+
+# install mongo
+sudo apt-get install mongodb-10gen=2.2.3 --assume-yes
