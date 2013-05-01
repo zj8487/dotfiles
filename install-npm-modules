@@ -2,9 +2,11 @@
 set -e
 
 echo "---- INSTALLING: installing global npm modules"
+npm install -g beefy
 npm install -g blacksmith
 npm install -g browserify
 npm install -g forever
+npm install -g me-editor
 npm install -g nave
 npm install -g node-gyp
 npm install -g npmtop
