@@ -119,6 +119,9 @@ sudo apt-get install --assume-yes rar unrar
 echo "---- INSTALLING: bitcoind"
 sudo apt-get install --assume-yes bitcoind
 
+echo "---- INSTALLING: pip"
+sudo apt-get install --assume-yes python-pip
+
 echo "---- INSTALLING: traceroute"
 sudo apt-get install --assume-yes traceroute
 
