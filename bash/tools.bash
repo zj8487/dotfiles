@@ -23,7 +23,7 @@ function update-leveldb {
 }
 
 function run-bitcoin {
-    ~/src/bitcoin/src/bitcoind -testnet -debug -logtimestamps -daemon
+    ~/src/bitcoin/src/bitcoind -testnet -debug -logtimestamps -daemon -printtoconsole
 }
 
 function kill-bitcoin {
