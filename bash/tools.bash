@@ -19,3 +19,11 @@ function update_leveldb {
     cd ~/src/node-leveldown && git pull && node-gyp rebuild
     cd ~/src/node-levelup && git pull
 }
+
+function run-bitcoin {
+    ~/src/bitcoin/src/bitcoind -testnet -debug -logtimestamps -daemon
+}
+
+function kill-bitcoin {
+    pkill bitcoind
+}
