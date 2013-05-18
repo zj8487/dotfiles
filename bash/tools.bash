@@ -23,6 +23,10 @@ function update-leveldb {
 }
 
 function runbitcoind {
+    ~/src/bitcoin/src/bitcoind -testnet -debug -logtimestamps -printtoconsole -rpcuser=foo -rpcpassword=bar -rpcport=12345
+}
+
+function runbitcoind-gen {
     ~/src/bitcoin/src/bitcoind -gen -testnet -debug -logtimestamps -printtoconsole -rpcuser=foo -rpcpassword=bar -rpcport=12345
 }
 
