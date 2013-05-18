@@ -22,8 +22,8 @@ function update-leveldb {
     popd
 }
 
-function run-bitcoin {
-    ~/src/bitcoin/src/bitcoind -testnet -debug -logtimestamps -daemon -printtoconsole
+function runbitcoind {
+    ~/src/bitcoin/src/bitcoind -gen -testnet -debug -logtimestamps -printtoconsole -rpcuser=bitterfittan -rpcpassword=vuPSW04sm2FtgXxaIhAa5IWwYM -port=12345
 }
 
 function kill-bitcoin {
