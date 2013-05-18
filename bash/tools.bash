@@ -26,6 +26,9 @@ function runbitcoind {
     ~/src/bitcoin/src/bitcoind -gen -testnet -debug -logtimestamps -printtoconsole -rpcuser=bitterfittan -rpcpassword=vuPSW04sm2FtgXxaIhAa5IWwYM -port=12345
 }
 
-function kill-bitcoin {
-    pkill bitcoind
+function rebuildbitcoind {
+    pushd ~/src/bitcoin/src
+    make -f makefile.unix clean
+    make -j $NUMBER_OF_PROCESSORS -f makefile.unix USE_UPNP=-
+    popd
 }
