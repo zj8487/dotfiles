@@ -71,6 +71,10 @@ sudo apt-get install --assume-yes lame
 echo "---- INSTALLING: xclip"
 sudo apt-get install --assume-yes xclip
 
+echo "---- INSTALLING: wamerican-insane"
+sudo apt-get install --assume-yes wamerican-insane
+# dict file installed in /usr/share/dict/american-english-insane
+
 #echo "---- INSTALLING: redis-server"
 #sudo apt-get install --assume-yes redis-server
 
