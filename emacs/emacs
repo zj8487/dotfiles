@@ -255,7 +255,7 @@
 
 ;; Show error/warning message in status buffer
 ;; TODO use something else than custom-set-variables, need to split out settings and
-;; not keep them all in the same place, how do you set a defcustom variable if not 
+;; not keep them all in the same place, how do you set a defcustom variable if not
 ;; using custom-set-variables?
 (custom-set-variables
 
@@ -303,4 +303,19 @@
 ;; --------------------------------------------------------------------
 ;; Do not fucking indent within C++ namespaces. Thanks!
 (add-to-list 'c++-mode-hook (lambda () (c-set-offset 'innamespace 0)))
+;; --------------------------------------------------------------------
+
+;; --------------------------------------------------------------------
+;; Don't redefine M-j for me please, c++-mode
+(define-key c++-mode-map (kbd "M-j") nil)
+;; --------------------------------------------------------------------
+
+;; --------------------------------------------------------------------
+;; C and C++ indentation
+(setq-default c-basic-offset 4)
+;; --------------------------------------------------------------------
+
+;; --------------------------------------------------------------------
+;; Treat .h files as C++ mode
+(add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 ;; --------------------------------------------------------------------
