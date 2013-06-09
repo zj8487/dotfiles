@@ -13,9 +13,6 @@ ln -fs ~/dotfiles/git/gitconfig ~/.gitconfig
 echo "---- INSTALLING: update apt-get"
 sudo apt-get update --assume-yes
 
-echo "---- INSTALLING: git"
-sudo apt-get install --assume-yes git
-
 echo "---- INSTALLING: build-essential"
 sudo apt-get install --assume-yes build-essential
 
