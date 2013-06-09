@@ -1,0 +1,22 @@
+#!/bin/bash
+set -e
+
+echo "---- INSTALLING: setting up folder structure"
+mkdir -p ~/tmp
+
+echo "---- INSTALLING: symlink for ~/.bashrc"
+ln -fs ~/dotfiles/bash/bashrc ~/.bashrc
+
+echo "---- INSTALLING: symlink for ~/.gitconfig"
+ln -fs ~/dotfiles/git/gitconfig ~/.gitconfig
+
+echo "---- INSTALLING: build-essential"
+sudo apt-get install --assume-yes build-essential
+
+echo "---- INSTALLING: ack-grep"
+sudo apt-get install --assume-yes ack-grep
+
+source ~/dotfiles/install-node
+source ~/dotfiles/install-npm-modules
+
+echo "---- INSTALL: Finished successfully!"
