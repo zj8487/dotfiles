@@ -2,14 +2,11 @@
 set -e
 
 echo "---- INSTALLING: installing global npm modules"
-npm install -g beefy
-npm install -g blacksmith
 npm install -g browserify
 npm install -g forever
-npm install -g me-editor
 npm install -g nave
+npm install -g morkdown
 npm install -g node-gyp
-npm install -g npmtop
 npm install -g rsa-json
 npm install -g swank-js
 npm install -g uglify-js2
@@ -18,6 +15,3 @@ npm install -g wr
 npm install -g pkginit
 pkginit add default /home/magnus/dotfiles/node/default.json
 
-npm install -g morkdown
-cd /home/magnus/local/lib/node_modules/morkdown/
-npm install appjs-linux-ia32
