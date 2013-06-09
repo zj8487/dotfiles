@@ -20,6 +20,5 @@ echo "---- INSTALLING: ack-grep"
 sudo apt-get install --assume-yes ack-grep
 
 source ~/dotfiles/install-node
-source ~/dotfiles/install-npm-modules
 
 echo "---- INSTALL: Finished successfully!"
