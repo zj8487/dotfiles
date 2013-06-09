@@ -1,9 +1,9 @@
 Host node
 	User ubuntu
-	Hostname ec2-176-34-206-245.eu-west-1.compute.amazonaws.com
+	Hostname ec2-54-229-52-122.eu-west-1.compute.amazonaws.com
 	ForwardAgent yes
 	PreferredAuthentications publickey
-	IdentityFile /media/magnus/usb-stick/ssh/node_aws.pem
+	IdentityFile /media/magnus/usb-stick/ssh/mange_aws.pem
 
 Host github.com
 	User git
@@ -16,12 +16,6 @@ Host djoot
 	Hostname djoot.se
 	PreferredAuthentications publickey
 	IdentityFile /media/magnus/usb-stick/ssh/djoot
-
-Host bitcoinjs
-	User root
-	Hostname 165.225.128.216
-	PreferredAuthentications publickey
-	IdentityFile /media/magnus/usb-stick/ssh/bitcoin_rsa
 
 Host numbahWWW
 	User numbahtennet
