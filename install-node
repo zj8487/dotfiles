@@ -1,10 +1,10 @@
 #!/bin/bash
 set -e
 
-mkdir -p ~/src ~/.npm ~/local && cd ~/src
+mkdir -p ~/src ~/local && cd ~/src
 
 if [ ! -d "node" ]; then
-    NODE_V=v0.8.14
+    NODE_V=v0.10.10
     echo "---- INSTALLING: node $NODE_V"
     git clone git://github.com/joyent/node.git
     cd node && git co $NODE_V
