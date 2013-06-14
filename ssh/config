@@ -1,4 +1,4 @@
-Host btcprogress
+Host node
 	User ubuntu
 	Hostname ec2-54-229-52-122.eu-west-1.compute.amazonaws.com
 	ForwardAgent yes
