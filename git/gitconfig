@@ -8,7 +8,7 @@
 	lg = log --all --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an <%ae>%Creset' --abbrev-commit
 [user]
 	name = Lars-Magnus Skog
-	email = lars.magnus.skog@gmail.com
+	email = ralphtheninja@riseup.net
 [merge]
 	conflictstyle = diff3
 [core]
