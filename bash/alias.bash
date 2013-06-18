@@ -16,6 +16,7 @@ alias l="ls -ltrha"
 alias ll="ls -lha"
 alias ls="ls --color=auto"
 alias m="make -j $NUMBER_OF_PROCESSORS"
+alias mail='thunderbird &> /dev/null &'
 alias n="node"
 alias myip="curl icanhazip.com"
 alias pi='nave use 0.8.19 pkginit'
@@ -25,6 +26,7 @@ alias runbitcoind='bitcoind -debug -logtimestamps -printtoconsole'
 alias todo='e ~/Dropbox/TODO.txt'
 alias t='npm test'
 alias ti='goxticker.js'
+alias surf='firefox &> /dev/null &'
 alias tt="wr 'npm test' *.js test/*.js"
 alias up='git add . && git ci -C HEAD --amend && git push -f'
 alias ve='virtualenv --no-site-packages '
