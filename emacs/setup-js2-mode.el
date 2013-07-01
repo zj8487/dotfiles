@@ -1,7 +1,7 @@
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 ;;(add-to-list 'auto-mode-alist '("\\.json$" . js2-mode))
 
-(setq-default js2-global-externs '("module" "process" "require" "jQuery" "$" "_"
+(setq-default js2-global-externs '("global" "module" "process" "require" "jQuery" "$" "_"
                                    "buster" "sinon" "assert" "refute" "setTimeout"
                                    "clearTimeout" "setInterval" "clearInterval"
                                    "location" "__dirname" "__filename" "console"
