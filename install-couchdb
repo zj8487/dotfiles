@@ -7,7 +7,7 @@ COUCHDB_FOLDER=build-couchdb
 
 if [ ! -d "$COUCHDB_FOLDER" ]; then
     echo "---- INSTALLING: dependencies for build-couchdb"
-    sudo apt-get install --assume-yes help2man make gcc zlib1g-dev libssl-dev rake
+    sudo apt-get install --assume-yes help2man make gcc zlib1g-dev libssl-dev rake texinfo flex dctrl-tools libsctp-dev libxslt1-dev libcap2-bin ed
     echo "---- INSTALLING: build-couchdb"
     git clone git://github.com/iriscouch/build-couchdb
     cd build-couchdb
