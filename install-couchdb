@@ -1,11 +1,9 @@
 #!/bin/bash
 set -e
 
-mkdir -p ~/src && cd ~/src
+mkdir ~/src && cd ~/src
 
-COUCHDB_FOLDER=build-couchdb
-
-if [ ! -d "$COUCHDB_FOLDER" ]; then
+if [ ! -d "build-couchdb" ]; then
     echo "---- INSTALLING: dependencies for build-couchdb"
     sudo apt-get install --assume-yes help2man make gcc zlib1g-dev libssl-dev rake texinfo flex dctrl-tools libsctp-dev libxslt1-dev libcap2-bin ed
     echo "---- INSTALLING: build-couchdb"
