@@ -1,16 +1,14 @@
-alias ac='. ~/env/bin/activate && cd ~/src/braian/'
 alias ack='ack-grep'
-alias bankid='cat /media/usb-stick/passwords/bank-id | xclip'
 alias bc='bc <(echo scale=10)'
 alias cd..='cd ..'
 alias cd-='cd -'
-alias chr='google-chrome --js-flags="--trace-opt --trace-bailout --trace-deopt --prof"'
 alias duf='du -h --max-depth=1 | sort -n -r'
 alias getnpm='curl https://npmjs.org/install.sh | sh'
 alias gd='git diff'
 alias gg='git grep'
 alias gl='git lg'
 alias glp='git lg -p'
+alias gs='git st'
 alias igrep='grep -i'
 alias l="ls -ltrha"
 alias ll="ls -lha"
@@ -19,17 +17,11 @@ alias m="make -j $NUMBER_OF_PROCESSORS"
 alias mail='thunderbird &> /dev/null &'
 alias n="node"
 alias myip="curl icanhazip.com"
-alias pi='nave use 0.8.19 pkginit'
 alias rlocate='locate --regex'
 alias bitcoind='~/src/bitcoin/src/bitcoind -testnet -rpcuser=foo -rpcpassword=bar -rpcport=12345'
 alias runbitcoind='bitcoind -debug -logtimestamps -printtoconsole'
 alias todo='e ~/Dropbox/TODO.txt'
-alias t='npm test'
-alias ti='goxticker.js'
 alias surf='firefox &> /dev/null &'
-alias tt="wr 'npm test' *.js test/*.js"
-alias up='git add . && git ci -C HEAD --amend && git push -f'
-alias ve='virtualenv --no-site-packages '
 alias xpc='xclip -o -selection clipboard'
 alias xpp='xclip -o -selection primary'
 alias xps='xclip -o -selection secondary'
