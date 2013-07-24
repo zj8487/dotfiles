@@ -28,11 +28,14 @@ if [ -d ~/.config/openbox ]; then
     ln -fs ~/dotfiles/lubuntu-rc.xml ~/.config/openbox/lubuntu-rc.xml
 fi
 
-echo "---- INSTALLING: symlink for /etc/rc.local"
-sudo ln -fs ~/dotfiles/rc.local /etc/rc.local
+#echo "---- INSTALLING: symlink for /etc/rc.local"
+#sudo ln -fs ~/dotfiles/rc.local /etc/rc.local
 
 echo "---- INSTALLING: build-essential"
 sudo apt-get install --assume-yes build-essential
+
+echo "---- INSTALLING: libnss3-tools (for certutil)"
+sudo apt-get install --assume-yes libnss3-tools
 
 echo "---- INSTALLING: gdb"
 sudo apt-get install --assume-yes gdb
