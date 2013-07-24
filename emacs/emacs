@@ -223,13 +223,13 @@
 
 ;; --------------------------------------------------------------------
 ; Install jshint-mode (uses flymake)
-(require 'flymake-jshint)
-(add-hook 'js2-mode-hook (lambda () 
-                           (flymake-mode t)
-                           (local-set-key "\en" 'flymake-goto-next-error)
-                           (local-set-key "\ep" 'flymake-goto-prev-error)))
+;(require 'flymake-jshint)
+;(add-hook 'js2-mode-hook (lambda () 
+;                           (flymake-mode t)
+;                           (local-set-key "\en" 'flymake-goto-next-error)
+;                           (local-set-key "\ep" 'flymake-goto-prev-error)))
 ;; Turns on flymake for all files which have a flymake mode
-(add-hook 'find-file-hook 'flymake-find-file-hook)
+;(add-hook 'find-file-hook 'flymake-find-file-hook)
 ;; Flymake log level. Useful when trouble shooting flymake problems
 ;;(setq flymake-log-level 3)
 ;; --------------------------------------------------------------------
