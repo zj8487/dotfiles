@@ -33,7 +33,7 @@
     // Relaxing options
 
   , "asi": true           // true -> Suppress warning on missing semicolon
-  , "boss": false         // false -> Warn about assignment instead of comparision
+  , "boss": true          // false -> Warn about assignment instead of comparision
   , "debug": true         // true -> Suppress warning on debugger statements
   , "eqnull": false       // false -> Use === to compare with null
   , "es5": true           // true -> Use ECMAScript5 specific features such as getters/setters
