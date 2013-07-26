@@ -37,3 +37,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
    . /etc/bash_completion
 fi
 
+# joyent manta
+export MANTA_URL=https://us-east.manta.joyent.com
+export MANTA_USER=ralphtheninja
+export MANTA_KEY_ID=d8:77:b5:bc:75:29:08:6c:68:70:14:1b:08:ed:d9:b3
