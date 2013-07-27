@@ -152,3 +152,7 @@ source ~/dotfiles/install-pidgin
 source ~/dotfiles/install-ssh
 
 echo "---- INSTALL: Finished successfully!"
+
+echo "---- CLEANUP: Running autoremove"
+sudo apt-get autoremove --assume-yes
+
