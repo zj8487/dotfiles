@@ -5,7 +5,7 @@
                                    "buster" "sinon" "assert" "refute" "setTimeout"
                                    "clearTimeout" "setInterval" "clearInterval"
                                    "location" "__dirname" "__filename" "console"
-                                   "JSON" "Buffer"))
+                                   "JSON" "Buffer" "Image" "FileReader"))
 (setq-default js2-basic-offset 2)
 (setq-default js2-pretty-multiline-declarations 'all)
 (setq-default js2-strict-missing-semi-warning nil)
