@@ -294,6 +294,48 @@
 ;; --------------------------------------------------------------------
 
 ;; --------------------------------------------------------------------
+;; Execute current file in a shell
+(defun run-current-file ()
+  "Execute the current file.
+For example, if the current buffer is the file xx.py,
+then it'll call “python xx.py” in a shell.
+The file can be php, perl, python, ruby, javascript, bash, ocaml, vb, elisp.
+File suffix is used to determine what program to run.
+
+If the file is modified, ask if you want to save first.
+
+If the file is emacs lisp, run the byte compiled version if exist."
+  (interactive)
+  (let* (
+         (suffixMap
+          `(
+            ("pl" . "perl")
+            ("py" . "python")
+            ("rb" . "ruby")
+            ("js" . "node")
+            ("sh" . "bash")
+            )
+          )
+         (fName (buffer-file-name))
+         (fSuffix (file-name-extension fName))
+         (progName (cdr (assoc fSuffix suffixMap)))
+         (cmdStr (concat progName " \""   fName "\""))
+         )
+
+    (when (buffer-modified-p) (save-buffer))
+
+    (if (string-equal fSuffix "el") ; special case for emacs lisp
+        (load (file-name-sans-extension fName))
+      (if progName
+          (progn
+            (message "Running…")
+            (shell-command cmdStr "*run-current-file output*" )
+            )
+        (message "No recognized program file suffix for this file.")
+        ) ) ))
+;; --------------------------------------------------------------------
+
+;; --------------------------------------------------------------------
 ;; C and C++ stuff
 (define-key c++-mode-map (kbd "M-j") nil) ; dont redefine M-j for me please
 (setq-default c-basic-offset 4)
@@ -336,3 +378,9 @@
 ;(add-hook 'c++-mode-hook 'turn-on-font-lock)
 
 ;; --------------------------------------------------------------------
+
+;; --------------------------------------------------------------------
+;; Misc key bindings
+(global-set-key "\M-p" 'run-current-file)
+;; --------------------------------------------------------------------
+
