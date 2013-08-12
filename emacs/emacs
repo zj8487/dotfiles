@@ -24,12 +24,12 @@
 
 ;; --------------------------------------------------------------------
 ;; Add package archives TODO move these elsewhere? check magnars stuff
-(require 'package)
-(add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/"))
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(package-initialize)
+;;(require 'package)
+;;(add-to-list 'package-archives
+;;             '("marmalade" . "http://marmalade-repo.org/packages/"))
+;;(add-to-list 'package-archives
+;;             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+;;(package-initialize)
 ;; --------------------------------------------------------------------
 
 ;; --------------------------------------------------------------------
@@ -69,15 +69,15 @@
 ;; --------------------------------------------------------------------
 ;; http://whattheemacsd.com/my-misc.el-01.html
 ;; Webjump to search using different enginges, e.g. google, wikipedia
-(global-set-key (kbd "C-x g") 'webjump)
+;;(global-set-key (kbd "C-x g") 'webjump)
 ;; Add Urban Dictionary to webjump
-(eval-after-load "webjump"
-'(add-to-list 'webjump-sites
-              '("Urban Dictionary" .
-                [simple-query
-                 "www.urbandictionary.com"
-                 "http://www.urbandictionary.com/define.php?term="
-                 ""])))
+;;(eval-after-load "webjump"
+;;'(add-to-list 'webjump-sites
+;;              '("Urban Dictionary" .
+;;                [simple-query
+;;                 "www.urbandictionary.com"
+;;                 "http://www.urbandictionary.com/define.php?term="
+;;                 ""])))
 ;; --------------------------------------------------------------------
 
 ;; --------------------------------------------------------------------
@@ -97,15 +97,15 @@
 ;; --------------------------------------------------------------------
 ;; http://whattheemacsd.com/setup-shell.el-01.html
 ;; Tap C-d twice to stop shell and kill buffer
-(defun comint-delchar-or-eof-or-kill-buffer (arg)
-  (interactive "p")
-  (if (null (get-buffer-process (current-buffer)))
-      (kill-buffer)
-    (comint-delchar-or-maybe-eof arg)))
-(add-hook 'shell-mode-hook
-          (lambda ()
-            (define-key shell-mode-map
-              (kbd "C-d") 'comint-delchar-or-eof-or-kill-buffer)))
+;;(defun comint-delchar-or-eof-or-kill-buffer (arg)
+;;  (interactive "p")
+;;  (if (null (get-buffer-process (current-buffer)))
+;;      (kill-buffer)
+;;    (comint-delchar-or-maybe-eof arg)))
+;;(add-hook 'shell-mode-hook
+;;          (lambda ()
+;;            (define-key shell-mode-map
+;;              (kbd "C-d") 'comint-delchar-or-eof-or-kill-buffer)))
 ;; --------------------------------------------------------------------
 
 ;; --------------------------------------------------------------------
@@ -127,18 +127,6 @@
 (global-set-key (kbd "<C-S-return>") 'open-line-above)
 ;; --------------------------------------------------------------------
 
-;; --------------------------------------------------------------------
-;; http://whattheemacsd.com/html
-;; --------------------------------------------------------------------
-
-;; --------------------------------------------------------------------
-;; http://whattheemacsd.com/html
-;; --------------------------------------------------------------------
-
-;; --------------------------------------------------------------------
-;; http://whattheemacsd.com/html
-;; --------------------------------------------------------------------
-
 ;; Color theme stuff
 (add-to-list 'load-path "~/dotfiles/emacs/color-theme")
 
@@ -148,7 +136,7 @@
 ;(color-theme-deep-blue)
 ;(color-theme-hober)
 (color-theme-gray30)
-(setq my-color-themes (list 'color-theme-billw 'color-theme-robin-hood 
+(setq my-color-themes (list 'color-theme-billw 'color-theme-robin-hood
                             'color-theme-deep-blue 'color-theme-hober))
 
 (add-to-list 'load-path "~/dotfiles/emacs")
@@ -212,7 +200,7 @@
 
 (global-set-key (quote [67108909]) 'shrink-window);; C--
 (global-set-key (quote [M-up]) `shrink-window);; M-up
-(global-set-key (quote [67108907]) 'enlarge-window);; C-+ 
+(global-set-key (quote [67108907]) 'enlarge-window);; C-+
 (global-set-key (quote [M-down]) `enlarge-window);; M-down
 
 ;; Language specific setup files
@@ -224,7 +212,7 @@
 ;; --------------------------------------------------------------------
 ; Install jshint-mode (uses flymake)
 ;(require 'flymake-jshint)
-;(add-hook 'js2-mode-hook (lambda () 
+;(add-hook 'js2-mode-hook (lambda ()
 ;                           (flymake-mode t)
 ;                           (local-set-key "\en" 'flymake-goto-next-error)
 ;                           (local-set-key "\ep" 'flymake-goto-prev-error)))
@@ -241,8 +229,8 @@
 (setq-default indent-tabs-mode nil)
 
 ;; Use electric indent mode and pair mode
-(electric-indent-mode)
-(electric-pair-mode)
+;;(electric-indent-mode)
+;;(electric-pair-mode)
 
 ;; Automatically convert to unix line endings
 (add-hook 'find-file-hook 'find-file-check-line-endings)
@@ -294,7 +282,7 @@
 ;; --------------------------------------------------------------------
 
 ;; --------------------------------------------------------------------
-;; Highlight tabs for me!
+;; Highlight trailing whitespace! Toggle with F9
 (require 'highlight-chars)
 (global-set-key (kbd "<f9>") 'hc-toggle-highlight-trailing-whitespace)
 (hc-toggle-highlight-trailing-whitespace)
@@ -316,8 +304,10 @@
 ;;(global-set-key "\C-xg" 'goto-line)
 ;;(global-set-key "\C-xf" 'search-forward)
 (global-set-key "\C-xc" 'compile)
-(global-set-key "\M-n" 'next-error)
-(global-set-key "\M-p" 'previous-error)
+
+;; I used these one together with flymake and jshint
+;;(global-set-key "\M-n" 'next-error)
+;;(global-set-key "\M-p" 'previous-error)
 
 ;;(global-set-key "\C-xt" 'text-mode);
 ;;(global-set-key "\C-xr" 'replace-string);
