@@ -1,0 +1,20 @@
+#!/bin/bash
+set -e
+
+mkdir -p ~/src && cd ~/src
+
+echo "---- INSTALLING: dependencies for armory"
+sudo apt-get install --assume-yes build-essential pyqt4-dev-tools swig libqtcore4 libqt4-dev python-qt4 python-dev python-twisted python-psutil
+
+if [ ! -d "BitcoinArmory" ]; then
+    echo "---- INSTALLING: BitcoinArmory"
+    git clone git@github.com:ralphtheninja/BitcoinArmory.git
+    cd BitcoinArmory
+    NUMBER_OF_PROCESSORS=`cat /proc/cpuinfo | grep processor | wc -l`
+    make -j $NUMBER_OF_PROCESSORS
+else
+    echo "---- INSTALLING: BitcoinArmory already installed, SKIPPING!"
+fi
+
+# Start by running
+#python ~/src/BitcoinArmory/ArmoryQt.py

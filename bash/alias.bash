@@ -1,5 +1,6 @@
 alias ack='ack-grep'
 alias ama='amarok &> /dev/null &'
+alias armory='python ~/src/BitcoinArmory/ArmoryQt.py &'
 alias bc='bc <(echo scale=10)'
 alias cd..='cd ..'
 alias cd-='cd -'
