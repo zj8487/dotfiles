@@ -1,19 +1,19 @@
 {
-    "name": basename.replace(/^node-/, '')
-  , "description": prompt()
-  , "keywords": []
-  , "version": prompt('version', '0.0.0')
-  , "author": "lms <ralphtheninja@riseup.net>"
-  , "repository": {
-        "url": "git://github.com/ralphtheninja/" + basename + ".git"
-    }
-  , "main": prompt('entry point', 'index.js')
-  , "scripts": {
-        "test": "tap --stderr ./test/*.js"
-    }
-  , "dependencies": {}
-  , "devDependencies": {
-        "tap": "~0.4.0"
-    }
-  , "license": "MIT"
+  "name": basename.replace(/^node-/, ''),
+  "description": prompt(),
+  "keywords": [],
+  "version": prompt('version', '0.0.0'),
+  "author": "lms <ralphtheninja@riseup.net>",
+  "repository": {
+    "url": "git://github.com/ralphtheninja/" + basename + ".git"
+  },
+  "main": prompt('entry point', 'index.js'),
+  "scripts": {
+    "test": "tap --stderr ./test/*.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "tap": "~0.4.0"
+  },
+  "license": "MIT"
 }
