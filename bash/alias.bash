@@ -24,8 +24,9 @@ alias mail='thunderbird &> /dev/null &'
 alias n="node"
 alias myip="curl icanhazip.com"
 alias rlocate='locate --regex'
-alias bitcoind='~/src/bitcoin/src/bitcoind -testnet -rpcuser=foo -rpcpassword=bar -rpcport=12345'
-alias runbitcoind='bitcoind -debug -logtimestamps -printtoconsole'
+alias bitcoind='~/src/bitcoin/src/bitcoind'
+#alias bitcoind='~/src/bitcoin/src/bitcoind -testnet -rpcuser=foo -rpcpassword=bar -rpcport=12345'
+#alias runbitcoind='bitcoind -debug -logtimestamps -printtoconsole'
 alias todo='e ~/Dropbox/TODO.txt'
 alias surf='firefox &> /dev/null &'
 alias xpc='xclip -o -selection clipboard'
