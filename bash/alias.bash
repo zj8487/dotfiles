@@ -25,6 +25,7 @@ alias n="node"
 alias myip="curl icanhazip.com"
 alias rlocate='locate --regex'
 alias bitcoind='~/src/bitcoin/src/bitcoind'
+alias reload-static='pkginit rm static && pkginit add static ~/dotfiles/node/static.json'
 #alias bitcoind='~/src/bitcoin/src/bitcoind -testnet -rpcuser=foo -rpcpassword=bar -rpcport=12345'
 #alias runbitcoind='bitcoind -debug -logtimestamps -printtoconsole'
 alias todo='e ~/Dropbox/TODO.txt'

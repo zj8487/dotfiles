@@ -7,7 +7,7 @@
   "repository": {
     "url": "git://github.com/ralphtheninja/" + basename + ".git"
   },
-  "main": prompt('entry point', 'server.js'),
+  "main": prompt('entry point', 'index.js'),
   "dependencies": {
     "st": "~0.2.2"
   },
