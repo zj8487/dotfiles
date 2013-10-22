@@ -1,0 +1,16 @@
+{
+  "name": basename.replace(/^node-/, ''),
+  "description": prompt(),
+  "keywords": [],
+  "version": prompt('version', '0.0.0'),
+  "author": "lms <ralphtheninja@riseup.net>",
+  "repository": {
+    "url": "git://github.com/ralphtheninja/" + basename + ".git"
+  },
+  "main": prompt('entry point', 'server.js'),
+  "dependencies": {
+    "st": "~0.2.2"
+  },
+  "devDependencies": {},
+  "license": "MIT"
+}
