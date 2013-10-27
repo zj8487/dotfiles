@@ -40,6 +40,12 @@ echo "---- INSTALLING: gdb"
 sudo apt-get install --assume-yes gdb
 sudo sysctl kernel.core_pattern='core'
 
+echo "---- INSTALLING: xinit"
+sudo apt-get install --assume-yes xinit
+
+echo "---- INSTALLING: awesome"
+sudo apt-get install --assume-yes awesome
+
 #echo "---- INSTALLING: aptitude"
 #sudo apt-get install --assume-yes aptitude
 
