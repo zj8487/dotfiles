@@ -46,7 +46,7 @@ sudo apt-get install -y gdb
 sudo sysctl kernel.core_pattern='core'
 
 echo "---- INSTALLING: awesome"
-sudo apt-get install -y awesome
+sudo apt-get install -y awesome awesome-extra
 
 echo "---- INSTALLING: aptitude"
 sudo apt-get install -y aptitude
