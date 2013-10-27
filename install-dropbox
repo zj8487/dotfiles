@@ -1,5 +1,5 @@
 #!/bin/bash
 set -e
 
-sudo dpkg -i ~/dotfiles/files/dropbox.deb
+sudo dpkg -i ~/dotfiles/files/dropbox_1.6.0_amd64.deb
 
