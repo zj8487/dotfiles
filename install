@@ -63,6 +63,9 @@ sudo apt-get install -y mplayer2
 echo "---- INSTALLING: libreoffice"
 sudo apt-get install -y libreoffice
 
+echo "---- INSTALLING: finch (xmpp)"
+sudo apt-get install -y finch
+
 #echo "---- INSTALLING: mpg321 for mpg123"
 #sudo apt-get install -y mpg321
 
