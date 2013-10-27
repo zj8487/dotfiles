@@ -55,6 +55,9 @@ sudo apt-get install --assume-yes curl
 echo "---- INSTALLING: imagemagick"
 sudo apt-get install --assume-yes imagemagick
 
+echo "---- INSTALLING: mplayer2"
+sudo apt-get install --assume-yes mplayer2
+
 #echo "---- INSTALLING: mpg321 for mpg123"
 #sudo apt-get install --assume-yes mpg321
 
