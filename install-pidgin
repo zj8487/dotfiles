@@ -3,7 +3,7 @@ set -e
 
 mkdir -p ~/src && cd ~/src
 
-PIDGIN_V=2.10.6
+PIDGIN_V=2.10.7
 PIDGIN_FOLDER="pidgin-$PIDGIN_V"
 
 if [ ! -d "$PIDGIN_FOLDER" ]; then

@@ -36,8 +36,3 @@ export GIT_MERGE_AUTOEDIT=no
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
    . /etc/bash_completion
 fi
-
-# joyent manta
-export MANTA_URL=https://us-east.manta.joyent.com
-export MANTA_USER=fonofy
-export MANTA_KEY_ID=c2:5a:0b:57:ac:d5:b9:67:32:5c:19:e1:f1:09:56:87

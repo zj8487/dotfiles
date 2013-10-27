@@ -1,15 +1,15 @@
 #!/bin/bash
 set -e
 
-echo "---- INSTALLING: copy o script"
-sudo ln -fs ~/dotfiles/bash/o /usr/bin/o
-
-echo "---- INSTALLING: updating git submodules"
-git submodule init
-git submodule update
+# TODO update o script, cant rely on gnome-open anymore
+#echo "---- INSTALLING: copy o script"
+#sudo ln -fs ~/dotfiles/bash/o /usr/bin/o
 
 echo "---- INSTALLING: setting up folder structure"
-mkdir -p ~/tmp
+mkdir -p ~/tmp ~/src ~/.ssh
+
+echo "---- INSTALLING: symlink for ~/.ssh/config"
+ln -fs ~/dotfiles/ssh/config ~/.ssh/config
 
 echo "---- INSTALLING: setting up keyboard preferences"
 sudo cp ~/dotfiles/keyboard /etc/default/keyboard
@@ -20,69 +20,56 @@ ln -fs ~/dotfiles/bash/bashrc ~/.bashrc
 echo "---- INSTALLING: symlink for ~/.gitconfig"
 ln -fs ~/dotfiles/git/gitconfig ~/.gitconfig
 
-echo "---- INSTALLING: symlink for ~/.xinitrc"
-ln -fs ~/dotfiles/xinitrc ~/.xinitrc
+echo "---- INSTALLING: setting up symbolic link for emacs"
+ln -fs ~/dotfiles/emacs/emacs ~/.emacs
+sudo ln -fs ~/dotfiles/bash/e /usr/bin/e
 
-echo "---- INSTALLING: symlink for ~/.config/openbox/lubuntu-rc.xml"
-if [ -d ~/.config/openbox ]; then
-    ln -fs ~/dotfiles/lubuntu-rc.xml ~/.config/openbox/lubuntu-rc.xml
-fi
+echo "---- INSTALLING: updating git submodules"
+git submodule init
+git submodule update
 
-#echo "---- INSTALLING: symlink for /etc/rc.local"
-#sudo ln -fs ~/dotfiles/rc.local /etc/rc.local
+# start apt-get specifics
 
 echo "---- INSTALLING: build-essential"
 sudo apt-get install --assume-yes build-essential
 
-echo "---- INSTALLING: libnss3-tools (for certutil)"
-sudo apt-get install --assume-yes libnss3-tools
+#echo "---- INSTALLING: libnss3-tools (for certutil)"
+#sudo apt-get install --assume-yes libnss3-tools
 
 echo "---- INSTALLING: gdb"
 sudo apt-get install --assume-yes gdb
 sudo sysctl kernel.core_pattern='core'
 
-echo "---- INSTALLING: aptitude"
-sudo apt-get install --assume-yes aptitude
-
-echo "---- INSTALLING: libavahi-compat-libdnssd-dev"
-sudo apt-get install --assume-yes libavahi-compat-libdnssd-dev
+#echo "---- INSTALLING: aptitude"
+#sudo apt-get install --assume-yes aptitude
 
 echo "---- INSTALLING: curl"
 sudo apt-get install --assume-yes curl
 
-echo "---- INSTALLING: gnome-utils"
-sudo apt-get install --assume-yes gnome-utils
-
-echo "---- INSTALLING: libgnome2-bin (for gnome-open)"
-sudo apt-get install --assume-yes libgnome2-bin
-
 echo "---- INSTALLING: imagemagick"
 sudo apt-get install --assume-yes imagemagick
 
-echo "---- INSTALLING: mpg321 for mpg123"
-sudo apt-get install --assume-yes mpg321
+#echo "---- INSTALLING: mpg321 for mpg123"
+#sudo apt-get install --assume-yes mpg321
 
-echo "---- INSTALLING: ffmpeg"
-sudo apt-get install --assume-yes ffmpeg
+#echo "---- INSTALLING: ffmpeg"
+#sudo apt-get install --assume-yes ffmpeg
 
-echo "---- INSTALLING: flac"
-sudo apt-get install --assume-yes flac
+#echo "---- INSTALLING: flac"
+#sudo apt-get install --assume-yes flac
 
-echo "---- INSTALLING: lame"
-sudo apt-get install --assume-yes lame
+#echo "---- INSTALLING: lame mp3 encoding library"
+#sudo apt-get install --assume-yes lame
 
 echo "---- INSTALLING: xclip"
 sudo apt-get install --assume-yes xclip
 
-echo "---- INSTALLING: wamerican-insane"
-sudo apt-get install --assume-yes wamerican-insane
+#echo "---- INSTALLING: wamerican-insane"
+#sudo apt-get install --assume-yes wamerican-insane
 # dict file installed in /usr/share/dict/american-english-insane
 
-#echo "---- INSTALLING: redis-server"
-#sudo apt-get install --assume-yes redis-server
-
-echo "---- INSTALLING: yum"
-sudo apt-get install --assume-yes yum
+#echo "---- INSTALLING: yum"
+#sudo apt-get install --assume-yes yum
 
 echo "---- INSTALLING: ack-grep"
 sudo apt-get install --assume-yes ack-grep
@@ -90,26 +77,17 @@ sudo apt-get install --assume-yes ack-grep
 echo "---- INSTALLING: tree"
 sudo apt-get install --assume-yes tree
 
-echo "---- INSTALLING: GNU gettext tools"
-sudo apt-get install --assume-yes gettext
-
-echo "---- INSTALLING: intltool"
-sudo apt-get install --assume-yes intltool
+#echo "---- INSTALLING: intltool"
+#sudo apt-get install --assume-yes intltool
 
 echo "---- INSTALLING: whois (for mkpasswd)"
 sudo apt-get install --assume-yes whois
 
-echo "---- INSTALLING: shotwell"
-sudo apt-get install --assume-yes shotwell
-
-echo "---- INSTALLING: libssl-dev (for bitcoinsjs-server)"
-sudo apt-get install --assume-yes libssl-dev
-
 echo "---- INSTALLING: gimp"
 sudo apt-get install --assume-yes gimp
 
-echo "---- INSTALLING: cvs"
-sudo apt-get install --assume-yes cvs
+#echo "---- INSTALLING: cvs"
+#sudo apt-get install --assume-yes cvs
 
 echo "---- INSTALLING: irssi"
 sudo apt-get install --assume-yes irssi
@@ -117,39 +95,29 @@ sudo apt-get install --assume-yes irssi
 echo "---- INSTALLING: nc6"
 sudo apt-get install --assume-yes netcat6
 
-echo "---- INSTALLING: eog"
-sudo apt-get install --assume-yes eog
+#echo "---- INSTALLING: eog"
+#sudo apt-get install --assume-yes eog
 
 echo "---- INSTALLING: rar"
 sudo apt-get install --assume-yes rar unrar
 
-echo "---- INSTALLING: bitcoind"
-sudo apt-get install --assume-yes bitcoind
+#echo "---- INSTALLING: pip"
+#sudo apt-get install --assume-yes python-pip
 
-echo "---- INSTALLING: pip"
-sudo apt-get install --assume-yes python-pip
+#echo "---- INSTALLING: traceroute"
+#sudo apt-get install --assume-yes traceroute
 
-echo "---- INSTALLING: traceroute"
-sudo apt-get install --assume-yes traceroute
+echo "---- INSTALLING: emacs"
+sudo apt-get install --assume-yes emacs24
 
-echo "---- INSTALLING: fortune"
-sudo apt-get install --assume-yes fortune-mod
+echo "---- INSTALLING: firefox"
+sudo apt-get install --assume-yes firefox
 
-echo "---- INSTALLING: dvd stuff"
-sudo apt-get install --assume-yes libdvdnav4 libdvdread4 gstreamer0.10-plugins-bad gstreamer0.10-plugins-ugly
-sudo /usr/share/doc/libdvdread4/install-css.sh
-
-source ~/dotfiles/install-couchdb
-source ~/dotfiles/install-gnome-terminal
-source ~/dotfiles/install-emacs
-source ~/dotfiles/install-firefox
 source ~/dotfiles/install-fonts
-source ~/dotfiles/install-node
-source ~/dotfiles/install-dtrace
-source ~/dotfiles/install-npm-modules
-source ~/dotfiles/install-opera
-source ~/dotfiles/install-pidgin
-source ~/dotfiles/install-ssh
+#source ~/dotfiles/install-node
+#source ~/dotfiles/install-npm-modules
+#source ~/dotfiles/install-pidgin
+#source ~/dotfiles/install-ssh
 
 echo "---- INSTALL: Finished successfully!"
 

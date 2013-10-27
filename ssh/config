@@ -1,32 +1,18 @@
-Host node
-	User ubuntu
-	Hostname ec2-54-229-52-122.eu-west-1.compute.amazonaws.com
-	ForwardAgent yes
-	PreferredAuthentications publickey
-	IdentityFile /media/usb-stick/ssh/mange_aws.pem
-
-Host fonofy
-	User ubuntu
-	Hostname ec2-54-229-66-126.eu-west-1.compute.amazonaws.com
-	ForwardAgent yes
-	PreferredAuthentications publickey
-	IdentityFile /media/usb-stick/ssh/fonofy_aws.pem
-
 Host github.com
 	User git
 	Hostname github.com
 	PreferredAuthentications publickey
-	IdentityFile /media/usb-stick/ssh/github
+	IdentityFile ~/.ssh/github
 
 Host djoot
 	User mange
 	Hostname djoot.se
 	PreferredAuthentications publickey
-	IdentityFile /media/usb-stick/ssh/djoot
+	IdentityFile ~/.ssh/djoot
 
 Host numbahWWW
 	User numbahtennet
 	Hostname shell.scorpionshops.com
 	PreferredAuthentications publickey
-	IdentityFile /media/usb-stick/ssh/numbahWWW
+	IdentityFile ~/.ssh/numbahWWW
 
