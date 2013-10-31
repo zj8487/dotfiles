@@ -28,3 +28,7 @@ function rebuildbitcoind {
     make -j $NUMBER_OF_PROCESSORS -f makefile.unix USE_UPNP=-
     popd
 }
+
+function md {
+    morkdown -w "$1" &> /dev/null &
+}
