@@ -32,3 +32,19 @@ function rebuildbitcoind {
 function md {
     morkdown -w "$1" &> /dev/null &
 }
+
+function mkstatic {
+    if [ ! -z "$1" ]; then
+#        echo "fuck yes"
+        mkdir -p "$1"
+        # TODO fix base module
+        cp -r ~/src/static-base/* "$1"
+        # TODO use sed to replace port numbers with "$2" ..
+        cd "$1"
+        pkginit build static
+        cat package.json
+#        ~/src/youtube-dl/youtube-dl -f18 -t "$1"
+    else
+        echo "missing module parameter!"
+    fi
+}

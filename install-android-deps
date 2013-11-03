@@ -1,0 +1,9 @@
+#!/bin/bash
+
+sudo apt-get install -y openjdk-6-jre openjdk-6-jdk icedtea6-plugin
+sudo apt-get install -y ant
+
+# download android sdk from here http://developer.android.com/sdk/index.html
+# $ tar -xvzf android-sdk_rXX-linux.tgz && mv android-sdk-linux ~/
+# $ cd ~/android-sdk-linux/tools
+# $ ./android

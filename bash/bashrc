@@ -29,6 +29,10 @@ prepend_to_path ~/local/bin
 prepend_to_path ~/dotfiles/bash
 prepend_to_path ~/dotfiles/node
 
+# AndroidDev PATH
+export PATH=${PATH}:~/android-sdk-linux/tools
+export PATH=${PATH}:~/android-sdk-linux/platform-tools
+
 # prevent git from opening editor for merge commit message
 export GIT_MERGE_AUTOEDIT=no
 
