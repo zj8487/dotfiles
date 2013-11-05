@@ -1,0 +1,5 @@
+#!/bin/bash
+
+if [ ! -z "$1" ]; then
+    youtube-dl -f18 -t "$1"
+fi

@@ -27,6 +27,7 @@ prepend_to_path() {
 
 prepend_to_path ~/local/bin
 prepend_to_path ~/dotfiles/bash
+prepend_to_path ~/dotfiles/bin
 prepend_to_path ~/dotfiles/node
 
 # AndroidDev PATH
