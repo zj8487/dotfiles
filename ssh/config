@@ -4,12 +4,18 @@ Host github.com
 	PreferredAuthentications publickey
 	IdentityFile ~/.ssh/github
 
-Host newserver
+Host indentive
 	User magsk
 	Hostname newserver
 	PreferredAuthentications publickey
         ForwardAgent yes
-	IdentityFile ~/.ssh/newserver
+	IdentityFile ~/.ssh/magsk_newserver
+
+Host git
+	User git
+	Hostname newserver
+	PreferredAuthentications publickey
+	IdentityFile ~/.ssh/git_newserver
 
 Host djoot
 	User mange
