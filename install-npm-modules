@@ -8,10 +8,14 @@ npm install -g nave
 npm install -g morkdown
 npm install -g node-gyp
 npm install -g cordova
+
+# for doing e.g. "wr 'browserify index.js -o bundle.js' & serve www/"
+npm install -g wr
+npm install -g serve
+
 #npm install -g rsa-json
 #npm install -g swank-js
 #npm install -g uglify-js2
-#npm install -g wr
 npm install -g node-inspector
 
 npm install -g pkginit
