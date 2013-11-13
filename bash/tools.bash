@@ -48,3 +48,15 @@ function mkstatic {
         echo "missing module parameter!"
     fi
 }
+
+function update-fasttrack {
+    cd ~/src
+    tar xzfv ~/Dropbox/indentive/fasttrack.tar.gz
+    cd -
+}
+
+function backup-fasttrack {
+    cd ~/src
+    tar czfv ~/Dropbox/indentive/fasttrack.tar.gz fasttrack
+    cd -
+}
