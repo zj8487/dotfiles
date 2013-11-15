@@ -1,31 +1,38 @@
 Host github.com
-	User git
-	Hostname github.com
-	PreferredAuthentications publickey
-	IdentityFile ~/.ssh/github
+     User git
+     Hostname github.com
+     PreferredAuthentications publickey
+     IdentityFile ~/.ssh/github
+
+Host home
+     User magnus
+     Hostname 85.229.217.74
+     Port 5699
+     PreferredAuthentications publickey
+     IdentityFile ~/.ssh/home
 
 Host indentive
-	User magsk
-	Hostname newserver
-	PreferredAuthentications publickey
-        ForwardAgent yes
-	IdentityFile ~/.ssh/magsk_newserver
+     User magsk
+     Hostname newserver
+     PreferredAuthentications publickey
+     ForwardAgent yes
+     IdentityFile ~/.ssh/magsk_newserver
 
 Host git
-	User git
-	Hostname newserver
-	PreferredAuthentications publickey
-	IdentityFile ~/.ssh/git_newserver
+     User git
+     Hostname newserver
+     PreferredAuthentications publickey
+     IdentityFile ~/.ssh/git_newserver
 
 Host djoot
-	User mange
-	Hostname djoot.se
-	PreferredAuthentications publickey
-	IdentityFile ~/.ssh/djoot
+     User mange
+     Hostname djoot.se
+     PreferredAuthentications publickey
+     IdentityFile ~/.ssh/djoot
 
 Host numbahWWW
-	User numbahtennet
-	Hostname shell.scorpionshops.com
-	PreferredAuthentications publickey
-	IdentityFile ~/.ssh/numbahWWW
+     User numbahtennet
+     Hostname shell.scorpionshops.com
+     PreferredAuthentications publickey
+     IdentityFile ~/.ssh/numbahWWW
 
