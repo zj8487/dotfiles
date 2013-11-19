@@ -7,7 +7,10 @@ npm install -g forever
 npm install -g nave
 npm install -g morkdown
 npm install -g node-gyp
+
+# phonegap stuff
 npm install -g cordova
+npm install -g plugman
 
 # serve static stuff, browserify on change and do live reload
 npm install -g beefy
