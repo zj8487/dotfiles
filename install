@@ -32,6 +32,9 @@ git submodule update
 echo "---- INSTALLING: xclip"
 sudo apt-get install -y xclip
 
+echo "---- INSTALLING: scrot"
+sudo apt-get install -y scrot
+
 echo "---- INSTALLING: emacs"
 sudo apt-get install -y emacs24
 
