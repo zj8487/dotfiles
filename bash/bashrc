@@ -34,6 +34,8 @@ prepend_to_path ~/dotfiles/node
 export PATH=${PATH}:~/android-sdk-linux/tools
 export PATH=${PATH}:~/android-sdk-linux/platform-tools
 
+export JAVA_HOME=/usr/
+
 # prevent git from opening editor for merge commit message
 export GIT_MERGE_AUTOEDIT=no
 
