@@ -1,3 +1,16 @@
+Host amazon
+     User ubuntu
+     Hostname ec2-50-112-147-146.us-west-2.compute.amazonaws.com
+     ForwardAgent yes
+     PreferredAuthentications publickey
+     IdentityFile ~/.ssh/indentive_aws.pem
+
+Host calle
+     User magsk
+     Hostname 192.168.1.10
+     PreferredAuthentications publickey
+     IdentityFile ~/.ssh/calle_server
+
 Host github.com
      User git
      Hostname github.com
