@@ -15,6 +15,7 @@ alias glp='git lg -p'
 alias gs='git st'
 #alias igrep='grep -i'
 alias l="ls -ltrha"
+alias lc='for f in *; do b=$(echo "$f" | tr '[A-Z]' '[a-z]'); mv "$f" "$b"; done'
 alias ll="ls -lha"
 alias ls="ls --color=auto"
 alias m="make -j $NUMBER_OF_PROCESSORS"
