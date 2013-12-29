@@ -27,6 +27,7 @@ alias myip="curl icanhazip.com"
 #alias bitcoind='~/src/bitcoin/src/bitcoind -testnet -rpcuser=foo -rpcpassword=bar -rpcport=12345'
 #alias runbitcoind='bitcoind -debug -logtimestamps -printtoconsole'
 alias sc='synclient TapButton1=1 TapButton2=2 TapButton3=3'
+alias tor='~/tor-browser_en-US/start-tor-browser &> /dev/null &'
 #alias xpc='xclip -o -selection clipboard'
 #alias xpp='xclip -o -selection primary'
 #alias xps='xclip -o -selection secondary'
