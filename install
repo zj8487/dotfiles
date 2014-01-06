@@ -32,6 +32,9 @@ git submodule update
 echo "---- INSTALLING: iftop"
 sudo apt-get install -y iftop
 
+echo "---- INSTALLING: jwhois"
+sudo apt-get install -y jwhois
+
 echo "---- INSTALLING: xclip"
 sudo apt-get install -y xclip
 
