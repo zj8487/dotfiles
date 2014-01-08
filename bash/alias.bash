@@ -1,6 +1,6 @@
 alias ack='ack-grep'
 alias ama='amarok &> /dev/null &'
-#alias armory='python ~/src/BitcoinArmory/ArmoryQt.py &'
+alias bd='~/src/bitcoin/src/bitcoind'
 alias bc='bc <(echo scale=10)'
 #alias create-cert='openssl req -x509 -nodes -newkey rsa:2048 -keyout key.pem -out cert.pem -days 365'
 alias duf='du -h --max-depth=1 | sort -n -r'
@@ -15,6 +15,7 @@ alias glp='git lg -p'
 alias gs='git st'
 #alias igrep='grep -i'
 alias l="ls -ltrha"
+alias lc='for f in *; do b=$(echo "$f" | tr '[A-Z]' '[a-z]'); mv "$f" "$b"; done'
 alias ll="ls -lha"
 alias ls="ls --color=auto"
 alias m="make -j $NUMBER_OF_PROCESSORS"
@@ -22,12 +23,11 @@ alias mail='thunderbird &> /dev/null &'
 alias n="node"
 alias myip="curl icanhazip.com"
 #alias rlocate='locate --regex'
-#alias bitcoind='~/src/bitcoin/src/bitcoind'
 #alias reload-static='pkginit rm static && pkginit add static ~/dotfiles/node/static.json'
 #alias bitcoind='~/src/bitcoin/src/bitcoind -testnet -rpcuser=foo -rpcpassword=bar -rpcport=12345'
-#alias runbitcoind='bitcoind -debug -logtimestamps -printtoconsole'
 alias sc='synclient TapButton1=1 TapButton2=2 TapButton3=3'
 alias sshot='gnome-screenshot -a'
+alias tor='~/tor-browser_en-US/start-tor-browser &> /dev/null &'
 #alias xpc='xclip -o -selection clipboard'
 #alias xpp='xclip -o -selection primary'
 #alias xps='xclip -o -selection secondary'
