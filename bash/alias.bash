@@ -20,6 +20,7 @@ alias ll="ls -lha"
 alias ls="ls --color=auto"
 alias m="make -j $NUMBER_OF_PROCESSORS"
 alias mail='thunderbird &> /dev/null &'
+alias maxisat='ssh -l indentive -o PubkeyAuthentication=no -p 9400 83.216.4.20'
 alias n="node"
 alias myip="curl icanhazip.com"
 #alias rlocate='locate --regex'
