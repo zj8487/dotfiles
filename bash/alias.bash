@@ -29,6 +29,7 @@ alias myip="curl icanhazip.com"
 alias sc='synclient TapButton1=1 TapButton2=2 TapButton3=3'
 alias sshot='gnome-screenshot -a'
 alias tor='~/tor-browser_en-US/start-tor-browser &> /dev/null &'
+alias we='weinre --boundHost=-all-'
 #alias xpc='xclip -o -selection clipboard'
 #alias xpp='xclip -o -selection primary'
 #alias xps='xclip -o -selection secondary'
