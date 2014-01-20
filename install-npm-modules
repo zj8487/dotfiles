@@ -8,13 +8,14 @@ npm install -g forever
 npm install -g morkdown
 npm install -g msee
 npm install -g node-gyp
+npm install -g weinre
 
 # phonegap stuff
 npm install -g cordova
 npm install -g plugman
 
 # serve static stuff, browserify on change and do live reload
-npm install -g beefy
+#npm install -g beefy
 
 # for doing e.g. "wr 'browserify index.js -o bundle.js' & serve www/"
 npm install -g wr
