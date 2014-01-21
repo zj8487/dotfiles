@@ -39,6 +39,9 @@ export JAVA_HOME=/usr/
 # prevent git from opening editor for merge commit message
 export GIT_MERGE_AUTOEDIT=no
 
+# when opening eclipse, make sure the menu is attached to the window
+export UBUNTU_MENUPROXY=0
+
 # enable bash completion in interactive shells
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
    . /etc/bash_completion
