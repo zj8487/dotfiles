@@ -29,6 +29,9 @@ git submodule update
 
 # start apt-get specifics
 
+echo "---- INSTALLING: svn"
+sudo apt-get install -y subversion
+
 echo "---- INSTALLING: iftop"
 sudo apt-get install -y iftop
 
