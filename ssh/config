@@ -1,3 +1,10 @@
+Host maxisat
+     User indentive
+     Hostname 83.216.4.20
+     Port 9400
+     PreferredAuthentications publickey
+     IdentityFile ~/.ssh/maxisat
+
 Host amazon
      User ubuntu
      Hostname ec2-50-112-147-146.us-west-2.compute.amazonaws.com
