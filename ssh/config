@@ -1,3 +1,25 @@
+# My stuff
+
+Host github.com
+     User git
+     Hostname github.com
+     PreferredAuthentications publickey
+     IdentityFile ~/.ssh/github
+
+Host djoot
+     User mange
+     Hostname djoot.se
+     PreferredAuthentications publickey
+     IdentityFile ~/.ssh/djoot
+
+Host numbahWWW
+     User numbahtennet
+     Hostname shell.scorpionshops.com
+     PreferredAuthentications publickey
+     IdentityFile ~/.ssh/numbahWWW
+
+# Work related stuff
+
 Host maxisat
      User indentive
      Hostname 83.216.4.20
@@ -18,19 +40,6 @@ Host calle
      PreferredAuthentications publickey
      IdentityFile ~/.ssh/calle_server
 
-Host github.com
-     User git
-     Hostname github.com
-     PreferredAuthentications publickey
-     IdentityFile ~/.ssh/github
-
-Host home
-     User magnus
-     Hostname 85.229.217.74
-     Port 5699
-     PreferredAuthentications publickey
-     IdentityFile ~/.ssh/home
-
 Host indentive
      User magsk
      Hostname newserver
@@ -43,16 +52,4 @@ Host git
      Hostname newserver
      PreferredAuthentications publickey
      IdentityFile ~/.ssh/git_newserver
-
-Host djoot
-     User mange
-     Hostname djoot.se
-     PreferredAuthentications publickey
-     IdentityFile ~/.ssh/djoot
-
-Host numbahWWW
-     User numbahtennet
-     Hostname shell.scorpionshops.com
-     PreferredAuthentications publickey
-     IdentityFile ~/.ssh/numbahWWW
 
