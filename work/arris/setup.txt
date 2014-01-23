@@ -1,0 +1,6 @@
+gradle
+------
+
+cd ~/src
+git clone git@github.com:gradle/gradle.git
+~/src/gradle/gradlew installAll -Pgradle_installPath=~/local/gradle-source-build
