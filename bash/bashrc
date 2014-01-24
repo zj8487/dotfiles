@@ -30,6 +30,7 @@ append_to_path() {
     fi
 }
 
+prepend_to_path ~/dotfiles/work/arris
 prepend_to_path ~/local/bin
 prepend_to_path ~/dotfiles/bash
 prepend_to_path ~/dotfiles/bin
