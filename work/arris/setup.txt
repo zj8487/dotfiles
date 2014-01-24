@@ -1,6 +1,39 @@
-gradle
-------
+- install svn
+sudo apt-get install subversion
 
-cd ~/src
-git clone git@github.com:gradle/gradle.git
-~/src/gradle/gradlew installAll -Pgradle_installPath=~/local/gradle-source-build
+- java stuff
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update && sudo apt-get install oracle-java7-installer
+
+- install eclipse (in e.g. /opt/eclipse)
+
+- use eclipse.ini from dotfiles
+
+- install JavaHL library for eclipse (settings should be ok in eclipse.ini)
+sudo apt-get install libsvn-java
+
+- checkout code
+cd ~/workspace/ && svn co https://dg-svns.arrisi.com/ws_phoenix/trunk phoenix
+
+- use h2 db with jetty (do not check in this file!)
+echo 'svg.deploy.type = dev_h2' > ~/workspace/phoenix/dpcust_phoenix/build_dev.properties
+
+- run eclipse-plugins.sh
+
+- install checkstyle from ~/workspace/phoenix/dreampark/checkstyle_medium.xml (TODO write description)
+
+- install gradle plugin in eclipse and build model (TODO write description)
+
+- create working sets to simplify navigation in eclipse
+
+- run Jetty:
+cd ~/workspace/phoenix/dpcust_phoenix && gradle rJ
+
+
+MISC
+----
+
+RemoteFullPCConfig.json contains key mappings for the browser
+
+
+
