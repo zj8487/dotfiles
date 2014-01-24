@@ -18,10 +18,15 @@ source $THIS/prompt.bash
 source $THIS/npm-completion.bash
 source $THIS/tools.bash
 
-# only prepend to path if it's not in path
 prepend_to_path() {
     if [[ ":$PATH:" != *":$1:"* ]]; then
         PATH=$1:$PATH
+    fi
+}
+
+append_to_path() {
+    if [[ ":$PATH:" != *":$1:"* ]]; then
+        PATH=$PATH:$1
     fi
 }
 
@@ -30,11 +35,12 @@ prepend_to_path ~/dotfiles/bash
 prepend_to_path ~/dotfiles/bin
 prepend_to_path ~/dotfiles/node
 
-# AndroidDev PATH
-export PATH=${PATH}:~/android-sdk-linux/tools
-export PATH=${PATH}:~/android-sdk-linux/platform-tools
+#append_to_path ~/local/gradle-1.10/bin
 
-export JAVA_HOME=/usr/
+# AndroidDev PATH
+#export PATH=${PATH}:~/android-sdk-linux/tools
+#export PATH=${PATH}:~/android-sdk-linux/platform-tools
+#export JAVA_HOME=/usr/
 
 # prevent git from opening editor for merge commit message
 export GIT_MERGE_AUTOEDIT=no
