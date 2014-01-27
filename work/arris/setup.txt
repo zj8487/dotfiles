@@ -5,7 +5,7 @@ sudo apt-get install subversion
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update && sudo apt-get install oracle-java7-installer
 
-- install eclipse (in e.g. /opt/eclipse)
+- install eclipse (in e.g. ~/programs/eclipse)
 
 - use eclipse.ini from dotfiles
 

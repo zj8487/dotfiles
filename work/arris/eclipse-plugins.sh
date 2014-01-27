@@ -1,4 +1,4 @@
-ECLIPSE_HOME=/opt/eclipse ; \
+ECLIPSE_HOME=~/programs/eclipse ; \
 $ECLIPSE_HOME/eclipse -nosplash \
 -application org.eclipse.equinox.p2.director \
 -repository http://andrei.gmxhome.de/eclipse/,http://dist.springsource.com/release/TOOLS/update/e4.2/,http://download.eclipse.org/eclipse/updates/4.2,\
