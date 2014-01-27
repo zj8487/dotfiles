@@ -1,6 +1,6 @@
 #!/bin/bash
 
 export MOZILLA_FIVE_HOME="/usr/lib/mozilla/"
-export ECLIPSE_HOME="~/programs/eclipse"
+export ECLIPSE_HOME=~/programs/eclipse
 
 $ECLIPSE_HOME/eclipse $*
