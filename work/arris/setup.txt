@@ -14,6 +14,7 @@ sudo apt-get install libsvn-java
 
 - checkout code
 cd ~/workspace/ && svn co https://dg-svns.arrisi.com/ws_phoenix/trunk phoenix
+cd ~/workspace/ && svn co https://dg-svns.arrisi.com/ws_testportal/trunk testportal
 
 - use h2 db with jetty (do not check in this file!)
 echo 'svg.deploy.type = dev_h2' > ~/workspace/phoenix/dpcust_phoenix/build_dev.properties
@@ -28,12 +29,3 @@ echo 'svg.deploy.type = dev_h2' > ~/workspace/phoenix/dpcust_phoenix/build_dev.p
 
 - run Jetty:
 cd ~/workspace/phoenix/dpcust_phoenix && gradle rJ
-
-
-MISC
-----
-
-RemoteFullPCConfig.json contains key mappings for the browser
-
-
-
