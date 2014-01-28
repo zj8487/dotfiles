@@ -15,6 +15,7 @@ alias gg='git grep -n -C1'
 alias gl='git lg'
 alias glp='git lg -p'
 alias gs='git st'
+alias gr='~/programs/gradle-1.10/bin/gradle'
 #alias igrep='grep -i'
 alias l="ls -ltrha"
 alias lc='for f in *; do b=$(echo "$f" | tr '[A-Z]' '[a-z]'); mv "$f" "$b"; done'
