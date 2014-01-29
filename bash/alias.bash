@@ -18,6 +18,7 @@ alias gs='git st'
 #alias igrep='grep -i'
 alias l="ls -ltrha"
 alias lc='for f in *; do b=$(echo "$f" | tr '[A-Z]' '[a-z]'); mv "$f" "$b"; done'
+alias logc='~/dotfiles/work/arris/logclient 172.20.20.53'
 alias ll="ls -lha"
 alias ls="ls --color=auto"
 alias m="make -j $NUMBER_OF_PROCESSORS"
