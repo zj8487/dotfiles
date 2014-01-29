@@ -34,12 +34,6 @@ Host amazon
      PreferredAuthentications publickey
      IdentityFile ~/.ssh/indentive_aws.pem
 
-Host calle
-     User magsk
-     Hostname 192.168.1.10
-     PreferredAuthentications publickey
-     IdentityFile ~/.ssh/calle_server
-
 Host indentive
      User magsk
      Hostname newserver
