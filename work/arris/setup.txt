@@ -27,5 +27,8 @@ echo 'svg.deploy.type = dev_h2' > ~/workspace/phoenix/dpcust_phoenix/build_dev.p
 
 - create working sets to simplify navigation in eclipse
 
-- run Jetty:
+run Jetty:
 cd ~/workspace/phoenix/dpcust_phoenix && gradle rJ
+
+in dpcust_phoenix/db/data_scripts/mock_data.rb add the following line:
+createCustomerWithBox("00:02:9b:4f:24:63", "test", "customer")
