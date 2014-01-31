@@ -30,6 +30,7 @@ alias myip="curl icanhazip.com"
 #alias rlocate='locate --regex'
 #alias reload-static='pkginit rm static && pkginit add static ~/dotfiles/node/static.json'
 #alias bitcoind='~/src/bitcoin/src/bitcoind -testnet -rpcuser=foo -rpcpassword=bar -rpcport=12345'
+alias rj='cd ~/workspace/phoenix/dpcust_phoenix && gr rJ'
 alias sc='synclient TapButton1=1 TapButton2=2 TapButton3=3'
 alias sshot='gnome-screenshot -a'
 alias tor='~/tor-browser_en-US/start-tor-browser &> /dev/null &'
