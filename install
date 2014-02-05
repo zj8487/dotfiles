@@ -29,6 +29,9 @@ git submodule update
 
 # start apt-get specifics
 
+echo "---- INSTALLING: libncurses"
+sudo apt-get install -y libncurses5-dev
+
 echo "---- INSTALLING: svn"
 sudo apt-get install -y subversion
 
