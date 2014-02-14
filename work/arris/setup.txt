@@ -19,6 +19,10 @@ cd ~/workspace/ && svn co https://dg-svns.arrisi.com/ws_testportal/trunk testpor
 - use h2 db with jetty (do not check in this file!)
 echo 'svg.deploy.type = dev_h2' > ~/workspace/phoenix/dpcust_phoenix/build_dev.properties
 
+- or if mysql
+sudo apt-get install mysql-server mysql-client
+echo 'svg.deploy.type = dev > ~/workspace/phoenix/dpcust_phoenix/build_dev.properties
+
 - run eclipse-plugins.sh
 
 - install checkstyle from ~/workspace/phoenix/dreampark/checkstyle_medium.xml (TODO write description)
@@ -26,9 +30,6 @@ echo 'svg.deploy.type = dev_h2' > ~/workspace/phoenix/dpcust_phoenix/build_dev.p
 - install gradle plugin in eclipse and build model (TODO write description)
 
 - create working sets to simplify navigation in eclipse
-
-run Jetty:
-cd ~/workspace/phoenix/dpcust_phoenix && gradle rJ
 
 in dpcust_phoenix/db/data_scripts/mock_data.rb add the following line:
 createCustomerWithBox("00:02:9b:4f:24:63", "test", "customer")
