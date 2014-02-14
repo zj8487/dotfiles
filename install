@@ -29,6 +29,9 @@ git submodule update
 
 # start apt-get specifics
 
+echo "---- INSTALLING: libtools (for various configure, automake stuff)"
+sudo apt-get install -y libtools
+
 echo "---- INSTALLING: libncurses"
 sudo apt-get install -y libncurses5-dev
 
