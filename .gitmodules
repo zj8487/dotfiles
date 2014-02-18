@@ -4,3 +4,6 @@
 [submodule "emacs/site-lisp/jshint-mode"]
 	path = emacs/site-lisp/jshint-mode
 	url = https://github.com/ralphtheninja/jshint-mode.git
+[submodule "emacs/site-lisp/nodejs-repl.el"]
+	path = emacs/site-lisp/nodejs-repl.el
+	url = git@github.com:ralphtheninja/nodejs-repl.el.git

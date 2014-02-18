@@ -33,6 +33,11 @@
 ;; --------------------------------------------------------------------
 
 ;; --------------------------------------------------------------------
+;; Enable nodejs repl mode (start with M-x nodejs-repl)
+(require 'nodejs-repl)
+;; --------------------------------------------------------------------
+
+;; --------------------------------------------------------------------
 ;; http://whattheemacsd.com/init.el-02.html
 ;; Write backup files to own directory
 (setq backup-directory-alist
