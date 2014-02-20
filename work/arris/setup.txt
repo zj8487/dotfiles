@@ -20,7 +20,7 @@ cd ~/workspace/ && svn co https://dg-svns.arrisi.com/ws_testportal/trunk testpor
 echo 'svg.deploy.type = dev_h2' > ~/workspace/phoenix/dpcust_phoenix/build_dev.properties
 
 - or if mysql
-sudo apt-get install mysql-server mysql-client
+sudo apt-get install mysql-server mysql-client mysql-workbench
 echo 'svg.deploy.type = dev > ~/workspace/phoenix/dpcust_phoenix/build_dev.properties
 
 - run eclipse-plugins.sh
