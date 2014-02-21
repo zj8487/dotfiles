@@ -13,38 +13,39 @@
 (defun toggle-single-char-noindent (c)
   (back-to-indentation)
     (if (looking-at c)
-	(delete-char 1) 
+	(delete-char 1)
       (progn
 	(beginning-of-line)
 	(insert c))))
 
 ;;
-;; C, C++
+;; C, C++, JavaScript, Java
 ;;
 (defun cc-mode-comment-out-line ()
   "Comment in/out line using // comment marker."
   (interactive)
   (save-excursion
     (back-to-indentation)
-    (if (looking-at "/")   
+    (if (looking-at "/")
 	(delete-char 2)
       (insert "//"))))
 
 (require 'cc-mode)
 (define-key c-mode-map "\C-]" 'cc-mode-comment-out-line)
 (define-key c++-mode-map "\C-]" 'cc-mode-comment-out-line)
+(define-key java-mode-map "\C-]" 'cc-mode-comment-out-line)
 (add-hook 'js2-mode-hook
 	  '(lambda() (local-set-key "" 'cc-mode-comment-out-line)))
 
 ;;
-;; emacs-lisp 
+;; emacs-lisp
 ;;
 (defun lisp-comment-out-line ()
   "Comment in/out line using ; comment char."
   (interactive)
   (save-excursion (toggle-single-char-indent ";")))
 
-(add-hook 'emacs-lisp-mode-hook 
+(add-hook 'emacs-lisp-mode-hook
 	  '(lambda() (local-set-key "" 'lisp-comment-out-line)))
 
 ;;
@@ -55,7 +56,7 @@
   (interactive)
   (save-excursion
     (toggle-single-char-noindent "#")))
-    
+
 (add-hook 'makefile-mode-hook
 	  '(lambda() (local-set-key "" 'hash-noindent-comment-out-line)))
 (add-hook 'sh-mode-hook
@@ -92,7 +93,7 @@
 (defun xml-mode-comment-out-line ()
   "Comment in/out line using <!-- -->."
   (interactive)
-  (save-excursion 
+  (save-excursion
     (back-to-indentation)
     (let* ((end (point-at-eol))
 	   (st (search-forward "<!--" end t))
@@ -109,5 +110,5 @@
 	(end-of-line)
 	(insert "-->"))))))
 
-(add-hook 'sgml-mode-hook 
+(add-hook 'sgml-mode-hook
 	  '(lambda() (local-set-key "" 'xml-mode-comment-out-line)))
