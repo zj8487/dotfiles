@@ -31,5 +31,19 @@ echo 'svg.deploy.type = dev > ~/workspace/phoenix/dpcust_phoenix/build_dev.prope
 
 - create working sets to simplify navigation in eclipse
 
+I don't think the following step is needed when running mysql
 in dpcust_phoenix/db/data_scripts/mock_data.rb add the following line:
 createCustomerWithBox("00:02:9b:4f:24:63", "test", "customer")
+
+Migrating data run migrate_console.rb, for the testportal:
+~/workspace/testportal/dreampark $ ./jruby/bin/jruby db/migrate_console.rb
+
+In order to migrate you also need to tell dreampark about customer.home in
+~/workspace/testportal/dreampark/build.properties
+change customer.home and customer.name to
+
+customer.home = ../dpcust_testportal
+customer.name = dpcust_testportal
+
+should obviously be dpcust_phoenix for the phoenix project
+
