@@ -47,3 +47,6 @@ customer.name = dpcust_testportal
 
 should obviously be dpcust_phoenix for the phoenix project
 
+to mock epg data for e.g. testportal, put the following line:
+ps.epgContentProvider = mock
+in file ~/workspace/testportal/dpcust_testportal/web/WEB-INF/dev.properties
