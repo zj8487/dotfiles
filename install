@@ -32,6 +32,9 @@ git submodule update
 echo "---- INSTALLING: manpage stuff"
 sudo apt-get install -y manpages manpages-dev manpages-posix manpages-posix-dev
 
+echo "---- INSTALLING: wireshark"
+sudo apt-get install -y wireshark
+
 echo "---- INSTALLING: libtools (for various configure, automake stuff)"
 sudo apt-get install -y libtools
 
