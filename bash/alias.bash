@@ -42,7 +42,7 @@ alias we='weinre --boundHost=-all-'
 # work related stuff
 alias box='ssh root@172.20.20.53'
 alias ecl='eclipse &> /dev/null &'
-alias gr='~/programs/gradle-1.10/bin/gradle'
+alias gr='../master/gradlew'
 alias maxisat='ssh -l indentive -o PubkeyAuthentication=no -p 9400 83.216.4.20'
 alias mysqlwb='mysql-workbench &> /dev/null &'
 alias rj='cd ~/workspace/phoenix/dpcust_phoenix && gr rJ'
