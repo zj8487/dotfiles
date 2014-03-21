@@ -50,3 +50,13 @@ should obviously be dpcust_phoenix for the phoenix project
 to mock epg data for e.g. testportal, put the following line:
 ps.epgContentProvider = mock
 in file ~/workspace/testportal/dpcust_testportal/web/WEB-INF/dev.properties
+
+Tests for the testportal
+------------------------
+
+to generate jsTestDriver.conf run:
+cd ~/workspace/testportal/master && gr generateJSTestDriverConf --rerun-tasks
+
+if jsTestDriver.conf exists already, run:
+cd ~/workspace && ./runJsTestConf.sh
+
