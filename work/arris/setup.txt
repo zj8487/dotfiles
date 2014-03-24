@@ -60,3 +60,8 @@ cd ~/workspace/testportal/master && gr generateJSTestDriverConf --rerun-tasks
 if jsTestDriver.conf exists already, run:
 cd ~/workspace && ./runJsTestConf.sh
 
+
+SDK tests
+---------
+
+change file: dpcust_testportal/test-js/sdk/includeTests.conf if you only want to run certain tests
