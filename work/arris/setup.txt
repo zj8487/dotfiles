@@ -65,3 +65,16 @@ SDK tests
 ---------
 
 change file: dpcust_testportal/test-js/sdk/includeTests.conf if you only want to run certain tests
+run the sdk tests:
+cd ~/workspace/testportal/dpcust_testportal && gr testSDK
+this task will use includeTests.conf to generate jsTestDriver-SDK.conf
+
+
+run the portal in secure mode
+-----------------------------
+configure: ps.security.enableDpSecurity = true
+in ~/workspace/testportal/dpcust_testportal/web/WEB-INF/application.properties
+
+and run sdk tests on the command line on the secure portal:
+
+gr testSDK -PstartUrlPortal=testportal-sec -PuseRunningJetty -a
