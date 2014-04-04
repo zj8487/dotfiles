@@ -1,0 +1,167 @@
+#!/bin/bash
+set -e
+
+echo "---- INSTALLING: copy o script"
+sudo ln -fs ~/dotfiles/bash/o /usr/bin/o
+
+echo "---- INSTALLING: setting up folder structure"
+mkdir -p ~/tmp ~/src
+
+echo "---- INSTALLING: symlink for ~/.ssh/config"
+ln -fs ~/dotfiles/ssh/config ~/.ssh/config
+
+echo "---- INSTALLING: setting up keyboard preferences"
+sudo cp ~/dotfiles/keyboard /etc/default/keyboard
+
+echo "---- INSTALLING: symlink for ~/.bashrc"
+ln -fs ~/dotfiles/bash/bashrc ~/.bashrc
+
+echo "---- INSTALLING: symlink for ~/.gitconfig"
+ln -fs ~/dotfiles/git/gitconfig ~/.gitconfig
+
+echo "---- INSTALLING: setting up symbolic link for emacs"
+ln -fs ~/dotfiles/emacs/emacs ~/.emacs
+sudo ln -fs ~/dotfiles/bash/e /usr/bin/e
+
+echo "---- INSTALLING: updating git submodules"
+git submodule init
+git submodule update
+
+# start apt-get specifics
+
+echo "---- INSTALLING: build-essential"
+sudo apt-get install -y build-essential
+
+#echo "---- INSTALLING: manpage stuff"
+#sudo apt-get install -y manpages manpages-dev manpages-posix manpages-posix-dev
+
+#echo "---- INSTALLING: wireshark"
+#sudo apt-get install -y wireshark
+
+#echo "---- INSTALLING: libtools (for various configure, automake stuff)"
+#sudo apt-get install -y libtools
+
+#echo "---- INSTALLING: libncurses"
+#sudo apt-get install -y libncurses5-dev
+
+#echo "---- INSTALLING: iftop"
+#sudo apt-get install -y iftop
+
+#echo "---- INSTALLING: jwhois"
+#sudo apt-get install -y jwhois
+
+#echo "---- INSTALLING: xclip"
+#sudo apt-get install -y xclip
+
+#echo "---- INSTALLING: scrot"
+#sudo apt-get install -y scrot
+
+#echo "---- INSTALLING: emacs"
+#sudo apt-get install -y emacs24
+
+#echo "---- INSTALLING: autoconf"
+#sudo apt-get install -y autoconf
+
+#echo "---- INSTALLING: libpcre3-dev (vanitygen dependency)"
+#sudo apt-get install -y libpcre3-dev
+
+#echo "---- INSTALLING: libssl-dev (vanitygen dependency)"
+#sudo apt-get install -y libssl-dev
+
+#echo "---- INSTALLING: libnss3-tools (for certutil)"
+#sudo apt-get install -y libnss3-tools
+
+#echo "---- INSTALLING: gdb"
+#sudo apt-get install -y gdb
+#sudo sysctl kernel.core_pattern='core'
+
+#echo "---- INSTALLING: awesome"
+#sudo apt-get install -y awesome awesome-extra
+
+#echo "---- INSTALLING: aptitude"
+#sudo apt-get install -y aptitude
+
+#echo "---- INSTALLING: curl"
+#sudo apt-get install -y curl
+
+#echo "---- INSTALLING: imagemagick"
+#sudo apt-get install -y imagemagick
+
+#echo "---- INSTALLING: graphviz (for dot command)"
+#sudo apt-get install -y graphviz
+
+#echo "---- INSTALLING: mplayer2"
+#sudo apt-get install -y mplayer2
+
+#echo "---- INSTALLING: libreoffice"
+#sudo apt-get install -y libreoffice
+
+#echo "---- INSTALLING: finch (xmpp)"
+#sudo apt-get install -y finch
+
+#echo "---- INSTALLING: mpg321 for mpg123"
+#sudo apt-get install -y mpg321
+
+#echo "---- INSTALLING: ffmpeg"
+#sudo apt-get install -y ffmpeg
+
+#echo "---- INSTALLING: flac"
+#sudo apt-get install -y flac
+
+#echo "---- INSTALLING: lame mp3 encoding library"
+#sudo apt-get install -y lame
+
+#echo "---- INSTALLING: wamerican-insane"
+#sudo apt-get install -y wamerican-insane
+# dict file installed in /usr/share/dict/american-english-insane
+
+#echo "---- INSTALLING: yum"
+#sudo apt-get install -y yum
+
+#echo "---- INSTALLING: ack-grep"
+#sudo apt-get install -y ack-grep
+
+#echo "---- INSTALLING: tree"
+#sudo apt-get install -y tree
+
+#echo "---- INSTALLING: intltool"
+#sudo apt-get install -y intltool
+
+#echo "---- INSTALLING: whois (for mkpasswd)"
+#sudo apt-get install -y whois
+
+#echo "---- INSTALLING: gimp"
+#sudo apt-get install -y gimp
+
+#echo "---- INSTALLING: cvs"
+#sudo apt-get install -y cvs
+
+#echo "---- INSTALLING: irssi"
+#sudo apt-get install -y irssi
+
+#echo "---- INSTALLING: nc6"
+#sudo apt-get install -y netcat6
+
+#echo "---- INSTALLING: eog"
+#sudo apt-get install -y eog
+
+#echo "---- INSTALLING: rar"
+#sudo apt-get install -y rar unrar
+
+#echo "---- INSTALLING: pip"
+#sudo apt-get install -y python-pip
+
+#echo "---- INSTALLING: traceroute"
+#sudo apt-get install -y traceroute
+
+#source ~/dotfiles/install-fonts
+#source ~/dotfiles/install-node
+#source ~/dotfiles/install-npm-modules
+#source ~/dotfiles/install-pidgin
+#source ~/dotfiles/install-ssh
+
+#echo "---- INSTALL: Finished successfully!"
+
+#echo "---- CLEANUP: Running autoremove"
+#sudo apt-get autoremove -y
+
