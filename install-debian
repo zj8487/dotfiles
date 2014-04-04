@@ -32,6 +32,18 @@ git submodule update
 echo "---- INSTALLING: build-essential"
 sudo apt-get install -y build-essential
 
+echo "---- INSTALLING: libncurses"
+sudo apt-get install -y libncurses5-dev
+
+echo "---- INSTALLING: xclip"
+sudo apt-get install -y xclip
+
+echo "---- INSTALLING: curl"
+sudo apt-get install -y curl
+
+echo "---- INSTALLING: mplayer2"
+sudo apt-get install -y mplayer2
+
 #echo "---- INSTALLING: manpage stuff"
 #sudo apt-get install -y manpages manpages-dev manpages-posix manpages-posix-dev
 
@@ -41,23 +53,14 @@ sudo apt-get install -y build-essential
 #echo "---- INSTALLING: libtools (for various configure, automake stuff)"
 #sudo apt-get install -y libtools
 
-#echo "---- INSTALLING: libncurses"
-#sudo apt-get install -y libncurses5-dev
-
 #echo "---- INSTALLING: iftop"
 #sudo apt-get install -y iftop
 
 #echo "---- INSTALLING: jwhois"
 #sudo apt-get install -y jwhois
 
-#echo "---- INSTALLING: xclip"
-#sudo apt-get install -y xclip
-
 #echo "---- INSTALLING: scrot"
 #sudo apt-get install -y scrot
-
-#echo "---- INSTALLING: emacs"
-#sudo apt-get install -y emacs24
 
 #echo "---- INSTALLING: autoconf"
 #sudo apt-get install -y autoconf
@@ -78,23 +81,11 @@ sudo apt-get install -y build-essential
 #echo "---- INSTALLING: awesome"
 #sudo apt-get install -y awesome awesome-extra
 
-#echo "---- INSTALLING: aptitude"
-#sudo apt-get install -y aptitude
-
-#echo "---- INSTALLING: curl"
-#sudo apt-get install -y curl
-
 #echo "---- INSTALLING: imagemagick"
 #sudo apt-get install -y imagemagick
 
 #echo "---- INSTALLING: graphviz (for dot command)"
 #sudo apt-get install -y graphviz
-
-#echo "---- INSTALLING: mplayer2"
-#sudo apt-get install -y mplayer2
-
-#echo "---- INSTALLING: libreoffice"
-#sudo apt-get install -y libreoffice
 
 #echo "---- INSTALLING: finch (xmpp)"
 #sudo apt-get install -y finch
