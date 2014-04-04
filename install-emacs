@@ -9,7 +9,8 @@ sudo ln -fs ~/dotfiles/bash/e /usr/bin/e
 
 echo "---- INSTALLING: emacs dependencies"
 sudo aptitude install libxaw7-dev
-sudo apt-get install --assume-yes libtiff4-dev libjpeg-dev libgif-dev libxpm-dev libncurses5-dev
+#sudo apt-get install --assume-yes libtiff4-dev libjpeg-dev libgif-dev libxpm-dev libncurses5-dev
+sudo apt-get install --assume-yes libncurses5-dev
 
 EMACS_V=24.2
 EMACS_BASE="emacs-$EMACS_V"
@@ -20,7 +21,7 @@ if [ ! -d "$EMACS_BASE" ]; then
     wget -O $EMACS_GZ "ftp://ftp.gnu.org/pub/gnu/emacs/$EMACS_GZ"
     tar xvfz $EMACS_GZ
     cd $EMACS_BASE
-    ./configure
+    ./configure --with-jpeg=no --with-png=no --with-gif=no --with-tiff=no
     NUMBER_OF_PROCESSORS=`cat /proc/cpuinfo | grep processor | wc -l`
     make -j $NUMBER_OF_PROCESSORS
     sudo make install
