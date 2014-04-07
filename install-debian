@@ -44,6 +44,15 @@ sudo apt-get install -y curl
 echo "---- INSTALLING: mplayer2"
 sudo apt-get install -y mplayer2
 
+echo "---- INSTALLING: automake (for silver searcher)"
+sudo apt-get install -y automake
+
+echo "---- INSTALLING: libpcre3-dev (for silver searcher)"
+sudo aptitude install libpcre3-dev
+
+echo "---- INSTALLING: liblzma-dev (for silver searcher)"
+sudo apt-get install liblzma-dev
+
 #echo "---- INSTALLING: manpage stuff"
 #sudo apt-get install -y manpages manpages-dev manpages-posix manpages-posix-dev
 
