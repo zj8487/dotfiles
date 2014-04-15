@@ -36,8 +36,6 @@ prepend_to_path ~/dotfiles/bash
 prepend_to_path ~/dotfiles/bin
 prepend_to_path ~/dotfiles/node
 
-#append_to_path ~/local/gradle-1.10/bin
-
 # AndroidDev PATH
 #export PATH=${PATH}:~/android-sdk-linux/tools
 #export PATH=${PATH}:~/android-sdk-linux/platform-tools
