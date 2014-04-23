@@ -27,20 +27,6 @@ Host maxisat
      PreferredAuthentications publickey
      IdentityFile ~/.ssh/maxisat
 
-Host amazon
-     User ubuntu
-     Hostname ec2-50-112-147-146.us-west-2.compute.amazonaws.com
-     ForwardAgent yes
-     PreferredAuthentications publickey
-     IdentityFile ~/.ssh/indentive_aws.pem
-
-Host indentive
-     User magsk
-     Hostname newserver
-     PreferredAuthentications publickey
-     ForwardAgent yes
-     IdentityFile ~/.ssh/magsk_newserver
-
 Host git
      User git
      Hostname newserver
