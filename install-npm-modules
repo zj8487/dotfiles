@@ -27,5 +27,5 @@ npm install -g wr
 npm install -g node-inspector
 
 npm install -g pkginit
-pkginit add default ~/dotfiles/node/default.json
+pkginit add default ~/dotfiles/config/pkginit/default.json
 
