@@ -1,2 +1,0 @@
-#!/bin/bash
-exec ~/programs/firefox-16.0.2/firefox -no-remote -P firefox-16.0.2 "$@"

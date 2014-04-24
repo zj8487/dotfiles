@@ -1,5 +1,0 @@
-# run Jetty:
-cd ~/workspace/phoenix/dpcust_phoenix && gradle rJ
-
-# check config on the box
-toish is getobject all | grep version
