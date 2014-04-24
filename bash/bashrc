@@ -11,12 +11,12 @@ THIS="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
 NUMBER_OF_PROCESSORS=`cat /proc/cpuinfo | grep processor | wc -l`
 
-source $THIS/alias.bash
-source $THIS/colors.bash
-source $THIS/git-completion.bash
-source $THIS/prompt.bash
-source $THIS/npm-completion.bash
-source $THIS/tools.bash
+source $THIS/alias.sh
+source $THIS/colors.sh
+source $THIS/git-completion.sh
+source $THIS/prompt.sh
+source $THIS/npm-completion.sh
+source $THIS/tools.sh
 
 prepend_to_path() {
     if [[ ":$PATH:" != *":$1:"* ]]; then
