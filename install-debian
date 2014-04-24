@@ -2,7 +2,7 @@
 set -e
 
 echo "---- INSTALLING: copy o script"
-sudo ln -fs ~/dotfiles/bash/o /usr/bin/o
+sudo ln -fs ~/dotfiles/bin/o /usr/bin/o
 
 echo "---- INSTALLING: setting up folder structure"
 mkdir -p ~/tmp ~/src
@@ -21,7 +21,7 @@ ln -fs ~/dotfiles/git/gitconfig ~/.gitconfig
 
 echo "---- INSTALLING: setting up symbolic link for emacs"
 ln -fs ~/dotfiles/emacs/emacs ~/.emacs
-sudo ln -fs ~/dotfiles/bash/e /usr/bin/e
+sudo ln -fs ~/dotfiles/bin/e /usr/bin/e
 
 echo "---- INSTALLING: updating git submodules"
 git submodule init
