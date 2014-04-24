@@ -1,34 +1,10 @@
-# get dir for this script
-SOURCE="${BASH_SOURCE[0]}"
-THIS="$( dirname "$SOURCE" )"
-while [ -h "$SOURCE" ]
-do
-    SOURCE="$(readlink "$SOURCE")"
-    [[ $SOURCE != /* ]] && SOURCE="$THIS/$SOURCE"
-    THIS="$( cd -P "$( dirname "$SOURCE"  )" && pwd )"
-    done
-THIS="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
-
-NUMBER_OF_PROCESSORS=`cat /proc/cpuinfo | grep processor | wc -l`
-
-source $THIS/alias.sh
-source $THIS/colors.sh
-source $THIS/git-completion.sh
-source $THIS/prompt.sh
-source $THIS/npm-completion.sh
-source $THIS/tools.sh
-
-prepend_to_path() {
-    if [[ ":$PATH:" != *":$1:"* ]]; then
-        PATH=$1:$PATH
-    fi
-}
-
-append_to_path() {
-    if [[ ":$PATH:" != *":$1:"* ]]; then
-        PATH=$PATH:$1
-    fi
-}
+source ~/dotfiles/bash/variables.sh
+source ~/dotfiles/bash/colors.sh
+source ~/dotfiles/bash/prompt.sh
+source ~/dotfiles/bash/tools.sh
+source ~/dotfiles/bash/alias.sh
+source ~/dotfiles/bash/git-completion.sh
+source ~/dotfiles/bash/npm-completion.sh
 
 prepend_to_path ~/local/bin
 prepend_to_path ~/dotfiles/bin
