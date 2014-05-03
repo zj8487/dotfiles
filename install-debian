@@ -5,7 +5,7 @@ echo "---- INSTALLING: copy o script"
 sudo ln -fs ~/dotfiles/bin/o /usr/bin/o
 
 echo "---- INSTALLING: setting up folder structure"
-mkdir -p ~/tmp ~/src
+mkdir -p ~/tmp ~/src ~/.ssh
 
 echo "---- INSTALLING: symlink for ~/.ssh/config"
 ln -fs ~/dotfiles/ssh/config ~/.ssh/config
