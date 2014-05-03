@@ -11,7 +11,6 @@ if [ ! -d "node" ]; then
     NUMBER_OF_PROCESSORS=`cat /proc/cpuinfo | grep processor | wc -l`
     ./configure --prefix=~/local
     time make -j $NUMBER_OF_PROCESSORS && make install
-    source install-npm-modules
 else
     echo "---- INSTALLING: node already installed, SKIPPING!"
 fi
