@@ -9,6 +9,7 @@ npm install -g morkdown
 npm install -g msee
 npm install -g node-gyp
 npm install -g weinre
+npm install -g wit
 
 # phonegap stuff
 npm install -g cordova
@@ -18,7 +19,7 @@ npm install -g plugman
 #npm install -g beefy
 
 # for doing e.g. "wr 'browserify index.js -o bundle.js' & serve www/"
-npm install -g wr
+#npm install -g wr
 #npm install -g serve
 
 #npm install -g rsa-json
