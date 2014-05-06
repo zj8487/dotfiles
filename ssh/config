@@ -1,5 +1,11 @@
 # My stuff
 
+Host home
+     User lms
+     Hostname ralphtheninja.info
+     PreferredAuthentications publickey
+     IdentityFile ~/.ssh/ralphtheninja
+
 Host github.com
      User git
      Hostname github.com
