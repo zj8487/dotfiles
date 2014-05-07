@@ -29,14 +29,35 @@ git submodule update
 
 # start apt-get specifics
 
-echo "---- INSTALLING: hardinfo"
-sudo apt-get install -y hardinfo
+# build tools
 
 echo "---- INSTALLING: build-essential"
 sudo apt-get install -y build-essential
 
+echo "---- INSTALLING: pkg-config"
+sudo apt-get install -y pkg-config
+
+echo "---- INSTALLING: automake (for silver searcher)"
+sudo apt-get install -y automake
+
+# misc dependencies
+
 echo "---- INSTALLING: libncurses"
 sudo apt-get install -y libncurses5-dev
+
+echo "---- INSTALLING: libpcre3-dev (for silver searcher)"
+sudo aptitude install -y libpcre3-dev
+
+echo "---- INSTALLING: liblzma-dev (for silver searcher)"
+sudo apt-get install -y liblzma-dev
+
+echo "---- INSTALLING: libssl-dev (vanitygen, bitcoin and litecoind)"
+sudo apt-get install -y libssl-dev
+
+# applications
+
+echo "---- INSTALLING: hardinfo"
+sudo apt-get install -y hardinfo
 
 echo "---- INSTALLING: xclip"
 sudo apt-get install -y xclip
@@ -46,15 +67,6 @@ sudo apt-get install -y curl
 
 echo "---- INSTALLING: mplayer2"
 sudo apt-get install -y mplayer2
-
-echo "---- INSTALLING: automake (for silver searcher)"
-sudo apt-get install -y automake
-
-echo "---- INSTALLING: libpcre3-dev (for silver searcher)"
-sudo aptitude install -y libpcre3-dev
-
-echo "---- INSTALLING: liblzma-dev (for silver searcher)"
-sudo apt-get install -y liblzma-dev
 
 #echo "---- INSTALLING: manpage stuff"
 #sudo apt-get install -y manpages manpages-dev manpages-posix manpages-posix-dev
@@ -79,9 +91,6 @@ sudo apt-get install -y liblzma-dev
 
 #echo "---- INSTALLING: libpcre3-dev (vanitygen dependency)"
 #sudo apt-get install -y libpcre3-dev
-
-#echo "---- INSTALLING: libssl-dev (vanitygen dependency)"
-#sudo apt-get install -y libssl-dev
 
 #echo "---- INSTALLING: libnss3-tools (for certutil)"
 #sudo apt-get install -y libnss3-tools
@@ -163,8 +172,8 @@ sudo apt-get install -y liblzma-dev
 #source ~/dotfiles/install-pidgin
 #source ~/dotfiles/install-ssh
 
-#echo "---- INSTALL: Finished successfully!"
+echo "---- INSTALL: Finished successfully!"
 
-#echo "---- CLEANUP: Running autoremove"
-#sudo apt-get autoremove -y
+echo "---- CLEANUP: Running autoremove"
+sudo apt-get autoremove -y
 
