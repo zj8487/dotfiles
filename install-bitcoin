@@ -4,9 +4,6 @@ set -e
 mkdir -p ~/src && cd ~/src
 
 echo "---- INSTALLING: bitcoin"
-#sudo add-apt-repository ppa:bitcoin/bitcoin -y
-#sudo apt-get update --assume-yes
-#sudo apt-get install -y qt4-qmake libqt4-dev build-essential libboost-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev libdb4.8++-dev
 sudo apt-get install -y qt4-qmake libqt4-dev build-essential libboost-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev
 sudo apt-get install -y libdb5.1++-dev
 sudo apt-get install -y libprotobuf-dev
@@ -17,9 +14,6 @@ if [ ! -d "bitcoin" ]; then
     ./autogen.sh
     ./configure --with-incompatible-bdb
     make -j $NUMBER_OF_PROCESSORS
-#    git co v0.8.5
-#    qmake "USE_UPNP=-" && make -j $NUMBER_OF_PROCESSORS
-#    cd src && make -f makefile.unix -j $NUMBER_OF_PROCESSORS bitcoind USE_UPNP=-
 fi
 
 
