@@ -1,0 +1,17 @@
+#!/bin/bash
+set -e
+
+mkdir -p ~/src && cd ~/src
+
+echo "---- INSTALLING: litecoin"
+sudo apt-get install -y libboost-all-dev libssl-dev libdb++-dev libminiupnpc-dev
+
+if [ ! -d "litecoin" ]; then
+    git clone https://github.com/litecoin-project/litecoin.git && cd litecoin
+    NUMBER_OF_PROCESSORS=`cat /proc/cpuinfo | grep processor | wc -l`
+    cd src && make -f makefile.unix -j $NUMBER_OF_PROCESSORS litecoind
+fi
+
+
+
+
