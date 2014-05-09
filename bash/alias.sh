@@ -28,7 +28,7 @@ alias sshot='gnome-screenshot -a'
 alias tor='~/tor-browser_en-US/start-tor-browser &> /dev/null &'
 alias we='weinre --boundHost=-all-'
 alias wi='sudo /home/lms/local/bin/node /home/lms/local/bin/wit'
-
+alias ddc='sudo ddclient -daemon=0 -debug -verbose -noquiet -force'
 #alias xpc='xclip -o -selection clipboard'
 #alias xpp='xclip -o -selection primary'
 #alias xps='xclip -o -selection secondary'
