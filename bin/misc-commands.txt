@@ -34,5 +34,7 @@ stat -f '%Sp %p %N' * | rev | sed -E 's/^([^[:space:]]+)[[:space:]]([[:digit:]]{
 # git pull all repos
 find ~ -maxdepth 2 -name .git -print | while read repo; do cd $(dirname $repo); git pull; done
 
+# check listening ports with netstat, check for bitcoind
+sudo netstat --ip -lpa | grep bitcoind
 
 
