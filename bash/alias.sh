@@ -1,5 +1,5 @@
 alias ack='ack-grep'
-alias bd='~/src/bitcoin/src/bitcoind'
+alias bitcoind='~/src/bitcoin/src/bitcoind'
 alias bc='bc <(echo scale=10)'
 #alias create-cert='openssl req -x509 -nodes -newkey rsa:2048 -keyout key.pem -out cert.pem -days 365'
 alias duf='du -h --max-depth=1 | sort -n -r'
@@ -14,6 +14,7 @@ alias gl='git lg'
 alias glp='git lg -p'
 alias gs='git st'
 alias l="ls -ltrha"
+alias litecoind='~/src/litecoin/src/litecoind'
 alias lc='for f in *; do b=$(echo "$f" | tr '[A-Z]' '[a-z]'); mv "$f" "$b"; done'
 alias ll="ls -lha"
 alias ls="ls --color=auto"
