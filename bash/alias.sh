@@ -27,6 +27,7 @@ alias myip="curl icanhazip.com"
 alias sc='synclient TapButton1=1 TapButton2=2 TapButton3=3'
 alias sshot='gnome-screenshot -a'
 alias tor='~/tor-browser_en-US/start-tor-browser &> /dev/null &'
+alias t='npm test'
 alias we='weinre --boundHost=-all-'
 alias wi='sudo /home/lms/local/bin/node /home/lms/local/bin/wit'
 alias ddc='sudo ddclient -daemon=0 -debug -verbose -noquiet -force'
