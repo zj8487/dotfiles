@@ -1,0 +1,15 @@
+#!/bin/bash
+set -e
+
+mkdir -p ~/src && cd ~/src
+
+echo "---- INSTALLING: dependencies for ag"
+sudo apt-get install -y automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
+
+if [ ! -d the_silver_searcher ]; then
+    echo "---- INSTALLING: ag"
+    git clone git@github.com:ggreer/the_silver_searcher.git
+    cd the_silver_searcher
+    ./build.sh
+    sudo make install
+fi
