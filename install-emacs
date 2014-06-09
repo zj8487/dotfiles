@@ -8,7 +8,7 @@ ln -fs ~/dotfiles/emacs/emacs ~/.emacs
 sudo ln -fs ~/dotfiles/bash/e /usr/bin/e
 
 echo "---- INSTALLING: emacs dependencies"
-sudo aptitude install libxaw7-dev
+sudo aptitude install -y libxaw7-dev
 sudo apt-get install -y libtiff5-dev
 sudo apt-get install -y libpng12-dev
 sudo apt-get install -y libgif-dev
