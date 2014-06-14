@@ -23,6 +23,12 @@
     (add-to-list 'load-path project)))
 
 ;; --------------------------------------------------------------------
+;; Add ag.el (https://github.com/wilfred/ag.el)
+(require 'ag)
+(setq ag-highlight-search t)
+;; --------------------------------------------------------------------
+
+;; --------------------------------------------------------------------
 ;; Add package archives TODO move these elsewhere? check magnars stuff
 ;;(require 'package)
 ;;(add-to-list 'package-archives

@@ -7,3 +7,6 @@
 [submodule "emacs/site-lisp/nodejs-repl.el"]
 	path = emacs/site-lisp/nodejs-repl.el
 	url = https://github.com/ralphtheninja/nodejs-repl.el.git
+[submodule "emacs/site-lisp/ag.el"]
+	path = emacs/site-lisp/ag.el
+	url = git@github.com:Wilfred/ag.el.git
