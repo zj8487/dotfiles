@@ -1,4 +1,3 @@
-source ~/dotfiles/bash/variables.sh
 source ~/dotfiles/bash/colors.sh
 source ~/dotfiles/bash/prompt.sh
 source ~/dotfiles/bash/tools.sh

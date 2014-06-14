@@ -16,8 +16,7 @@ if [ ! -d "$PIDGIN_FOLDER" ]; then
     wget -O $PIDGIN_FILE $PIDGIN_URL
     tar xjvf $PIDGIN_FILE
     cd $PIDGIN_FOLDER
-    NUMBER_OF_PROCESSORS=`cat /proc/cpuinfo | grep processor | wc -l`
-    ./configure && make -j $NUMBER_OF_PROCESSORS && sudo make install && sudo ldconfig
+    ./configure && make -j `nproc` && sudo make install && sudo ldconfig
     cd ..
     rm $PIDGIN_FILE
 fi

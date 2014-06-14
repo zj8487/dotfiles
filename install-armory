@@ -8,10 +8,8 @@ sudo apt-get install --assume-yes build-essential pyqt4-dev-tools swig libqtcore
 
 if [ ! -d "BitcoinArmory" ]; then
     echo "---- INSTALLING: BitcoinArmory"
-    git clone git@github.com:ralphtheninja/BitcoinArmory.git
-    cd BitcoinArmory
-    NUMBER_OF_PROCESSORS=`cat /proc/cpuinfo | grep processor | wc -l`
-    make -j $NUMBER_OF_PROCESSORS
+    git clone git@github.com:ralphtheninja/BitcoinArmory.git && cd BitcoinArmory
+    make -j `nproc`
 else
     echo "---- INSTALLING: BitcoinArmory already installed, SKIPPING!"
 fi
