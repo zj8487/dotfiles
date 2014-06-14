@@ -3,7 +3,8 @@ set -e
 
 echo "---- INSTALLING: installing global npm modules"
 npm install -g nave
-npm install -g browserify
+npm install -g dependency-check
+#npm install -g browserify
 npm install -g clib
 npm install -g forever
 npm install -g morkdown
