@@ -1,4 +1,4 @@
-alias ack='ack-grep'
+alias aux='ps aux | grep node'
 alias bitcoind='~/src/bitcoin/src/bitcoind'
 alias bc='bc <(echo scale=10)'
 #alias create-cert='openssl req -x509 -nodes -newkey rsa:2048 -keyout key.pem -out cert.pem -days 365'
