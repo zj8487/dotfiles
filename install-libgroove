@@ -1,0 +1,13 @@
+#!/bin/bash
+set -e
+
+mkdir -p ~/src && cd ~/src
+
+echo "---- INSTALLING: libgroove dependencies"
+sudo apt-get install -y --force-yes libchromaprint-dev libbz2-dev yasm libmp3lame-dev libspeexdsp-dev
+
+if [ ! -d "libgroove" ]; then
+    echo "---- INSTALLING: libgroove"
+    git clone git@github.com:andrewrk/libgroove.git && cd libgroove
+    mkdir build && cd build && cmake ../ && make && sudo make install
+fi
