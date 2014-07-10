@@ -2,6 +2,7 @@
 set -e
 
 echo "---- INSTALLING: installing global npm modules"
+npm install -g grunt-cli
 npm install -g nave
 npm install -g nodemon
 npm install -g dependency-check
