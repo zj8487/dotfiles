@@ -13,7 +13,7 @@ sudo apt-get install -y libtiff5-dev
 sudo apt-get install -y libpng12-dev
 sudo apt-get install -y libgif-dev
 sudo apt-get install -y libncurses5-dev
-sudo apt-get install -y libxft-dev
+sudo apt-get install -y --force-yes libxft-dev
 
 EMACS_V=24.3
 EMACS_BASE="emacs-$EMACS_V"
