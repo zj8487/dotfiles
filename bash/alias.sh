@@ -1,6 +1,7 @@
 alias aux='ps aux | grep node'
 alias bitcoind='~/src/bitcoin/src/bitcoind'
 alias bc='bc <(echo scale=10)'
+alias cms='PORT=8080 npm run staging'
 #alias create-cert='openssl req -x509 -nodes -newkey rsa:2048 -keyout key.pem -out cert.pem -days 365'
 alias duf='du -h --max-depth=1 | sort -n -r'
 alias ff='firefox &> /dev/null &'
