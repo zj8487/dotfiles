@@ -24,6 +24,13 @@ Host numbahWWW
      PreferredAuthentications publickey
      IdentityFile ~/.ssh/numbahWWW
 
+# mic related stuff
+
+Host release-manager
+     User ubuntu
+     HostName 54.209.233.103
+     IdentityFile ~/.ssh/policymickey.pem
+
 # Work related stuff
 
 Host maxisat
