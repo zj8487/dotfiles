@@ -215,6 +215,11 @@
 (global-set-key (quote [67108907]) 'enlarge-window);; C-+
 (global-set-key (quote [M-down]) `enlarge-window);; M-down
 
+(defun prev-window ()
+  (interactive)
+  (other-window -1))
+(define-key global-map (kbd "C-x p") 'prev-window)
+
 ;; Language specific setup files
 (eval-after-load 'js2-mode '(require 'setup-js2-mode))
 
