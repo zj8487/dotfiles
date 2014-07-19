@@ -1,4 +1,5 @@
 alias aux='ps aux | grep node'
+alias b='./build > log 2>&1'
 alias bitcoind='~/src/bitcoin/src/bitcoind'
 alias bc='bc <(echo scale=10)'
 alias cms='PORT=8080 npm run staging'
