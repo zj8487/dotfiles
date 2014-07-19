@@ -13,6 +13,7 @@ alias gd='git diff'
 alias gg='git grep -n -C1'
 alias gl='git lg'
 alias glp='git lg -p'
+alias grm='git reset --hard upstream/master'
 alias gs='git st'
 alias gf='git fetch --all && git remote prune origin && git remote prune upstream'
 alias l="ls -ltrha"
