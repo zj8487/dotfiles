@@ -22,6 +22,7 @@ alias ls="ls --color=auto"
 alias m="make -j $NUMBER_OF_PROCESSORS"
 alias n="node"
 alias myip="curl icanhazip.com"
+alias prune="git remote prune origin && git remote prune upstream"
 #alias rlocate='locate --regex'
 #alias reload-static='pkginit rm static && pkginit add static ~/dotfiles/node/static.json'
 #alias bitcoind='~/src/bitcoin/src/bitcoind -testnet -rpcuser=foo -rpcpassword=bar -rpcport=12345'
