@@ -31,6 +31,16 @@ Host release-manager
      HostName 54.209.233.103
      IdentityFile ~/.ssh/policymickey.pem
 
+Host cms
+     User ubuntu
+     HostName 54.88.248.35
+     IdentityFile ~/.ssh/policymickey.pem
+
+Host cms-staging
+     User ubuntu
+     HostName 54.88.153.98
+     IdentityFile ~/.ssh/policymickey.pem
+
 # Work related stuff
 
 Host maxisat
