@@ -16,6 +16,7 @@ alias glp='git lg -p'
 alias grm='git reset --hard upstream/master'
 alias gs='git st'
 alias gf='git fetch origin && git remote prune origin'
+alias grep='grep --color=auto'
 alias l="ls -ltrha"
 alias litecoind='~/src/litecoin/src/litecoind'
 alias lc='for f in *; do b=$(echo "$f" | tr '[A-Z]' '[a-z]'); mv "$f" "$b"; done'
