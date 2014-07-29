@@ -15,7 +15,7 @@ alias gl='git lg'
 alias glp='git lg -p'
 alias grm='git reset --hard upstream/master'
 alias gs='git st'
-alias gf='git fetch origin && git remote prune origin'
+alias gf='git fetch --all'
 alias grep='grep --color=auto'
 alias l="ls -ltrha"
 alias litecoind='~/src/litecoin/src/litecoind'
