@@ -5,6 +5,7 @@ source ~/dotfiles/bash/alias.sh
 source ~/dotfiles/bash/git-completion.sh
 source ~/dotfiles/bash/npm-completion.sh
 
+prepend_to_path /usr/local/sbin
 prepend_to_path ~/local/bin
 prepend_to_path ~/dotfiles/bin
 
