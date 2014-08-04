@@ -4,14 +4,12 @@ Host home
      User lms
      Hostname ralphtheninja.info
      PreferredAuthentications publickey
-     ForwardAgent yes
      IdentityFile ~/.ssh/ralphtheninja
 
 Host github.com
      User git
      Hostname github.com
      PreferredAuthentications publickey
-     ForwardAgent yes
      IdentityFile ~/.ssh/github
 
 Host djoot
@@ -31,25 +29,26 @@ Host numbahWWW
 Host release-manager
      User ubuntu
      HostName 54.209.233.103
-     ForwardAgent yes
      IdentityFile ~/.ssh/policymickey.pem
 
 Host mic-bot
      User ubuntu
      HostName 54.210.149.208
-     ForwardAgent yes
      IdentityFile ~/.ssh/policymickey.pem
 
 Host cms
      User ubuntu
      HostName 54.88.248.35
-     ForwardAgent yes
      IdentityFile ~/.ssh/policymickey.pem
 
 Host cms-staging
      User ubuntu
      HostName 54.88.153.98
-     ForwardAgent yes
+     IdentityFile ~/.ssh/policymickey.pem
+
+Host varnish-staging
+     User ubuntu
+     HostName 54.204.103.193
      IdentityFile ~/.ssh/policymickey.pem
 
 # Work related stuff
