@@ -51,6 +51,11 @@ Host varnish-staging
      HostName 54.204.103.193
      IdentityFile ~/.ssh/policymickey.pem
 
+Host aws-watcher
+     User ubuntu
+     HostName 54.210.176.192
+     IdentityFile ~/.ssh/policymickey.pem
+
 # Work related stuff
 
 Host maxisat
