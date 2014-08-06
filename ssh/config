@@ -46,9 +46,9 @@ Host cms-staging
      HostName 54.88.153.98
      IdentityFile ~/.ssh/policymickey.pem
 
-Host varnish-staging
+Host varnish-cms-staging
      User ubuntu
-     HostName 54.204.103.193
+     HostName 54.209.204.228
      IdentityFile ~/.ssh/policymickey.pem
 
 Host aws-watcher
