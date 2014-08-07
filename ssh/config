@@ -26,15 +26,7 @@ Host numbahWWW
 
 # mic related stuff
 
-Host release-manager
-     User ubuntu
-     HostName 54.209.233.103
-     IdentityFile ~/.ssh/policymickey.pem
-
-Host mic-bot
-     User ubuntu
-     HostName 54.210.149.208
-     IdentityFile ~/.ssh/policymickey.pem
+# cms and its various environments and dependents
 
 Host cms
      User ubuntu
@@ -49,6 +41,25 @@ Host cms-staging
 Host varnish-cms-staging
      User ubuntu
      HostName 54.209.204.228
+     IdentityFile ~/.ssh/policymickey.pem
+
+# instances for mobile
+
+Host mobile-staging
+     User ubuntu
+     HostName 54.209.167.243
+     IdentityFile ~/.ssh/policymickey.pem
+
+# mic bots and devops tools
+
+Host release-manager
+     User ubuntu
+     HostName 54.209.233.103
+     IdentityFile ~/.ssh/policymickey.pem
+
+Host mic-bot
+     User ubuntu
+     HostName 54.210.149.208
      IdentityFile ~/.ssh/policymickey.pem
 
 Host aws-watcher
