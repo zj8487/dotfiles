@@ -50,6 +50,11 @@ Host mobile-staging
      HostName 54.209.167.243
      IdentityFile ~/.ssh/policymickey.pem
 
+Host api-staging
+     User ubuntu
+     HostName 54.84.199.30
+     IdentityFile ~/.ssh/policymickey.pem
+
 # mic bots and devops tools
 
 Host release-manager
