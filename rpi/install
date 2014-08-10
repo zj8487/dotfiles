@@ -45,8 +45,11 @@ sudo apt-get install -y autoconf
 
 # misc dependencies
 
-echo "---- INSTALLING: libncurses"
-sudo apt-get install -y libncurses5-dev
+echo "---- INSTALLING: libudev-dev"
+sudo apt-get install -y libudev-dev
+
+echo "---- INSTALLING: libusb-1.0.0-dev"
+sudo apt-get install -y libusb-1.0.0-dev
 
 echo "---- INSTALLING: libssl-dev (vanitygen, bitcoin and litecoind)"
 sudo apt-get install -y libssl-dev
