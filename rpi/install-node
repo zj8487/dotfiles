@@ -1,0 +1,16 @@
+#!/bin/bash
+
+mkdir -p ~/tmp && cd ~/tmp
+
+curl http://nodejs.org/dist/v0.10.28/node-v0.10.28-linux-arm-pi.tar.gz | tar -zx
+
+sudo chown -R $USER /usr/local
+
+mv node-v0.10.28-linux-arm-pi /usr/local/lib
+
+ln -fs /usr/local/lib/node-v0.10.28-linux-arm-pi/bin/node /usr/local/bin/node
+
+ln -fs /usr/local/lib/node-v0.10.28-linux-arm-pi/bin/npm /usr/local/bin/npm
+
+npm install -f npm -g
+
