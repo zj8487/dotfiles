@@ -1,0 +1,93 @@
+#!/bin/bash
+sudo apt-get -y update
+
+echo "---- INSTALLING: copy o script"
+sudo ln -fs ~/dotfiles/bin/o /usr/bin/o
+
+echo "---- INSTALLING: setting up folder structure"
+mkdir -p ~/tmp ~/src ~/.ssh
+
+echo "---- INSTALLING: symlink for ~/.ssh/config"
+ln -fs ~/dotfiles/ssh/config ~/.ssh/config
+
+echo "---- INSTALLING: setting up keyboard preferences"
+sudo cp ~/dotfiles/keyboard /etc/default/keyboard
+
+echo "---- INSTALLING: symlink for ~/.bashrc"
+ln -fs ~/dotfiles/bash/bashrc ~/.bashrc
+
+echo "---- INSTALLING: symlink for ~/.gitconfig"
+ln -fs ~/dotfiles/git/gitconfig ~/.gitconfig
+
+echo "---- INSTALLING: setting up symbolic link for emacs"
+ln -fs ~/dotfiles/emacs/emacs ~/.emacs
+sudo ln -fs ~/dotfiles/bin/e /usr/bin/e
+
+echo "---- INSTALLING: updating git submodules"
+git submodule init
+git submodule update
+
+# start apt-get specifics
+
+# build tools
+
+echo "---- INSTALLING: build-essential"
+sudo apt-get install -y build-essential
+
+echo "---- INSTALLING: pkg-config"
+sudo apt-get install -y pkg-config
+
+echo "---- INSTALLING: automake (for silver searcher)"
+sudo apt-get install -y automake
+
+echo "---- INSTALLING: autoconf"
+sudo apt-get install -y autoconf
+
+# misc dependencies
+
+echo "---- INSTALLING: libncurses"
+sudo apt-get install -y libncurses5-dev
+
+echo "---- INSTALLING: libssl-dev (vanitygen, bitcoin and litecoind)"
+sudo apt-get install -y libssl-dev
+
+# applications and tools
+
+echo "---- INSTALLING: whois (for mkpasswd)"
+sudo apt-get install -y whois
+
+echo "---- INSTALLING: unetbootin"
+sudo apt-get install -y unetbootin
+
+echo "---- INSTALLING: hardinfo"
+sudo apt-get install -y hardinfo
+
+echo "---- INSTALLING: xclip"
+sudo apt-get install -y xclip
+
+echo "---- INSTALLING: curl"
+sudo apt-get install -y curl
+
+echo "---- INSTALLING: mplayer2"
+sudo apt-get install -y mplayer2
+
+echo "---- INSTALLING: nc6"
+sudo apt-get install -y netcat6
+
+echo "---- INSTALLING: htop"
+sudo apt-get install -y htop
+
+echo "---- INSTALLING: iftop"
+sudo apt-get install -y iftop
+
+echo "---- INSTALLING: gparted"
+sudo apt-get install -y gparted
+
+source ~/dotfiles/install-fonts
+source ~/dotfiles/install-emacs
+
+echo "---- INSTALL: Finished successfully!"
+
+echo "---- CLEANUP: Running autoremove"
+sudo apt-get autoremove -y
+
