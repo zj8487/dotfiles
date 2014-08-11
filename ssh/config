@@ -28,18 +28,24 @@ Host numbahWWW
 # mic related stuff
 #
 
-# load balancers
-
-Host varnish-staging
-     User ubuntu
-     HostName 54.209.204.228
-     IdentityFile ~/.ssh/policymickey.pem
+Host micweb1
+   User root
+   HostName 54.237.90.49
+   port 2093
+   IdentityFile ~/.ssh/policymickey.pem
 
 Host pmic
     User root
     HostName 54.204.141.250
     port 2093
     IdentityFile ~/.ssh/policymickey.pem
+
+# load balancers
+
+Host varnish-staging
+     User ubuntu
+     HostName 54.209.204.228
+     IdentityFile ~/.ssh/policymickey.pem
 
 # cms and its various environments and dependents
 
