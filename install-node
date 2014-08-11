@@ -1,15 +1,36 @@
 #!/bin/bash
 set -e
 
-mkdir -p ~/src ~/local && cd ~/src
+mkdir -p ~/tmp && cd ~/tmp
 
-if [ ! -d "node" ]; then
-    NODE_V=v0.10.28
-    echo "---- INSTALLING: node $NODE_V"
-    git clone git://github.com/joyent/node.git && cd node && git co $NODE_V
-    ./configure --prefix=~/local
-    time make -j `nproc` && make install
-else
-    echo "---- INSTALLING: node already installed, SKIPPING!"
-fi
+# TODO take version as argument
+VERSION=v0.10.30
+NODE=node-$VERSION-linux-x64
+echo "> Downloading $VERSION of node"
+curl -s http://nodejs.org/dist/$VERSION/$NODE.tar.gz | tar -zx
+
+echo "> Setting ownership of /usr/local to $USER"
+sudo chown -R $USER /usr/local
+
+echo "> Moving extracted node binaries"
+rm -rf /usr/local/lib/$NODE && mv $NODE /usr/local/lib
+
+echo "> Symlinks"
+sudo ln -fs /usr/local/lib/$NODE/bin/node /usr/local/bin/node
+sudo ln -fs /usr/local/lib/$NODE/bin/npm /usr/local/bin/npm
+
+echo "> Upgrading npm to latest"
+npm install -f npm -g
+
+#mkdir -p ~/src ~/local && cd ~/src
+
+#if [ ! -d "node" ]; then
+#    NODE_V=v0.10.28
+#    echo "---- INSTALLING: node $NODE_V"
+#    git clone git://github.com/joyent/node.git && cd node && git co $NODE_V
+#    ./configure --prefix=~/local
+#    time make -j `nproc` && make install
+#else
+#    echo "---- INSTALLING: node already installed, SKIPPING!"
+#fi
 
