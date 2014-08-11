@@ -28,9 +28,15 @@ Host numbahWWW
 # mic related stuff
 #
 
-Host micweb1
+Host mic-varnish1
    User root
-   HostName 54.237.90.49
+   HostName 54.83.86.73
+   port 2093
+   IdentityFile ~/.ssh/policymickey.pem
+
+Host mic-varnish2
+   User root
+   HostName 54.204.214.159
    port 2093
    IdentityFile ~/.ssh/policymickey.pem
 
