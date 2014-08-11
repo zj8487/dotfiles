@@ -24,7 +24,16 @@ Host numbahWWW
      PreferredAuthentications publickey
      IdentityFile ~/.ssh/numbahWWW
 
+#
 # mic related stuff
+#
+
+# load balancers
+
+Host varnish-staging
+     User ubuntu
+     HostName 54.209.204.228
+     IdentityFile ~/.ssh/policymickey.pem
 
 # cms and its various environments and dependents
 
@@ -36,11 +45,6 @@ Host cms
 Host cms-staging
      User ubuntu
      HostName 54.88.153.98
-     IdentityFile ~/.ssh/policymickey.pem
-
-Host varnish-cms-staging
-     User ubuntu
-     HostName 54.209.204.228
      IdentityFile ~/.ssh/policymickey.pem
 
 # instances for mobile
@@ -73,13 +77,6 @@ Host aws-watcher
      IdentityFile ~/.ssh/policymickey.pem
 
 # Work related stuff
-
-Host maxisat
-     User indentive
-     Hostname 83.216.4.20
-     Port 9400
-     PreferredAuthentications publickey
-     IdentityFile ~/.ssh/maxisat
 
 Host git
      User git
