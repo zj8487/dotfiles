@@ -35,6 +35,12 @@ Host varnish-staging
      HostName 54.209.204.228
      IdentityFile ~/.ssh/policymickey.pem
 
+Host pmic
+    User root
+    HostName 54.204.141.250
+    port 2093
+    IdentityFile ~/.ssh/policymickey.pem
+
 # cms and its various environments and dependents
 
 Host cms
