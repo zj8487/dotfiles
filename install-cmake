@@ -1,0 +1,17 @@
+#!/bin/bash
+
+set -e
+
+mkdir -p ~/src && cd ~/src
+
+if [ ! -d "cmake" ]; then
+    git clone git://cmake.org/cmake.git
+    cd cmake
+    git checkout v2.8.12.2
+    ./bootstrap --prefix=/usr
+    make
+    sudo make install
+fi
+
+
+
