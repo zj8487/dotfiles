@@ -1,4 +1,7 @@
-# My stuff
+
+#####################################################
+#                     my stuff                      #
+#####################################################
 
 Host home
      User lms
@@ -24,77 +27,95 @@ Host numbahWWW
      PreferredAuthentications publickey
      IdentityFile ~/.ssh/numbahWWW
 
-#
-# mic related stuff
-#
+#####################################################
+#                        mic                        #
+#####################################################
 
+## production
+
+# runs cms-deploy on cms.mic.com
+Host cms
+     User ubuntu
+     HostName 54.88.248.35
+     IdentityFile ~/.ssh/policymickey.pem
+
+# first varnish in production, for cms.mic.com
 Host mic-varnish1
    User root
    HostName 54.83.86.73
    port 2093
    IdentityFile ~/.ssh/policymickey.pem
 
+# second varnish in production, for cms.mic.com
 Host mic-varnish2
    User root
    HostName 54.204.214.159
    port 2093
    IdentityFile ~/.ssh/policymickey.pem
 
+# ?
 Host pmic
     User root
     HostName 54.204.141.250
     port 2093
     IdentityFile ~/.ssh/policymickey.pem
 
-# load balancers
+## staging
 
-Host varnish-staging
-     User ubuntu
-     HostName 54.209.204.228
-     IdentityFile ~/.ssh/policymickey.pem
-
-# cms and its various environments and dependents
-
-Host cms
-     User ubuntu
-     HostName 54.88.248.35
-     IdentityFile ~/.ssh/policymickey.pem
-
+# runs cms on cms.pmic.us
 Host cms-staging
      User ubuntu
      HostName 54.88.153.98
      IdentityFile ~/.ssh/policymickey.pem
 
-# instances for mobile
+# only varnish in staging, for cms.pmic.us
+Host varnish-staging
+     User ubuntu
+     HostName 54.209.204.228
+     IdentityFile ~/.ssh/policymickey.pem
 
+# instances for mobile
 Host mobile-staging
      User ubuntu
      HostName 54.209.167.243
      IdentityFile ~/.ssh/policymickey.pem
-
 Host api-staging
      User ubuntu
      HostName 54.84.199.30
      IdentityFile ~/.ssh/policymickey.pem
 
-# mic bots and devops tools
+## mic bots and devops tools
 
+# listens to commits and tags, tells services to upgrade,
+# builds apps and pushes them to deploy repositories
 Host release-manager
      User ubuntu
      HostName 54.209.233.103
      IdentityFile ~/.ssh/policymickey.pem
 
+# listens to all github events and lets us know on #policymic
 Host mic-bot
      User ubuntu
      HostName 54.210.149.208
      IdentityFile ~/.ssh/policymickey.pem
 
+# checks 'watch' tags with aws-instances and polls websites,
+# alerts devops@mic.com if a service goes down
 Host aws-watcher
      User ubuntu
      HostName 54.210.176.192
      IdentityFile ~/.ssh/policymickey.pem
 
-# Work related stuff
+# devops repo for playing around and testing new concepts
+# reproducing bugs etc
+Host mic-devops
+     User ubuntu
+     HostName 54.164.48.224
+     IdentityFile ~/.ssh/policymickey.pem
+
+#####################################################
+#                    Indentive                      #
+#####################################################
 
 Host git
      User git
