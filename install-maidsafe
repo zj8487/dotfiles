@@ -12,6 +12,7 @@ if [ ! -d "MaidSafe" ]; then
     git -C MaidSafe submodule update --init
     cd build_maidsafe
     cmake ../MaidSafe -DCMAKE_BUILD_TYPE=Debug
+    make
 fi
 
 
