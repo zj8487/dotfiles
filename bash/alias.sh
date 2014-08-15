@@ -24,6 +24,7 @@ alias ll="ls -lha"
 alias ls="ls --color=auto"
 alias m="make -j $NUMBER_OF_PROCESSORS"
 alias n="node"
+alias ng="node-gyp"
 alias myip="curl icanhazip.com"
 #alias rlocate='locate --regex'
 #alias reload-static='pkginit rm static && pkginit add static ~/dotfiles/node/static.json'
