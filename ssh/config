@@ -86,6 +86,12 @@ Host api-staging
 
 ## mic bots and devops tools
 
+# performs tasks
+Host task-manager
+     User ubuntu
+     HostName 54.164.146.176
+     IdentityFile ~/.ssh/policymickey.pem
+
 # listens to commits and tags, tells services to upgrade,
 # builds apps and pushes them to deploy repositories
 Host release-manager
