@@ -84,6 +84,20 @@ Host api-staging
      HostName 54.84.199.30
      IdentityFile ~/.ssh/policymickey.pem
 
+## megafunnel stuff
+
+#
+Host megafunnel
+     User ubuntu
+     HostName 54.164.155.187
+     IdentityFile ~/.ssh/policymickey.pem
+
+#
+Host megafunnel-funnel
+     User ubuntu
+     HostName 54.164.29.96
+     IdentityFile ~/.ssh/policymickey.pem
+
 ## mic bots and devops tools
 
 # performs tasks
