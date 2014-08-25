@@ -363,7 +363,7 @@ If the file is emacs lisp, run the byte compiled version if exist."
 ;; --------------------------------------------------------------------
 ;; C and C++ stuff
 (define-key c++-mode-map (kbd "M-j") nil) ; dont redefine M-j for me please
-(setq-default c-basic-offset 4)
+(setq-default c-basic-offset 2)
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode)) ; .h files as C++ mode
 
 ;;(global-font-lock-mode t)
