@@ -5,8 +5,9 @@ alias bc='bc <(echo scale=10)'
 alias getnpm='curl https://npmjs.org/install.sh | sh'
 alias naux='ps aux | grep node'
 alias b='node-gyp build'
-alias n="node"
-alias ng="node-gyp"
+alias bb='node-gyp rebuild'
+alias n='node'
+alias ng='node-gyp'
 alias t='npm test'
 alias we='weinre --boundHost=-all-'
 
@@ -21,18 +22,18 @@ alias gf='git fetch --all'
 alias grep='grep --color=auto'
 
 ### make stuff
-alias m="make -j $NUMBER_OF_PROCESSORS"
+alias m='make -j $NUMBER_OF_PROCESSORS'
 
 ### network stuff
-alias myip="curl icanhazip.com"
+alias myip='curl icanhazip.com'
 alias ddc='sudo ddclient -daemon=0 -debug -verbose -noquiet -force'
 alias wi='sudo /home/lms/local/bin/node /home/lms/local/bin/wit'
 alias tor='~/tor-browser_en-US/start-tor-browser &> /dev/null &'
 
 ### ls stuff
-alias l="ls -ltrha"
-alias ll="ls -lha"
-alias ls="ls --color=auto"
+alias l='ls -ltrha'
+alias ll='ls -lha'
+alias ls='ls --color=auto'
 
 ### crypto
 alias bitcoind='~/src/bitcoin/src/bitcoind'
