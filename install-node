@@ -3,8 +3,7 @@ set -e
 
 mkdir -p ~/tmp && cd ~/tmp
 
-# TODO take version as argument
-VERSION=v0.10.30
+VERSION=v${1:-0.10.31}
 NODE=node-$VERSION-linux-x64
 echo "> Downloading $VERSION of node"
 curl -s http://nodejs.org/dist/$VERSION/$NODE.tar.gz | tar -zx
@@ -21,6 +20,8 @@ sudo ln -fs /usr/local/lib/$NODE/bin/npm /usr/local/bin/npm
 
 echo "> Upgrading npm to latest"
 npm install -f npm -g
+
+echo "node version: `node -v`, npm version: `npm -v`"
 
 #mkdir -p ~/src ~/local && cd ~/src
 
