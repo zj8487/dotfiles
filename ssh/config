@@ -130,7 +130,7 @@ Host aws-watcher
 # reproducing bugs etc
 Host mic-devops
      User ubuntu
-     HostName 54.164.48.224
+     HostName 54.164.151.120
      IdentityFile ~/.ssh/policymickey.pem
 
 #####################################################
