@@ -8,6 +8,13 @@
 # Example usage:
 # $ curlt http://www.apple.com
 # $ time curlt http://www.apple.com -v
+#
+# To get an newline separate file of json
+# $ curlt http://www.apple.com >> data
+# $ curlt http://www.apple.com >> data
+# $ curlt http://www.apple.com >> data
+# ..
+#
 set -e
-curl_format='{ "time_namelookup": %{time_namelookup}, "time_connect": %{time_connect}, "time_appconnect": %{time_appconnect}, "time_pretransfer": %{time_pretransfer}, "time_redirect": %{time_redirect}, "time_starttransfer": %{time_starttransfer}, "time_total": %{time_total}}\n'
+curl_format='{ "host": "%{remote_ip}", "time_namelookup": "%{time_namelookup}", "time_connect": "%{time_connect}", "time_appconnect": "%{time_appconnect}", "time_pretransfer": "%{time_pretransfer}", "time_redirect": "%{time_redirect}", "time_starttransfer": "%{time_starttransfer}", "time_total": "%{time_total}"}\n'
 exec curl -w "$curl_format" -o /dev/null -s "$@"
