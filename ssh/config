@@ -53,6 +53,27 @@ Host mic-varnish2
    port 2093
    IdentityFile ~/.ssh/policymickey.pem
 
+# mic-mobile
+Host mic-mobile1
+   User root
+   HostName 107.22.132.19
+   port 2093
+   IdentityFile ~/.ssh/policymickey.pem
+
+# mic-mobile
+Host mic-mobile2
+   User root
+   HostName 184.72.155.161
+   port 2093
+   IdentityFile ~/.ssh/policymickey.pem
+
+# mic-mobile
+Host mic-mobile3
+   User root
+   HostName 54.242.170.244
+   port 2093
+   IdentityFile ~/.ssh/policymickey.pem
+
 # ?
 Host pmic
     User root
