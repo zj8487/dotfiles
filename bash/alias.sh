@@ -44,7 +44,7 @@ alias cms='PORT=8080 npm start'
 alias duf='du -h --max-depth=1 | sort -n -r'
 alias ff='firefox &> /dev/null &'
 alias ift='sudo iftop -i wlan0 -B -P'
-alias gc='chromium-browser &> /dev/null &'
+alias gc='google-chrome &> /dev/null &'
 
 ### os specific stuff
 alias sc='synclient TapButton1=1 TapButton2=2 TapButton3=3'
