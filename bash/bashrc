@@ -24,3 +24,6 @@ export GPGKEY=9C784C79
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
    . /etc/bash_completion
 fi
+
+export PATH="$HOME/.linuxbrew/bin:$PATH"
+export LD_LIBRARY_PATH="$HOME/.linuxbrew/lib:$LD_LIBRARY_PATH"
