@@ -30,12 +30,12 @@
 
 ;; --------------------------------------------------------------------
 ;; Add package archives TODO move these elsewhere? check magnars stuff
-;;(require 'package)
+(require 'package)
 ;;(add-to-list 'package-archives
 ;;             '("marmalade" . "http://marmalade-repo.org/packages/"))
-;;(add-to-list 'package-archives
-;;             '("melpa" . "http://melpa.milkbox.net/packages/") t)
-;;(package-initialize)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(package-initialize)
 ;; --------------------------------------------------------------------
 
 ;; --------------------------------------------------------------------
