@@ -164,3 +164,9 @@ Host git
      PreferredAuthentications publickey
      IdentityFile ~/.ssh/git_newserver
 
+Host rpi1
+     User pi
+     Hostname 192.168.202.217
+     PreferredAuthentications publickey
+     IdentityFile ~/.ssh/rpi1
+
