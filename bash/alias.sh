@@ -1,5 +1,6 @@
-### math
+### misc unix stuff
 alias bc='bc <(echo scale=10)'
+alias grep='grep --color=auto'
 
 ### node aliases
 alias getnpm='curl https://npmjs.org/install.sh | sh'
@@ -19,7 +20,7 @@ alias glp='git lg -p'
 alias grm='git reset --hard upstream/master'
 alias gs='git st'
 alias gf='git fetch --all'
-alias grep='grep --color=auto'
+alias gp='git push'
 
 ### make stuff
 alias m='make -j $NUMBER_OF_PROCESSORS'
