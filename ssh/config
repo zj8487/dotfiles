@@ -154,6 +154,12 @@ Host mic-devops
      HostName 54.164.151.120
      IdentityFile ~/.ssh/policymickey.pem
 
+# sshout, used for remote commands
+Host sshout
+     User ubuntu
+     HostName 54.165.164.206
+     IdentityFile ~/.ssh/policymickey.pem
+
 #####################################################
 #                    Indentive                      #
 #####################################################
