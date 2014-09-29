@@ -14,6 +14,7 @@ alias we='weinre --boundHost=-all-'
 
 ### git aliases
 alias gd='git diff'
+alias gds='git diff --staged'
 alias gg='git grep -n -C1'
 alias gl='git lg'
 alias glp='git lg -p'
