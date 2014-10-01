@@ -157,7 +157,7 @@ Host aws-watcher
 
 # devops repo for playing around and testing new concepts
 # reproducing bugs etc
-Host mic-devops
+Host devops
      User ubuntu
      HostName 54.164.151.120
      IdentityFile ~/.ssh/policymickey.pem
@@ -166,7 +166,7 @@ Host mic-devops
 Host sshout
      User ubuntu
      HostName 54.165.164.206
-     IdentityFile ~/.ssh/policymickey.pem
+     IdentityFile ~/.ssh/sshout
 
 #####################################################
 #                    Indentive                      #
