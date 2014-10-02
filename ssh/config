@@ -124,7 +124,13 @@ Host megafunnel-funnel
      HostName 54.164.29.96
      IdentityFile ~/.ssh/policymickey.pem
 
-#
+## db for staging cms
+Host DevStaging
+     User ubuntu
+     HostName 50.16.139.206
+     IdentityFile ~/.ssh/policymickey.pem
+
+## external-content-api/db serges stuff
 Host ec-staging
      User ubuntu
      HostName 54.164.88.205
