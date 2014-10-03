@@ -39,11 +39,6 @@ Host cms
      HostName 54.172.65.108
      IdentityFile ~/.ssh/policymickey.pem
 
-Host cms-old
-     User ubuntu
-     HostName 54.88.248.35
-     IdentityFile ~/.ssh/policymickey.pem
-
 # first varnish in production, for cms.mic.com
 Host mic-varnish1
    User root
