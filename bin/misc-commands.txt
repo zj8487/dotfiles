@@ -37,4 +37,14 @@ find ~ -maxdepth 2 -name .git -print | while read repo; do cd $(dirname $repo); 
 # check listening ports with netstat, check for bitcoind
 sudo netstat --ip -lpa | grep bitcoind
 
+# This little gem creates a colorful scrolling display. Ctrl+c stops it:
+grep -o --binary-files=text '[[:alpha:]]' /dev/urandom |tr -d '[a-zA-Z]' |xargs -n $(($COLUMNS/2)) |tr -d ' '| lolcat -f | pv -L80k
 
+# .. with words
+grep -o --binary-files=text '[[:alpha:]]' /dev/urandom |tr -d '[a-zA-Z]' |xargs -n $(($COLUMNS/2)) |tr -d ' '| figlet | lolcat -f | pv -L80k
+
+# scrolling band of colors
+yes "$(seq 231 -1 16)" | while read i; do printf "\x1b[48;5;${i}m\n"; sleep .02; done
+
+# play a weird sound
+play -q -n synth sine F2 sine C3 remix - fade 0 4 .1 norm -4 bend 0.5,2399,2 fade 0 4.0 0.5 &
