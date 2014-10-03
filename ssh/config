@@ -33,10 +33,16 @@ Host numbahWWW
 
 ## production
 
-# runs cms-deploy on cms.mic.com
+# runs cms in production on cms.mic.com
 Host cms
      User ubuntu
      HostName 54.172.65.108
+     IdentityFile ~/.ssh/policymickey.pem
+
+# task-manager takes care of e.g. cron jobs
+Host task-manager
+     User ubuntu
+     HostName 54.164.146.176
      IdentityFile ~/.ssh/policymickey.pem
 
 # first varnish in production, for cms.mic.com
