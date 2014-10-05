@@ -31,13 +31,33 @@ Host numbahWWW
 #                        mic                        #
 #####################################################
 
-## production
+######## cms ########
 
-# runs cms in production on cms.mic.com
+# runs cms on cms.mic.com
 Host cms
      User ubuntu
      HostName 54.172.65.108
      IdentityFile ~/.ssh/policymickey.pem
+
+# db for cms
+Host db
+     User ubuntu
+     HostName 54.88.38.8
+     IdentityFile ~/.ssh/policymickey.pem
+
+# runs cms on cms.pmic.us
+Host cms-staging
+     User ubuntu
+     HostName 54.88.153.98
+     IdentityFile ~/.ssh/policymickey.pem
+
+# db for cms-staging (db-staging.pmic.us)
+Host db-staging
+     User ubuntu
+     HostName 54.86.15.80
+     IdentityFile ~/.ssh/policymickey.pem
+
+#####################
 
 # task-manager takes care of e.g. cron jobs
 Host task-manager
@@ -89,12 +109,6 @@ Host pmic
 
 ## staging
 
-# runs cms on cms.pmic.us
-Host cms-staging
-     User ubuntu
-     HostName 54.88.153.98
-     IdentityFile ~/.ssh/policymickey.pem
-
 # only varnish in staging, for cms.pmic.us
 Host varnish-staging
      User ubuntu
@@ -123,12 +137,6 @@ Host megafunnel
 Host megafunnel-funnel
      User ubuntu
      HostName 54.164.29.96
-     IdentityFile ~/.ssh/policymickey.pem
-
-## db for staging cms
-Host DevStaging
-     User ubuntu
-     HostName 50.16.139.206
      IdentityFile ~/.ssh/policymickey.pem
 
 ## external-content-api/db serges stuff
