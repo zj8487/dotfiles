@@ -84,6 +84,11 @@ Host ec-staging
      HostName 54.164.88.205
      IdentityFile ~/.ssh/policymickey.pem
 
+Host ec-api-staging
+     User ubuntu
+     HostName 54.88.145.182
+     IdentityFile ~/.ssh/policymickey.pem
+
 #####################
 
 ## mic bots and devops tools
