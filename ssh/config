@@ -72,6 +72,10 @@ Host ios-cms-staging
      HostName 54.172.110.167
      IdentityFile ~/.ssh/policymickey.pem
 
+Host ec-api
+     User ubuntu
+     HostName 54.172.53.192
+     IdentityFile ~/.ssh/policymickey.pem
 Host ec-api-staging
      User ubuntu
      HostName 54.88.145.182
