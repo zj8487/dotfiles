@@ -78,15 +78,14 @@ Host ios-cms-staging
      IdentityFile ~/.ssh/policymickey.pem
 
 ## external-content-api/db serges stuff
-## TODO split this into two separate instances
-Host ec-staging
-     User ubuntu
-     HostName 54.164.88.205
-     IdentityFile ~/.ssh/policymickey.pem
-
 Host ec-api-staging
      User ubuntu
      HostName 54.88.145.182
+     IdentityFile ~/.ssh/policymickey.pem
+
+Host ec-db-staging
+     User ubuntu
+     HostName 54.165.244.56
      IdentityFile ~/.ssh/policymickey.pem
 
 #####################
