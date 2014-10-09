@@ -54,90 +54,16 @@ Host cms-staging
 # db for cms-staging (db-staging.pmic.us)
 Host db-staging
      User ubuntu
-     HostName 54.86.15.80
+     HostName 54.85.248.12
      IdentityFile ~/.ssh/policymickey.pem
 
-#####################
-
-# task-manager takes care of e.g. cron jobs
-Host task-manager
-     User ubuntu
-     HostName 54.164.146.176
-     IdentityFile ~/.ssh/policymickey.pem
-
-# first varnish in production, for cms.mic.com
-Host mic-varnish1
-   User root
-   HostName 54.83.86.73
-   port 2093
-   IdentityFile ~/.ssh/policymickey.pem
-
-# second varnish in production, for cms.mic.com
-Host mic-varnish2
-   User root
-   HostName 54.204.214.159
-   port 2093
-   IdentityFile ~/.ssh/policymickey.pem
-
-# mic-mobile
-Host mic-mobile1
-   User root
-   HostName 107.22.132.19
-   port 2093
-   IdentityFile ~/.ssh/policymickey.pem
-
-# mic-mobile
-Host mic-mobile2
-   User root
-   HostName 184.72.155.161
-   port 2093
-   IdentityFile ~/.ssh/policymickey.pem
-
-# mic-mobile
-Host mic-mobile3
-   User root
-   HostName 54.242.170.244
-   port 2093
-   IdentityFile ~/.ssh/policymickey.pem
-
-# ?
-Host pmic
-    User root
-    HostName 54.204.141.250
-    port 2093
-    IdentityFile ~/.ssh/policymickey.pem
-
-## staging
-
-# only varnish in staging, for cms.pmic.us
+# varnish for staging, for cms.pmic.us
 Host varnish-staging
      User ubuntu
      HostName 54.209.204.228
      IdentityFile ~/.ssh/policymickey.pem
 
-# instances for mobile
-Host mobile-staging
-     User ubuntu
-     HostName 54.209.167.243
-     IdentityFile ~/.ssh/policymickey.pem
-Host api-staging
-     User ubuntu
-     HostName 54.84.199.30
-     IdentityFile ~/.ssh/policymickey.pem
-
-## megafunnel stuff
-
-#
-Host megafunnel
-     User ubuntu
-     HostName 54.164.155.187
-     IdentityFile ~/.ssh/policymickey.pem
-
-#
-Host megafunnel-funnel
-     User ubuntu
-     HostName 54.164.29.96
-     IdentityFile ~/.ssh/policymickey.pem
+#####################
 
 ## external-content-api/db serges stuff
 Host ec-staging
@@ -147,7 +73,7 @@ Host ec-staging
 
 ## mic bots and devops tools
 
-# performs tasks
+# task-manager takes care of e.g. cron jobs
 Host task-manager
      User ubuntu
      HostName 54.164.146.176
