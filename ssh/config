@@ -38,7 +38,6 @@ Host cms
      User ubuntu
      HostName 54.172.65.108
      IdentityFile ~/.ssh/policymickey.pem
-
 # runs cms on cms.pmic.us
 Host cms-staging
      User ubuntu
@@ -50,7 +49,6 @@ Host db
      User ubuntu
      HostName 54.88.38.8
      IdentityFile ~/.ssh/policymickey.pem
-
 # db for cms-staging (db-staging.pmic.us)
 Host db-staging
      User ubuntu
@@ -65,24 +63,24 @@ Host varnish-staging
 
 #####################
 
-## ios cms that david and lisa are working on
 Host ios-cms
      User ubuntu
      HostName 54.172.128.66
      IdentityFile ~/.ssh/policymickey.pem
-
-## ios cms that david and lisa are working on
 Host ios-cms-staging
      User ubuntu
      HostName 54.172.110.167
      IdentityFile ~/.ssh/policymickey.pem
 
-## external-content-api/db serges stuff
 Host ec-api-staging
      User ubuntu
      HostName 54.88.145.182
      IdentityFile ~/.ssh/policymickey.pem
 
+Host ec-db
+     User ubuntu
+     HostName 54.86.241.96
+     IdentityFile ~/.ssh/policymickey.pem
 Host ec-db-staging
      User ubuntu
      HostName 54.165.244.56
