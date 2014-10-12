@@ -1,0 +1,5 @@
+#!/bin/bash
+
+set -e
+
+sudo apt-get install -y ocaml ocaml-native-compilers ocaml-doc ocaml-findlib oasis libpcre-ocaml-dev
