@@ -8,6 +8,7 @@ source ~/dotfiles/bash/npm-completion.sh
 prepend_to_path /usr/local/sbin
 prepend_to_path ~/local/bin
 prepend_to_path ~/dotfiles/bin
+prepend_to_path ~/dotfiles/emacs/cask/bin
 
 # AndroidDev PATH
 #export PATH=${PATH}:~/android-sdk-linux/tools
