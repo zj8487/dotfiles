@@ -13,3 +13,6 @@
 [submodule "emacs/site-lisp/popup"]
 	path = emacs/site-lisp/popup
 	url = git@github.com:auto-complete/popup-el.git
+[submodule "emacs/site-lisp/yasnippet"]
+	path = emacs/site-lisp/yasnippet
+	url = git@github.com:ralphtheninja/yasnippet
