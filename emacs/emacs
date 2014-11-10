@@ -23,13 +23,13 @@
     (add-to-list 'load-path project)))
 
 ;; --------------------------------------------------------------------
-;; Add ag.el (https://github.com/wilfred/ag.el)
+;; ag.el (https://github.com/wilfred/ag.el)
 (require 'ag)
 (setq ag-highlight-search t)
 ;; --------------------------------------------------------------------
 
 ;; --------------------------------------------------------------------
-;; Add auto-complete
+;; auto-complete
 (require 'auto-complete-config)
 (ac-config-default)
 ; Use dictionaries by default
@@ -39,6 +39,12 @@
 (setq ac-auto-start 3)
 ; case sensitivity is important when finding matches
 (setq ac-ignore-case nil)
+;; --------------------------------------------------------------------
+
+;; --------------------------------------------------------------------
+;; yasnippet
+(require 'yasnippet)
+(yas-global-mode 1)
 ;; --------------------------------------------------------------------
 
 ;; --------------------------------------------------------------------
