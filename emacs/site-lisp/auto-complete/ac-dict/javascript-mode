@@ -58,19 +58,13 @@ clearImmediate
 clearTimeout
 close
 closed
-comment
 confirm
 connect
 constructor
 continue
-console.log
-console.error
-console.trace
 createServer
 createReadStream
 createWriteStream
-default
-defaultStatus
 delete
 do
 document
@@ -131,7 +125,6 @@ prompt
 prototype
 ref
 releaseEvents
-require
 resizeBy
 resizeTo
 return
