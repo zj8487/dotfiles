@@ -22,6 +22,7 @@ alias grm='git reset --hard upstream/master'
 alias gs='git st'
 alias gf='git fetch --all'
 alias gp='git push'
+alias gr='git remote'
 
 ### make stuff
 alias m='make -j $NUMBER_OF_PROCESSORS'
