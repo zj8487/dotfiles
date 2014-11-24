@@ -18,6 +18,13 @@ function append_to_path {
     fi
 }
 
+function mkp {
+    LENGTH=$1
+    STR=$(head /dev/urandom | sha256sum | sha256sum)
+    echo ${STR:0:$LENGTH}
+}
+
+
 # https://gist.github.com/mafintosh/405048d304fbabb830b2
 #function npm () {
 #  if [ "$1" = "publish" ]; then
