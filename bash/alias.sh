@@ -3,6 +3,7 @@ alias bc='bc <(echo scale=10)'
 alias grep='grep --color=auto'
 
 ### node aliases
+alias npme='npm login --registry=https://npme.mic.com/ --scope=mic'
 alias getnpm='curl https://npmjs.org/install.sh | sh'
 alias naux='ps aux | grep node'
 alias b='node-gyp build'
