@@ -10,6 +10,9 @@ prepend_to_path ~/local/bin
 prepend_to_path ~/dotfiles/bin
 prepend_to_path ~/dotfiles/emacs/cask/bin
 
+# go
+export PATH=$PATH:/usr/local/go/bin
+
 # AndroidDev PATH
 #export PATH=${PATH}:~/android-sdk-linux/tools
 #export PATH=${PATH}:~/android-sdk-linux/platform-tools
