@@ -55,6 +55,9 @@ sudo apt-get install -y libssl-dev
 
 # applications and tools
 
+echo "---- INSTALLING: sysv-rc-conf"
+sudo apt-get install -y sysv-rc-conf
+
 echo "---- INSTALLING: gnome-open"
 sudo apt-get install -y libgnome2-bin
 

@@ -53,6 +53,7 @@ alias gc='google-chrome &> /dev/null &'
 ### os specific stuff
 alias sc='synclient TapButton1=1 TapButton2=2 TapButton3=3'
 alias sshot='gnome-screenshot -a'
+alias chkconfig='sudo sysv-rc-conf'
 
 ### work related stuff
 alias startrm='liveswap -s ~/src/micnews/release-manager/index.js -f 1 -a 0.0.0.0 --pre-upgrade ~/src/micnews/release-manager/pre-upgrade.js'
