@@ -2,6 +2,9 @@
 echo "---- INSTALLING: copy o script"
 sudo ln -fs ~/dotfiles/bin/o /usr/bin/o
 
+echo "---- Disabling system fonts reported by flash (reduce browser fingerprinting)"
+sudo mkdir -p /etc/adobe && sudo cp ~/dotfiles/config/mms.cfg /etc/adobe
+
 echo "---- INSTALLING: setting up folder structure"
 mkdir -p ~/tmp ~/src ~/.ssh
 
