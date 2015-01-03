@@ -87,36 +87,6 @@
 ;; --------------------------------------------------------------------
 
 ;; --------------------------------------------------------------------
-;; http://whattheemacsd.com/init.el-04.html
-;; Diminish modeline clutter
-;;(require 'diminish)
-;(diminish 'wrap-region-mode)
-;(diminish 'yas/minor-mode)
-;; --------------------------------------------------------------------
-
-;; --------------------------------------------------------------------
-;; http://whattheemacsd.com/init.el-05.html
-;; Elisp go-to-definition with M-. and back again with M-,
-;;(autoload 'elisp-slime-nav-mode "elisp-slime-nav")
-;;(add-hook 'emacs-lisp-mode-hook (lambda () (elisp-slime-nav-mode t)))
-;;(eval-after-load 'elisp-slime-nav '(diminish 'elisp-slime-nav-mode))
-;; --------------------------------------------------------------------
-
-;; --------------------------------------------------------------------
-;; http://whattheemacsd.com/my-misc.el-01.html
-;; Webjump to search using different enginges, e.g. google, wikipedia
-;;(global-set-key (kbd "C-x g") 'webjump)
-;; Add Urban Dictionary to webjump
-;;(eval-after-load "webjump"
-;;'(add-to-list 'webjump-sites
-;;              '("Urban Dictionary" .
-;;                [simple-query
-;;                 "www.urbandictionary.com"
-;;                 "http://www.urbandictionary.com/define.php?term="
-;;                 ""])))
-;; --------------------------------------------------------------------
-
-;; --------------------------------------------------------------------
 ;; http://whattheemacsd.com/key-bindings.el-01.html
 ;; Awesome goto line that shows the line numbers to the left
 (global-set-key [remap goto-line] 'goto-line-with-feedback)
@@ -128,20 +98,6 @@
         (linum-mode 1)
         (goto-line (read-number "Goto line: ")))
     (linum-mode -1)))
-;; --------------------------------------------------------------------
-
-;; --------------------------------------------------------------------
-;; http://whattheemacsd.com/setup-shell.el-01.html
-;; Tap C-d twice to stop shell and kill buffer
-;;(defun comint-delchar-or-eof-or-kill-buffer (arg)
-;;  (interactive "p")
-;;  (if (null (get-buffer-process (current-buffer)))
-;;      (kill-buffer)
-;;    (comint-delchar-or-maybe-eof arg)))
-;;(add-hook 'shell-mode-hook
-;;          (lambda ()
-;;            (define-key shell-mode-map
-;;              (kbd "C-d") 'comint-delchar-or-eof-or-kill-buffer)))
 ;; --------------------------------------------------------------------
 
 ;; --------------------------------------------------------------------
@@ -180,16 +136,6 @@
 
 (add-to-list 'load-path "~/dotfiles/emacs/doremi")
 (require 'doremi-cmd)
-
-;; Start emacs in full screen mode
-(when (display-graphic-p)
-  (defun fullscreen (&optional f)
-    (interactive)
-    (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
-			   '(2 "_NET_WM_STATE_MAXIMIZED_VERT" 0))
-    (x-send-client-message nil 0 nil "_NET_WM_STATE" 32
-			   '(2 "_NET_WM_STATE_MAXIMIZED_HORZ" 0)))
-  (fullscreen))
 
 ; Show which parenthesis belongs together upon placing the cursor on one of them
 (show-paren-mode t)
@@ -251,28 +197,11 @@
 ;; Map files to modes
 (require 'mode-mappings)
 
-;; --------------------------------------------------------------------
-; Install jshint-mode (uses flymake)
-;(require 'flymake-jshint)
-;(add-hook 'js2-mode-hook (lambda ()
-;                           (flymake-mode t)
-;                           (local-set-key "\en" 'flymake-goto-next-error)
-;                           (local-set-key "\ep" 'flymake-goto-prev-error)))
-;; Turns on flymake for all files which have a flymake mode
-;(add-hook 'find-file-hook 'flymake-find-file-hook)
-;; Flymake log level. Useful when trouble shooting flymake problems
-;;(setq flymake-log-level 3)
-;; --------------------------------------------------------------------
-
 ;; Font used
 (set-default-font "Source Code Pro 8")
 
 ;; Use spaces and not fecking tabs when auto indenting!
 (setq-default indent-tabs-mode nil)
-
-;; Use electric indent mode and pair mode
-;;(electric-indent-mode)
-;;(electric-pair-mode)
 
 ;; Automatically convert to unix line endings
 (add-hook 'find-file-hook 'find-file-check-line-endings)
@@ -447,3 +376,5 @@ If the file is emacs lisp, run the byte compiled version if exist."
  ;; If there is more than one, they won't work right.
  '(ido-only-match ((t (:foreground "chartreuse"))))
  '(ido-subdir ((t (:foreground "yellow")))))
+
+(toggle-frame-fullscreen)
