@@ -15,7 +15,7 @@ sudo apt-get install -y libgif-dev
 sudo apt-get install -y libncurses5-dev
 sudo apt-get install -y --force-yes libxft-dev
 
-EMACS_V=24.3
+EMACS_V=24.4
 EMACS_BASE="emacs-$EMACS_V"
 MIRROR="ftp://ftp.sunet.se"
 
