@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "---- INSTALLING: irssi"
+sudo apt-get install -y irssi
+
+echo "---- INSTALLING: irssi configuration"
+mkdir -p ~/.irssi
+ln -fs ~/dotfiles/irssi/config ~/.irssi/config

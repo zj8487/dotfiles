@@ -180,9 +180,6 @@ sudo apt-get install -y fbreader
 #echo "---- INSTALLING: cvs"
 #sudo apt-get install -y cvs
 
-#echo "---- INSTALLING: irssi"
-#sudo apt-get install -y irssi
-
 #echo "---- INSTALLING: eog"
 #sudo apt-get install -y eog
 
