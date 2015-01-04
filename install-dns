@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# more help here -> http://sourceforge.net/p/ddclient/wiki/Home/
+
+sudo apt-get install -y ddclient
+sudo cp ~/dotfiles/dns/ddclient.conf /etc/ddclient.conf
