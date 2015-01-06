@@ -27,6 +27,7 @@ channels = (
   { name = "#scuttlebutt"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "##leveldb"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#node.js"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#ijhack"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#forskningsavd"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#ghs"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#nodeup"; chatnet = "freenode"; autojoin = "yes"; },
