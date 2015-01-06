@@ -87,4 +87,6 @@ Subsystem sftp /usr/lib/openssh/sftp-server
 UsePAM yes
 
 # Only allow me for now
-AllowUsers magnus
+AllowUsers lms
+
+KexAlgorithms curve25519-sha256@libssh.org
