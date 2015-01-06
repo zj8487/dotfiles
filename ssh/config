@@ -6,6 +6,7 @@
 Host home
      User lms
      Hostname ralphtheninja.info
+     Port 5699
      PreferredAuthentications publickey
      IdentityFile ~/.ssh/ralphtheninja
 
