@@ -8,7 +8,7 @@ Host home
      Hostname ralphtheninja.info
      Port 5699
      PreferredAuthentications publickey
-     IdentityFile ~/.ssh/ralphtheninja
+     IdentityFile ~/.ssh/ralphtheninja_rsa
 
 Host github.com
      User git
