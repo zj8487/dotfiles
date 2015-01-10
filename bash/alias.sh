@@ -1,6 +1,7 @@
 ### misc unix stuff
 alias bc='bc <(echo scale=10)'
 alias grep='grep --color=auto'
+alias wn='watch -n1 "ifconfig | grep RX"'
 
 ### node aliases
 alias npme='npm login --registry=https://npme.mic.com/ --scope=mic'
