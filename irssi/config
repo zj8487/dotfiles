@@ -32,6 +32,7 @@ channels = (
   { name = "#ghs"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#nodeup"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#seafile"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#cozycloud"; chatnet = "freenode"; autojoin = "yes"; },
   ### { name = "#darkwallet"; chatnet = "freenode"; autojoin = "yes"; },
   ### { name = "#openbazaar"; chatnet = "freenode"; autojoin = "yes"; },
   ### { name = "#bitcoin"; chatnet = "freenode"; autojoin = "yes"; },
