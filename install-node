@@ -22,16 +22,3 @@ echo "> Upgrading npm to latest"
 npm install -f npm -g
 
 echo "node version: $(node -v), npm version: $(npm -v)"
-
-#mkdir -p ~/src ~/local && cd ~/src
-
-#if [ ! -d "node" ]; then
-#    NODE_V=v0.10.28
-#    echo "---- INSTALLING: node $NODE_V"
-#    git clone git://github.com/joyent/node.git && cd node && git co $NODE_V
-#    ./configure --prefix=~/local
-#    time make -j `nproc` && make install
-#else
-#    echo "---- INSTALLING: node already installed, SKIPPING!"
-#fi
-
