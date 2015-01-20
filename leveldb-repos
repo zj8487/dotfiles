@@ -1,0 +1,14 @@
+#!/bin/bash
+
+mkdir -p ~/src/leveldb-repos && cd ~/src/leveldb-repos
+
+source ~/dotfiles/bash/clone.sh
+
+clone_remote node-levelup rvagg
+clone_remote node-leveldown rvagg
+clone_remote abstract-leveldown rvagg
+clone_remote level level
+clone_remote level-packager level
+clone_remote deferred-leveldown level
+clone_remote level-ws level
+
