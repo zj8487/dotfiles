@@ -6,6 +6,9 @@ source ~/dotfiles/bash/clone.sh
 
 cd ~/src
 
+clone_remote blessed chjj
+clone_remote contextify brianmcd
+clone_remote jsdom tmpvar
 clone_remote jsonld.js digitalbazaar
 
 cd ~/src/leveldb-repos
