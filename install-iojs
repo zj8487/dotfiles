@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION=v${1:-1.0.2}
+VERSION=v${1:-1.0.3}
 IOJS=iojs-${VERSION}-linux-x64
 echo "> Downloading $VERSION of iojs"
 curl -s https://iojs.org/dist/${VERSION}/${IOJS}.tar.xz | tar xvfJ -
