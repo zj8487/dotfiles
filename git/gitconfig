@@ -7,7 +7,7 @@
 	amend = commit --amend -C HEAD
 	lg = log --all --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an <%ae>%Creset' --abbrev-commit
 [user]
-	name = ralphtheninja
+	name = Lars-Magnus Skog
 	email = ralphtheninja@riseup.net
 [merge]
 	conflictstyle = diff3
