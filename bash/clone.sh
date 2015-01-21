@@ -1,4 +1,4 @@
-function clone_remote {
+function clone {
     local repo=$1
     local org=$2
     if [ ! -d $repo ]; then
