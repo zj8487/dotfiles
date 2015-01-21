@@ -1,0 +1,6 @@
+#!/bin/bash
+set -e
+
+echo "---- INSTALLING: openssh-server"
+sudo apt-get install -y openssh-server
+sudo cp ~/dotfiles/ssh/sshd_config /etc/ssh

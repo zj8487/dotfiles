@@ -1,0 +1,6 @@
+#!/bin/bash
+set -e
+
+echo "---- INSTALLING: sshfs"
+sudo apt-get install -y sshfs
+sudo cp ~/dotfiles/ssh/ssh_config /etc/ssh

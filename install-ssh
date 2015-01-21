@@ -1,9 +1,0 @@
-#!/bin/bash
-set -e
-
-# TODO rename this file to ssh-server bla bla
-echo "---- INSTALLING: sshfs"
-sudo apt-get install --assume-yes sshfs
-echo "---- INSTALLING: openssh-server"
-sudo apt-get install --assume-yes openssh-server
-sudo cp ~/dotfiles/ssh/sshd_config /etc/ssh
