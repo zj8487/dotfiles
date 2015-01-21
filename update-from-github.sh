@@ -13,6 +13,7 @@ clone blessed chjj
 clone contextify brianmcd
 clone jsdom tmpvar
 clone jsonld.js digitalbazaar
+clone cloneall micnews
 
 cd ~/src/leveldb-repos
 
