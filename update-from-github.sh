@@ -7,6 +7,7 @@ source ~/dotfiles/bash/clone.sh
 cd ~/src
 
 clone_remote awesome awesomeWM
+clone_remote omxplayer popcornmix
 clone_remote blessed chjj
 clone_remote contextify brianmcd
 clone_remote jsdom tmpvar
