@@ -2,6 +2,8 @@
 alias bc='bc <(echo scale=10)'
 alias grep='grep --color=auto'
 alias wn='watch -n1 "ifconfig | grep RX"'
+alias mount-cloud='sshfs -o idmap=user home:cloud/ ~/cloud'
+alias unmount-cloud='fusermount -uz ~/cloud'
 
 ### node aliases
 alias npme='npm login --registry=https://npme.mic.com/ --scope=mic'
