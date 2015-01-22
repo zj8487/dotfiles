@@ -6,6 +6,7 @@ source ~/dotfiles/bash/clone.sh
 
 cd ~/src
 
+clone pyg indutny
 clone wit substack
 clone awesome awesomeWM
 clone omxplayer popcornmix
