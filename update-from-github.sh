@@ -1,11 +1,19 @@
 #!/bin/bash
 
+set -e
+
 mkdir -p ~/src/leveldb-repos
 
 source ~/dotfiles/bash/clone.sh
 
 cd ~/src
 
+clone send pillarjs
+clone deploy tj
+clone stack tj
+clone serve tj
+clone io.js iojs
+clone learnyounode rvagg
 clone node-revisit-token revisitors
 clone pyg indutny
 clone wit substack
