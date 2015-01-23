@@ -17,7 +17,4 @@ ln -s /usr/local/lib/${IOJS}/bin/iojs /usr/local/bin/iojs
 ln -s /usr/local/lib/${IOJS}/bin/node /usr/local/bin/node
 ln -s /usr/local/lib/${IOJS}/bin/npm /usr/local/bin/npm
 
-echo "> Upgrading npm to latest"
-npm install -f npm -g
-
 echo "iojs version: $(iojs -v), npm version: $(npm -v)"
