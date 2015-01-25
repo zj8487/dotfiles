@@ -8,6 +8,7 @@ source ~/dotfiles/bash/clone.sh
 
 cd ~/src
 
+clone open-ath9k-htc-firmware qca
 clone scripts.irssi.org irssi
 clone zeal zealdocs
 clone send pillarjs
