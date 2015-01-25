@@ -176,6 +176,7 @@ statusbar = {
         act = { priority = "10"; };
         more = { priority = "-1"; alignment = "right"; };
         barend = { priority = "100"; alignment = "right"; };
+        otr = { };
       };
     };
 
@@ -242,6 +243,10 @@ settings = {
     autolog_path = "~/.irssi/logs/$tag/$0.log";
   };
   "irc/dcc" = { dcc_download_path = "~/Downloads/"; dcc_autoget = "no"; };
+  "perl/core/scripts" = {
+    nicklist_width = "20";
+    nicklist_automode = "SCREEN";
+  };
 };
 
 logs = { };
@@ -261,3 +266,148 @@ ignores = (
 );
 
 completions = { ":" = { value = "シ"; }; check = { value = "✔"; }; };
+windows = {
+  1 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
+  2 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#squatconf";
+        tag = "freenode";
+      }
+    );
+  };
+  3 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#cyberwizard";
+        tag = "freenode";
+      }
+    );
+  };
+  4 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#scuttlebutt";
+        tag = "freenode";
+      }
+    );
+  };
+  5 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "##leveldb";
+        tag = "freenode";
+      }
+    );
+  };
+  6 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#Node.js";
+        tag = "freenode";
+      }
+    );
+  };
+  7 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#ijhack";
+        tag = "freenode";
+      }
+    );
+  };
+  8 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#forskningsavd";
+        tag = "freenode";
+      }
+    );
+  };
+  9 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#ghs";
+        tag = "freenode";
+      }
+    );
+  };
+  10 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#nodeup";
+        tag = "freenode";
+      }
+    );
+  };
+  11 = {
+    items = (
+      {
+        type = "QUERY";
+        chat_type = "IRC";
+        name = "itzmjauz";
+        tag = "freenode";
+      }
+    );
+  };
+  12 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#io.js";
+        tag = "freenode";
+      }
+    );
+  };
+  13 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#trisquel";
+        tag = "freenode";
+      }
+    );
+  };
+  14 = {
+    items = (
+      {
+        type = "QUERY";
+        chat_type = "IRC";
+        name = "djoot";
+        tag = "freenode";
+      }
+    );
+  };
+  15 = {
+    items = (
+      {
+        type = "QUERY";
+        chat_type = "IRC";
+        name = "eyeforeigneye";
+        tag = "freenode";
+      }
+    );
+  };
+};
+mainwindows = { 2 = { first_line = "1"; lines = "65"; }; };
+keyboard = ( { key = "meta-c"; id = "command"; data = "clear "; } );
