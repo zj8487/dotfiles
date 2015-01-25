@@ -8,6 +8,7 @@ source ~/dotfiles/bash/clone.sh
 
 cd ~/src
 
+clone zeal zealdocs
 clone send pillarjs
 clone deploy tj
 clone stack tj
