@@ -17,6 +17,7 @@ clone stack tj
 clone serve tj
 clone io.js iojs
 clone learnyounode rvagg
+clone workshopper rvagg
 clone node-revisit-token revisitors
 clone pyg indutny
 clone wit substack
