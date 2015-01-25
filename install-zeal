@@ -1,0 +1,8 @@
+#!/bin/bash
+
+sudo add-apt-repository ppa:jerzy-kozera/zeal-ppa
+sudo apt-get update -y
+sudo apt-get install zeal -y
+
+# run with zeal
+
