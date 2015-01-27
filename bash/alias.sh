@@ -5,8 +5,8 @@ alias wn='watch -n1 "ifconfig | grep RX"'
 alias mount-cloud='sshfs -o idmap=user home:cloud/ ~/cloud'
 alias unmount-cloud='fusermount -uz ~/cloud'
 
-### node aliases
-alias npme='npm login --registry=https://npme.mic.com/ --scope=mic'
+### node
+alias npme='npm login --registry=https://npm.viaforensics.io/ --scope=viaforensics'
 alias getnpm='curl https://npmjs.org/install.sh | sh'
 alias naux='ps aux | grep node'
 alias b='node-gyp build'
@@ -16,7 +16,7 @@ alias ng='node-gyp'
 alias t='npm test'
 alias we='weinre --boundHost=-all-'
 
-### git aliases
+### git
 alias gd='git diff'
 alias gds='git diff --staged'
 alias gg='git grep -n -C1'
@@ -29,13 +29,13 @@ alias gp='git push'
 alias gr='git remote'
 
 ### make stuff
-alias m='make -j $NUMBER_OF_PROCESSORS'
+alias m='make -j $(nproc)'
 
 ### network stuff
 alias myip='curl icanhazip.com'
-alias ddc='sudo ddclient -daemon=0 -debug -verbose -noquiet -force'
+#alias ddc='sudo ddclient -daemon=0 -debug -verbose -noquiet -force'
 alias wi='sudo /home/lms/local/bin/node /home/lms/local/bin/wit'
-alias tor='~/tor-browser_en-US/start-tor-browser &> /dev/null &'
+#alias tor='~/tor-browser_en-US/start-tor-browser &> /dev/null &'
 
 ### ls stuff
 alias l='ls -ltrha'
@@ -59,5 +59,5 @@ alias sshot='gnome-screenshot -a'
 alias chkconfig='sudo sysv-rc-conf'
 
 ### work related stuff
-alias startrm='liveswap -s ~/src/micnews/release-manager/index.js -f 1 -a 0.0.0.0 --pre-upgrade ~/src/micnews/release-manager/pre-upgrade.js'
-alias var='sudo varnishd -f /home/lms/src/varnish-test/default.vcl -S /home/lms/src/varnish-test/secret -s malloc,1G -T 127.0.0.1:2000 -a 0.0.0.0:8888'
+#alias startrm='liveswap -s ~/src/micnews/release-manager/index.js -f 1 -a 0.0.0.0 --pre-upgrade ~/src/micnews/release-manager/pre-upgrade.js'
+#alias var='sudo varnishd -f /home/lms/src/varnish-test/default.vcl -S /home/lms/src/varnish-test/secret -s malloc,1G -T 127.0.0.1:2000 -a 0.0.0.0:8888'
