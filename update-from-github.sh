@@ -8,6 +8,7 @@ source ~/dotfiles/bash/clone.sh
 
 cd ~/src
 
+clone levelweb hij1nx
 clone open-ath9k-htc-firmware qca
 clone scripts.irssi.org irssi
 clone zeal zealdocs
