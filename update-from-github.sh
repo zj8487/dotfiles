@@ -11,6 +11,7 @@ cd ~/src
 clone prohub hij1nx
 clone multilevel juliangruber
 clone level-manifest dominictarr
+clone level-live-stream dominictarr
 clone levelweb hij1nx
 clone pull-stream dominictarr
 clone torrent-docker mafintosh
