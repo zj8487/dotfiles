@@ -8,6 +8,9 @@ source ~/dotfiles/bash/clone.sh
 
 cd ~/src
 
+clone prohub hij1nx
+clone multilevel juliangruber
+clone level-manifest dominictarr
 clone levelweb hij1nx
 clone pull-stream dominictarr
 clone torrent-docker mafintosh
