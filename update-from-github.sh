@@ -12,6 +12,7 @@ clone levelweb hij1nx
 clone pull-stream dominictarr
 clone torrent-docker mafintosh
 clone hyperlog mafintosh
+clone level-temp mafintosh
 clone open-ath9k-htc-firmware qca
 clone scripts.irssi.org irssi
 clone zeal zealdocs
