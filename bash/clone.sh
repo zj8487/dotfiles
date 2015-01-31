@@ -8,7 +8,10 @@ function clone {
         git clone git@github.com:ralphtheninja/$repo && cd $repo
         git remote add upstream git@github.com:$org/$repo && git fetch --all && cd ..
     else
-        cd $repo && git fetch --all && cd ..
+        cd $repo
+        git fetch --all
+        git remote prune origin upstream
+        cd ..
     fi
     echo -e "\n"
 }
