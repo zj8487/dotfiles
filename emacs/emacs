@@ -376,6 +376,9 @@ If the file is emacs lisp, run the byte compiled version if exist."
 (global-set-key "\M-p" 'run-current-file)
 ;; --------------------------------------------------------------------
 
+;; do not activate yasnippet in term-mode
+(add-hook 'term-mode-hook (lambda()
+                            (setq yas-dont-activate t)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
