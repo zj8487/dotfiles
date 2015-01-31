@@ -205,7 +205,7 @@
 (require 'mode-mappings)
 
 ;; Font used
-(set-default-font "Source Code Pro 8")
+(set-default-font "Source Code Pro 12")
 
 ;; Use spaces and not fecking tabs when auto indenting!
 (setq-default indent-tabs-mode nil)
