@@ -378,7 +378,8 @@ If the file is emacs lisp, run the byte compiled version if exist."
 
 ;; do not activate yasnippet in term-mode
 (add-hook 'term-mode-hook (lambda()
-                            (setq yas-dont-activate t)))
+                            (setq yas-dont-activate t)
+                            (hc-toggle-highlight-trailing-whitespace)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
