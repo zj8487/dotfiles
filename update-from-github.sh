@@ -8,6 +8,7 @@ source ~/dotfiles/bash/clone.sh
 
 cd ~/src
 
+clone level-2pc hij1nx
 clone scuttlebot ssbc
 clone prohub hij1nx
 clone multilevel juliangruber
