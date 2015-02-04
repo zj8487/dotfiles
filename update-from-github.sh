@@ -9,6 +9,8 @@ source ~/dotfiles/bash/clone.sh
 cd ~/src
 
 clone level-2pc hij1nx
+clone mqtt.js mqttjs
+clone mosca mcollina
 clone scuttlebot ssbc
 clone prohub hij1nx
 clone multilevel juliangruber
